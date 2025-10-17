@@ -29,6 +29,9 @@ No large or unnecessary dependencies are allowed. External libraries are only us
 
 ### VI. Cross-Platform Compatibility
 All commands and scripts must use Bash syntax, regardless of the operating system on which they are executed. This ensures consistency and portability across different development environments.
+Any paths must be in this format: `path/to/file` (using forward slashes).
+Example: `/d/Projects/MeinBlog/`
+No windows style paths (e.g., `path\to\file`) are allowed.
 
 ## Additional Requirements
 The project is based on Hugo. No large frameworks or build tools are used. Installation and usage must remain simple.
