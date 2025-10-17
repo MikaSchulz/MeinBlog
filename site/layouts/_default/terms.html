@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section aria-labelledby="taxonomy-title">
+    <h1 id="taxonomy-title">{{ .Title }}</h1>
+
+    {{ $type := .Type }}
+    <ul class="taxonomy-list" role="list">
+        {{ range .Pages }}
+        <li class="taxonomy-item">
+            <h2>
+                <a href="{{ .Permalink }}">
+                    {{ .Title }}
+                </a>
+            </h2>
+            <span class="count" aria-label="{{ len .Pages }} {{ $type }}">
+                ({{ len .Pages }} {{ if eq (len .Pages) 1 }}{{ i18n "post" | default "post" }}{{ else }}{{ i18n "posts" }}{{ end }})
+            </span>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}
+

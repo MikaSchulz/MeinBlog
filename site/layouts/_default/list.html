@@ -1,0 +1,32 @@
+{{ define "main" }}
+<section aria-labelledby="posts-heading">
+    <h1 id="posts-heading">{{ i18n "posts" }}</h1>
+
+    {{ $pages := where .Site.RegularPages "Type" "posts" }}
+    {{ $publishedPages := where $pages ".Draft" false }}
+
+    {{ if $publishedPages }}
+    <ul class="posts-list" role="list">
+        {{ range $publishedPages }}
+        <li class="post-item">
+            <article>
+                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <time datetime="{{ .Date.Format "2006-01-02" }}">
+                    {{ i18n "publishedOn" }} {{ .Date.Format "January 2, 2006" }}
+                </time>
+                {{ if .Summary }}
+                <p>{{ .Summary }}</p>
+                {{ end }}
+                <a href="{{ .Permalink }}" aria-label="{{ printf "Read more about %s" .Title }}">
+                    {{ i18n "readMore" }} →
+                </a>
+            </article>
+        </li>
+        {{ end }}
+    </ul>
+    {{ else }}
+    <p class="no-posts" role="status">{{ i18n "noPosts" }}</p>
+    {{ end }}
+</section>
+{{ end }}
+

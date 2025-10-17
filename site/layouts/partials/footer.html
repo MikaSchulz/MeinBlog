@@ -1,0 +1,7 @@
+<footer role="contentinfo">
+    <div class="container">
+        <p>&copy; {{ now.Year }} {{ .Site.Params.author | default .Site.Title }}</p>
+        {{ partial "social-links.html" . }}
+    </div>
+</footer>
+

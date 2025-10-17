@@ -1,0 +1,15 @@
+{{ if or .Site.Params.github .Site.Params.linkedin }}
+<div class="social-links" role="navigation" aria-label="Social media links">
+    {{ if .Site.Params.github }}
+    <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+        GitHub
+    </a>
+    {{ end }}
+    {{ if .Site.Params.linkedin }}
+    <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+        LinkedIn
+    </a>
+    {{ end }}
+</div>
+{{ end }}
+
