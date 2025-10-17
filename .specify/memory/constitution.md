@@ -1,8 +1,8 @@
 <!--
 Sync Impact Report
-- Version change: none → 1.0.0
-- List of modified principles: [PRINCIPLE_1_NAME] → Simplicity, [PRINCIPLE_2_NAME] → Maintainability, [PRINCIPLE_3_NAME] → Automated Testing, [PRINCIPLE_4_NAME] → Traceable Changes, [PRINCIPLE_5_NAME] → Minimal Dependencies
-- Added sections: Additional Requirements, Development Workflow
+- Version change: 1.0.0 → 1.1.0
+- List of modified principles: Added VI. Cross-Platform Compatibility
+- Added sections: None
 - Removed sections: None
 - Templates requiring updates: plan-template.md (✅), spec-template.md (✅), tasks-template.md (✅)
 - Follow-up TODOs: TODO(RATIFICATION_DATE): Initial ratification
@@ -27,7 +27,13 @@ All changes to the project must be traceable (e.g., through commit messages and 
 ### V. Minimal Dependencies
 No large or unnecessary dependencies are allowed. External libraries are only used if they provide clear value.
 
+### VI. Cross-Platform Compatibility
+All commands and scripts must use Bash syntax, regardless of the operating system on which they are executed. This ensures consistency and portability across different development environments.
+
+## Additional Requirements
+The project is based on Hugo. No large frameworks or build tools are used. Installation and usage must remain simple.
+
 ## Governance
 This constitution takes precedence over other project practices. Changes to the constitution must be documented and recorded in the repository. Versioning follows semantic rules (MAJOR.MINOR.PATCH). Compliance is checked with every merge.
 
-**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): Initial ratification | **Last Amended**: 2025-10-17
+**Version**: 1.1.0 | **Ratified**: TODO(RATIFICATION_DATE): Initial ratification | **Last Amended**: 2025-10-17
