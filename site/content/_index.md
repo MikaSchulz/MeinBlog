@@ -1,8 +1,9 @@
 ---
-title: "Welcome to MeinBlog"
+title: "Welcome to my Developer Blog"
 date: 2025-10-17
 draft: false
 ---
 
-Welcome to my developer blog! Here you'll find posts about software development, technology, and my journey as a developer.
+Welcome to my developer blog! Here you'll find my thoughts, projects, experiences in software
+development and technology, as well as my ambitions for the future.
 
