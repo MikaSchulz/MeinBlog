@@ -88,6 +88,7 @@ As a visitor, I want to access the author's LinkedIn profile via a link.
 - All content (posts, pages, categories, tags) is managed directly via files (Markdown/front matter). No admin/editor UI is provided.
 - Categories and tags are dynamic and user-defined in the front matter of each post. There is no fixed or predefined set.
 - Each blog post is uniquely identified by its file path (relative to the content directory) and publication date, following Hugo's default behavior. Duplicate slugs or titles are not allowed within the same directory and date.
+- Blog posts support draft/published states using Hugo's built-in `draft: true/false` front matter. Only published posts (draft: false or no draft field) are visible on the live site.
 
 ## Key Entities
 - Blog Post (title, content, date, categories, tags)
@@ -107,12 +108,14 @@ As a visitor, I want to access the author's LinkedIn profile via a link.
 
 ## Accessibility and Localization
 - The blog must meet full accessibility standards (WCAG 2.1 AA or higher), including but not limited to: alt text for all images, semantic HTML, keyboard navigation, ARIA labels, sufficient color contrast, and skip navigation links.
-- The blog must support multiple languages (localization), with at least English and one additional language. All user-facing text must be translatable, and language switching must be available in the UI.
+- The blog must support multiple languages (localization), with at least English and German (Deutsch). All user-facing text must be translatable, and language switching must be available in the UI.
 
 ## Clarifications
 ### Session 2025-10-17
 - Q: Should the blog have a contact section, contact form, or other contact method? → A: Only GitHub and LinkedIn profile links should be present as contact/professional networking methods. All other contact or profile links are excluded.
-- Q: What features are explicitly out of scope? → A: Out of scope: comments, search, RSS, analytics, dark mode, multi-author, and any contact method other than GitHub/LinkedIn links.
+- Q: What features are explicitly out of scope? → A: Out of scope: comments, search, RSS, analytics, multi-author, and any contact method other than GitHub/LinkedIn links.
 - Q: How are blog posts uniquely identified? → A: Each post is uniquely identified by its file path (relative to the content directory) and publication date, following Hugo's default behavior. Duplicate slugs or titles are not allowed within the same directory and date.
 - Q: What happens if the GitHub or LinkedIn link is missing or invalid? → A: If a link is missing, the corresponding icon or link is not shown. If a link is present but invalid, clicking it will result in the browser's default error (no custom error handling).
-- Q: What are the accessibility and localization requirements? → A: The blog must meet full accessibility standards (WCAG 2.1 AA or higher) and support multiple languages (localization), with at least English and one additional language. All user-facing text must be translatable, and language switching must be available in the UI.
+- Q: What are the accessibility and localization requirements? → A: The blog must meet full accessibility standards (WCAG 2.1 AA or higher) and support multiple languages (localization), with at least English and German (Deutsch). All user-facing text must be translatable, and language switching must be available in the UI.
+- Q: Which second language should be supported for localization? → A: German (Deutsch) will be the second language alongside English.
+- Q: Should blog posts support draft/published states? → A: Yes, blog posts support draft/published states using Hugo's built-in `draft: true/false` front matter. Only published posts are visible on the live site.
