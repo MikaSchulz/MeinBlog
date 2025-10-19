@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article role="article" aria-labelledby="about-title">
+    <h1 id="about-title">{{ .Title }}</h1>
+
+    {{ if .Params.image }}
+    <img src="{{ .Params.image }}" alt="{{ .Params.imageAlt | default "Author profile photo" }}" class="author-image">
+    {{ end }}
+
+    <div class="content">
+        {{ .Content }}
+    </div>
+</article>
+{{ end }}
+

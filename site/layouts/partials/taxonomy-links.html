@@ -1,0 +1,22 @@
+{{ if .Params.categories }}
+<div class="post-categories" aria-label="{{ i18n "categories" }}">
+    <strong>{{ i18n "categories" }}:</strong>
+    <ul>
+        {{ range .Params.categories }}
+        <li><a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}
+
+{{ if .Params.tags }}
+<div class="post-tags" aria-label="{{ i18n "tags" }}">
+    <strong>{{ i18n "tags" }}:</strong>
+    <ul>
+        {{ range .Params.tags }}
+        <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}
+

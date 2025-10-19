@@ -1,0 +1,35 @@
+{{ define "main" }}
+<section aria-labelledby="taxonomy-term-title">
+    <h1 id="taxonomy-term-title">
+        {{ .Title }}
+    </h1>
+
+    <p>{{ i18n "posts" }} {{ i18n "in" | default "in" }} {{ .Title }}:</p>
+
+    {{ $pages := where .Pages ".Draft" false }}
+
+    {{ if $pages }}
+    <ul class="posts-list" role="list">
+        {{ range $pages }}
+        <li class="post-item">
+            <article>
+                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <time datetime="{{ .Date.Format "2006-01-02" }}">
+                    {{ i18n "publishedOn" }} {{ .Date.Format "January 2, 2006" }}
+                </time>
+                {{ if .Summary }}
+                <p>{{ .Summary }}</p>
+                {{ end }}
+                <a href="{{ .Permalink }}" aria-label="{{ printf "Read more about %s" .Title }}">
+                    {{ i18n "readMore" }} →
+                </a>
+            </article>
+        </li>
+        {{ end }}
+    </ul>
+    {{ else }}
+    <p class="no-posts" role="status">{{ i18n "noPosts" }}</p>
+    {{ end }}
+</section>
+{{ end }}
+
