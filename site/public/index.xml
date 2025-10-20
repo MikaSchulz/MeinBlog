@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Welcome to my Developer Blog on </title>
-    <link>//localhost:1313/</link>
+    <link>/</link>
     <description>Recent content in Welcome to my Developer Blog on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 17 Oct 2025 10:00:00 +0100</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Blog Post</title>
-      <link>//localhost:1313/posts/first-post/</link>
+      <link>/posts/first-post/</link>
       <pubDate>Fri, 17 Oct 2025 10:00:00 +0100</pubDate>
-      <guid>//localhost:1313/posts/first-post/</guid>
+      <guid>/posts/first-post/</guid>
       <description>Welcome to My Blog This is my first blog post! I&amp;rsquo;m excited to share my journey in software development.&#xA;What I&amp;rsquo;ll Write About Software development tips Clean code practices Technology trends Stay tuned for more posts!</description>
     </item>
     <item>
       <title>About Me</title>
-      <link>//localhost:1313/about/</link>
+      <link>/about/</link>
       <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/about/</guid>
+      <guid>/about/</guid>
       <description>About Me Hi, I’m Mika, a software developer currently working at Otto GmbH &amp;amp; Co. KGaA. My passion for IT started at a young age, and ever since, I’ve been hooked. It all began with Minecraft modding, where I first got hands-on with Java, explored the basics of software architecture, and even got a taste of project management.&#xA;Over time, I turned this passion into a career, deepening my skills during my apprenticeship as an IT specialist in application development (Fachinformatiker für Anwendungsentwicklung).</description>
     </item>
   </channel>

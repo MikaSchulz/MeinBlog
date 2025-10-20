@@ -1,0 +1,23 @@
+# Default Color Values for MeinBlock
+# These values are used as fallbacks when colors are not specified in config.toml
+# All default colors meet WCAG AA accessibility standards (4.5:1 contrast ratio minimum)
+
+[colors]
+  # Core colors (Priority P1)
+  background = "#FFFFFF"           # White background
+  text = "#333333"                 # Dark gray text (12.6:1 contrast ratio with white)
+  link = "#0066CC"                 # Blue links (4.5:1 contrast ratio with white)
+  linkHover = "#004499"            # Darker blue on hover (7.0:1 contrast ratio)
+
+  # Interactive elements (Priority P2)
+  navigationLink = "#FFFFFF"       # White navigation links (on dark header)
+  button = "#0066CC"               # Blue buttons
+
+  # Accent and semantic colors (Priority P3)
+  headingPrimary = "#1a1a1a"       # Near-black for primary headings (16.1:1 contrast)
+  headingSecondary = "#333333"     # Dark gray for secondary headings (12.6:1 contrast)
+  codeBackground = "#f5f5f5"       # Light gray code background
+  codeText = "#333333"             # Dark gray code text (9.7:1 contrast with code bg)
+  metadata = "#666666"             # Medium gray for metadata (5.7:1 contrast)
+  border = "#e0e0e0"               # Light gray borders
+

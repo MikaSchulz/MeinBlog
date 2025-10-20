@@ -1,8 +1,9 @@
 <nav role="navigation" aria-label="Main navigation">
     <ul>
         <li><a href="{{ "/" | relLangURL }}">{{ i18n "home" }}</a></li>
+        <li><a href="{{ "/" | relLangURL }}">Mika Schulz</a></li>
+        <li><a href="{{ "/posts" | relLangURL }}">Blog</a></li>
         <li><a href="{{ "/about" | relLangURL }}">{{ i18n "about" }}</a></li>
         {{ partial "language-switcher.html" . }}
     </ul>
 </nav>
-

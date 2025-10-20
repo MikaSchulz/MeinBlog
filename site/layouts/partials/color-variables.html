@@ -1,0 +1,27 @@
+{{- /* Generate CSS custom properties from color configuration */ -}}
+{{- $colors := site.Params.colors -}}
+{{- $defaults := site.Data.color_defaults.colors -}}
+
+<style>
+:root {
+  {{- /* Core colors (Priority P1) */ -}}
+  --color-background: {{ default $defaults.background $colors.background }};
+  --color-text: {{ default $defaults.text $colors.text }};
+  --color-link: {{ default $defaults.link $colors.link }};
+  --color-link-hover: {{ default $defaults.linkHover $colors.linkHover }};
+
+  {{- /* Interactive elements (Priority P2) */ -}}
+  --color-navigation-link: {{ default $defaults.navigationLink $colors.navigationLink }};
+  --color-button: {{ default $defaults.button $colors.button }};
+  --color-header-background: {{ default "#2c3e50" $colors.headerBackground }};
+  --color-footer-background: {{ default "#2c3e50" $colors.footerBackground }};
+
+  {{- /* Accent and semantic colors (Priority P3) */ -}}
+  --color-heading-primary: {{ default $defaults.headingPrimary $colors.headingPrimary }};
+  --color-heading-secondary: {{ default $defaults.headingSecondary $colors.headingSecondary }};
+  --color-code-background: {{ default $defaults.codeBackground $colors.codeBackground }};
+  --color-code-text: {{ default $defaults.codeText $colors.codeText }};
+  --color-metadata: {{ default $defaults.metadata $colors.metadata }};
+  --color-border: {{ default $defaults.border $colors.border }};
+}
+</style>

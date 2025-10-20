@@ -1,0 +1,107 @@
+{{- /* Color validation for build-time format and accessibility checks */ -}}
+{{- $colors := site.Params.colors -}}
+{{- $defaults := site.Data.color_defaults.colors -}}
+
+{{- /* Helper function to validate color format */ -}}
+{{- define "partials/validate-color-format" -}}
+  {{- $color := .color -}}
+  {{- $name := .name -}}
+  {{- $valid := false -}}
+
+  {{- /* Check if color is defined */ -}}
+  {{- if $color -}}
+    {{- /* Hex format: #RGB or #RRGGBB */ -}}
+    {{- if findRE "^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$" $color -}}
+      {{- $valid = true -}}
+    {{- /* RGB/RGBA format */ -}}
+    {{- else if findRE "^rgba?\\s*\\(\\s*\\d{1,3}\\s*,\\s*\\d{1,3}\\s*,\\s*\\d{1,3}\\s*(,\\s*[0-9.]+\\s*)?\\)$" $color -}}
+      {{- $valid = true -}}
+    {{- /* Named colors (common ones) */ -}}
+    {{- else if in (slice "white" "black" "red" "green" "blue" "yellow" "orange" "purple" "pink" "brown" "gray" "grey" "navy" "teal" "lime" "cyan" "magenta" "silver" "maroon" "olive" "aqua" "fuchsia") (lower $color) -}}
+      {{- $valid = true -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if not $valid -}}
+    {{- errorf "ERROR: Invalid color value for '%s': '%s'\nAccepted formats:\n  - Hexadecimal: #RRGGBB or #RGB (e.g., '#FFFFFF' or '#FFF')\n  - RGB/RGBA: rgb(r,g,b) or rgba(r,g,b,a) (e.g., 'rgb(255,255,255)')\n  - Named colors: CSS color names (e.g., 'white', 'black', 'blue')\nSee site/COLOR-CONFIGURATION.md for details." $name $color -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Helper function to convert hex to RGB for contrast calculation */ -}}
+{{- define "partials/hex-to-rgb" -}}
+  {{- $hex := .hex -}}
+  {{- $hex = strings.TrimPrefix "#" $hex -}}
+  {{- if eq (len $hex) 3 -}}
+    {{- $hex = printf "%s%s%s%s%s%s" (substr $hex 0 1) (substr $hex 0 1) (substr $hex 1 2) (substr $hex 1 2) (substr $hex 2 3) (substr $hex 2 3) -}}
+  {{- end -}}
+  {{- $r := 0 -}}
+  {{- $g := 0 -}}
+  {{- $b := 0 -}}
+  {{- /* Note: Hugo doesn't have native hex parsing, so we'll use a simplified approach */ -}}
+  {{- /* For now, we'll skip the actual contrast calculation in Hugo and rely on manual verification */ -}}
+  {{- /* A full implementation would require a custom Hugo function or external tool */ -}}
+  {{- dict "r" $r "g" $g "b" $b -}}
+{{- end -}}
+
+{{- /* Validate all color parameters */ -}}
+{{- if $colors -}}
+  {{- /* Core colors validation */ -}}
+  {{- if $colors.background -}}
+    {{- partial "validate-color-format" (dict "color" $colors.background "name" "background") -}}
+  {{- end -}}
+  {{- if $colors.text -}}
+    {{- partial "validate-color-format" (dict "color" $colors.text "name" "text") -}}
+  {{- end -}}
+  {{- if $colors.link -}}
+    {{- partial "validate-color-format" (dict "color" $colors.link "name" "link") -}}
+  {{- end -}}
+  {{- if $colors.linkHover -}}
+    {{- partial "validate-color-format" (dict "color" $colors.linkHover "name" "linkHover") -}}
+  {{- end -}}
+
+  {{- /* Interactive elements validation */ -}}
+  {{- if $colors.navigationLink -}}
+    {{- partial "validate-color-format" (dict "color" $colors.navigationLink "name" "navigationLink") -}}
+  {{- end -}}
+  {{- if $colors.button -}}
+    {{- partial "validate-color-format" (dict "color" $colors.button "name" "button") -}}
+  {{- end -}}
+
+  {{- /* Accent colors validation */ -}}
+  {{- if $colors.headingPrimary -}}
+    {{- partial "validate-color-format" (dict "color" $colors.headingPrimary "name" "headingPrimary") -}}
+  {{- end -}}
+  {{- if $colors.headingSecondary -}}
+    {{- partial "validate-color-format" (dict "color" $colors.headingSecondary "name" "headingSecondary") -}}
+  {{- end -}}
+  {{- if $colors.codeBackground -}}
+    {{- partial "validate-color-format" (dict "color" $colors.codeBackground "name" "codeBackground") -}}
+  {{- end -}}
+  {{- if $colors.codeText -}}
+    {{- partial "validate-color-format" (dict "color" $colors.codeText "name" "codeText") -}}
+  {{- end -}}
+  {{- if $colors.metadata -}}
+    {{- partial "validate-color-format" (dict "color" $colors.metadata "name" "metadata") -}}
+  {{- end -}}
+  {{- if $colors.border -}}
+    {{- partial "validate-color-format" (dict "color" $colors.border "name" "border") -}}
+  {{- end -}}
+
+  {{- /* Contrast validation warnings (simplified - full calculation requires external tool) */ -}}
+  {{- /* Note: Hugo's template engine doesn't support complex color calculations */ -}}
+  {{- /* For production, consider using a build script or Hugo module for full WCAG validation */ -}}
+  {{- if and $colors.text $colors.background -}}
+    {{- if eq $colors.text $colors.background -}}
+      {{- errorf "ERROR: Insufficient contrast - text and background colors are identical ('%s')\nWCAG AA requires minimum 4.5:1 contrast ratio for normal text.\nUse a contrast checker tool: https://webaim.org/resources/contrastchecker/" $colors.text -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if and $colors.codeText $colors.codeBackground -}}
+    {{- if eq $colors.codeText $colors.codeBackground -}}
+      {{- errorf "ERROR: Insufficient contrast - code text and code background colors are identical ('%s')\nWCAG AA requires minimum 4.5:1 contrast ratio.\nUse a contrast checker tool: https://webaim.org/resources/contrastchecker/" $colors.codeText -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Output nothing - this partial is for validation only */ -}}
+

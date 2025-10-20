@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ .Site.Params.description }}">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+    {{- /* Run color validation at build time */ -}}
+    {{- partial "color-validation.html" . -}}
+
+    {{- /* Inject CSS custom properties from color configuration */ -}}
+    {{- partial "color-variables.html" . -}}
+
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relURL }}">
 </head>
 <body>
@@ -20,4 +27,3 @@
     {{ partial "footer.html" . }}
 </body>
 </html>
-
