@@ -6,8 +6,6 @@ image: "/assets/images/profile.jpg"
 imageAlt: "Profile photo of the blog author"
 ---
 
-# About Me
-
 Hi, I’m Mika, a software developer currently working at Otto GmbH & Co. KGaA.
 My passion for IT started at a young age, and ever since, I’ve been hooked. It all began with
 Minecraft modding, where I first got hands-on with Java, explored the basics of software

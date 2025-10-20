@@ -1,3 +1,22 @@
+baseURL = "https://example.com"
+languageCode = "de"
+title = "MeinBlock"
+defaultContentLanguage = "de"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.de]
+    languageName = "Deutsch"
+    weight = 1
+    title = "MeinBlock"
+    contentDir = "content"
+
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    title = "MeinBlock"
+    contentDir = "content"
+
 [params]
 
   description = "Thoughts and projects on my IT life."
@@ -15,7 +34,7 @@
   [params.colors]
     # Core colors (Priority P1)
     background = "#01161e"           # Main page background color
-    text = "#FFFFFF"                 # Primary text color
+    text = "#aec3b0"                 # Primary text color
     link = "#FFFFFF"                 # Link color
     linkHover = "#FFFFFF"            # Link hover/focus state color
 
@@ -26,9 +45,9 @@
     footerBackground = "#124559"     # Footer background color
 
     # Accent and semantic colors (Priority P3)
-    headingPrimary = "#1a1a1a"       # Primary heading color (h1, h2)
-    headingSecondary = "#333333"     # Secondary heading color (h3, h4, h5, h6)
+    headingPrimary = "#FFFFFF"       # Primary heading color (h1, h2)
+    headingSecondary = "#FFFFFF"     # Secondary heading color (h3, h4, h5, h6)
     codeBackground = "#f5f5f5"       # Code block background color
-    codeText = "#333333"             # Code block text color
-    metadata = "#666666"             # Metadata text color (dates, categories, tags)
+    codeText = "#EEEEEE"             # Code block text color
+    metadata = "#EEEEEE"             # Metadata text color (dates, categories, tags)
     border = "#e0e0e0"               # Border and divider color

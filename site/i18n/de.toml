@@ -1,9 +1,14 @@
 [skipToMain]
 other = "Zum Hauptinhalt springen"
 
+[home]
+other = "Startseite"
+
+[about]
+other = "Über mich"
+
 [in]
 other = "in"
 
 [post]
 other = "Beitrag"
-

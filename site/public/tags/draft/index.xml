@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Draft on MeinBlock</title>
+    <link>http://localhost:1313/tags/draft/</link>
+    <description>Recent content in Draft on MeinBlock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de</language>
+    <lastBuildDate>Sat, 18 Oct 2025 09:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/draft/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Draft Post - Work in Progress</title>
+      <link>http://localhost:1313/posts/draft-post/</link>
+      <pubDate>Sat, 18 Oct 2025 09:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/draft-post/</guid>
+      <description>This is a Draft This post should NOT be visible on the live site because draft: true.</description>
+    </item>
+  </channel>
+</rss>
