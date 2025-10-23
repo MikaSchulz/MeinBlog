@@ -26,7 +26,7 @@ Apprenticeship as IT Specialist for Application Development (Fachinformatiker f√
 Anwendungsentwicklung) at Otto GmbH & Co. KGaA
 
 **2017 - 2020**  
-Abitur 3.0 (German high school diploma) from Johannes-Brahms-Schule, Pinneberg
+Abitur (German high school diploma) from Johannes-Brahms-Schule, Pinneberg
 
 ## What Drives Me
 
@@ -93,5 +93,5 @@ bring to modern software projects.
 
 ## Connect with Me
 
-Feel free to reach out via GitHub or LinkedIn! I'm always interested in
-connecting with fellow developers and learning from the community.
+Feel free to reach out via GitHub or LinkedIn.
+I'm looking forward connecting with you!

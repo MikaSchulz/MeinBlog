@@ -25,7 +25,7 @@ Java Software-Engineer bei Otto GmbH & Co. KGaA
 Ausbildung zum Fachinformatiker für Anwendungsentwicklung bei Otto GmbH & Co. KGaA
 
 **2017 - 2020**  
-Abitur 3.0 an der Johannes-Brahms-Schule, Pinneberg
+Abitur an der Johannes-Brahms-Schule, Pinneberg
 
 ## Was mich antreibt
 
@@ -53,7 +53,7 @@ Ich arbeite als Software-Entwickler mit Schwerpunkt auf:
 
 **Cloud & Infrastruktur:**
 
-- AWS (z.B. EKS, SQS, SNS, S3, EC2, RDS, SSM)
+- AWS (v.a. EKS, SQS, SNS, S3, EC2, RDS, SSM)
 - Kubernetes, Helm, Docker
 - Terraform
 
@@ -91,5 +91,5 @@ Möglichkeiten, die sie für moderne Software-Projekte bieten.
 
 ## Kontakt
 
-Melde dich gerne über GitHub oder LinkedIn! Ich freue mich immer über den Austausch 
-mit anderen Entwicklern und das Lernen von der Community.
+Melde dich gerne über GitHub oder LinkedIn.
+Ich freue mich über einen Austausch!
