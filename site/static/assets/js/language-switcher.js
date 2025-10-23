@@ -1,4 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Auto-detect browser language and redirect if needed
+    function detectAndRedirectLanguage() {
+        const currentPath = window.location.pathname;
+        const browserLang = navigator.language || navigator.userLanguage;
+        const langCode = browserLang.split('-')[0]; // Get 'de' from 'de-DE' or 'en' from 'en-US'
+
+        // Only redirect if we're on the root path (not already on a language-specific page)
+        // and not on /de/ or /en/ paths
+        if (currentPath === '/' || currentPath === '/index.html') {
+            const supportedLangs = ['de', 'en'];
+            const targetLang = supportedLangs.includes(langCode) ? langCode : 'de'; // Default to 'de'
+
+            // Check if user has already visited (don't redirect on every visit)
+            const hasVisited = sessionStorage.getItem('language-detected');
+
+            if (!hasVisited) {
+                sessionStorage.setItem('language-detected', 'true');
+                window.location.href = '/' + targetLang + '/';
+            }
+        }
+    }
+
+    // Run language detection
+    detectAndRedirectLanguage();
+
     const dropdown = document.querySelector('.language-switcher-dropdown');
     if (!dropdown) return;
 
@@ -29,4 +54,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-

@@ -1,13 +1,27 @@
 {{ define "main" }}
 
-<section aria-labelledby="posts-heading">
-    <h1 id="posts-heading">{{ .Title }}</h1>
+<section class="hero-section" aria-labelledby="hero-heading">
+    <div class="hero-content">
+        <div class="hero-text">
+            {{ .Content }}
+        </div>
+        {{ if .Params.image }}
+        <div class="hero-image">
+            <img src="{{ .Params.image }}" alt="Mika Schulz" />
+        </div>
+        {{ end }}
+    </div>
+</section>
 
-    {{ $pages := where .Pages ".Draft" false }}
+<section aria-labelledby="recent-posts-heading">
+    <h2 id="recent-posts-heading">{{ i18n "recentPosts" }}</h2>
 
-    {{ if $pages }}
+    {{ $pages := where .Site.RegularPages "Type" "posts" }}
+    {{ $publishedPages := where $pages ".Draft" false }}
+
+    {{ if $publishedPages }}
     <ul class="posts-list" role="list">
-        {{ range $pages }}
+        {{ range $publishedPages }}
         <li class="post-item">
             <article>
                 <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>

@@ -1,6 +1,6 @@
 baseURL = "https://example.com"
 languageCode = "de"
-title = "MeinBlock"
+title = "Mika Schulz"
 defaultContentLanguage = "de"
 defaultContentLanguageInSubdir = false
 
@@ -8,13 +8,13 @@ defaultContentLanguageInSubdir = false
   [languages.de]
     languageName = "Deutsch"
     weight = 1
-    title = "MeinBlock"
+    title = "Dev Blog - Mika Schulz"
     contentDir = "content"
 
   [languages.en]
     languageName = "English"
     weight = 2
-    title = "MeinBlock"
+    title = "Dev Blog - Mika Schulz"
     contentDir = "content"
 
 [params]
