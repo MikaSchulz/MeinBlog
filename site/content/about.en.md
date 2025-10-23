@@ -6,8 +6,8 @@ image: "/assets/images/profile.jpg"
 imageAlt: "Profile photo of the blog author"
 ---
 
-Hi, I’m Mika, a software developer currently working at Otto GmbH & Co. KGaA.
-My passion for IT started at a young age, and ever since, I’ve been hooked. It all began with
+Hi, I'm Mika, a software developer currently working at Otto GmbH & Co. KGaA.
+My passion for IT started at a young age, and ever since, I've been hooked. It all began with
 Minecraft modding, where I first got hands-on with Java, explored the basics of software
 architecture, and even got a taste of project management.
 
@@ -30,48 +30,86 @@ Abitur (German high school diploma) from Johannes-Brahms-Schule, Pinneberg
 
 ## What Drives Me
 
-- Clean code
-- Keeping things simple
-- Thinking ahead and seeing the bigger picture
-- Striking a balance between elegant design and unnecessary complexity
-- Always learning
+<div class="values-grid">
+
+- 💎 **Clean Code** – Readable, maintainable, achieved through coding patterns and best practices
+- 🔭 **Big Picture** – Keeping the bigger picture in mind
+- ⚖️ **Balance** – Elegance without unnecessary complexity
+- 📚 **Continuous Learning** – Always stay curious
+
+</div>
 
 ## Professional Experience
 
 I work as a software developer with a focus on:
 
-- **Feature Development & Deployment**: Building and shipping features based on agile methodologies
-- **Infrastructure & Operations**: Maintaining and improving cloud infrastructure, monitoring
-  systems through dashboards, metrics, and logs
-- **Cross-Team Collaboration**: Coordinating with multiple teams and stakeholders
-- **Domain Modeling**: Working with Event Storming to design both business and technical
-  architectures
+<div class="experience-grid">
+
+- 🚀 **Feature Development & Deployment** – Building and shipping features based on agile methodologies
+- ☁️ **Infrastructure & Operations** – Maintaining and improving cloud infrastructure, monitoring systems through dashboards, metrics, and logs
+- 🤝 **Cross-Team Collaboration** – Coordinating with multiple teams and stakeholders
+- 🏗️ **Domain Modeling** – Working with Event Storming to design both business and technical architectures
+
+</div>
 
 ## Skills & Technologies
 
-**Languages & Frameworks:**
+<div class="skills-section">
 
-- Java, Spring Boot, Gradle, Python
+### 💻 Languages & Frameworks
 
-**Cloud & Infrastructure:**
+<div class="tech-stack">
 
-- AWS (i.e. EKS, SQS, SNS, S3, EC2, RDS, SSM)
-- Kubernetes, Helm, Docker
+- Java
+- Spring Boot
+- Gradle
+- Python
+
+</div>
+
+### ☁️ Cloud & Infrastructure
+
+<div class="tech-stack">
+
+- AWS (EKS, SQS, SNS, S3, EC2, RDS, SSM)
+- Kubernetes
+- Helm
+- Docker
 - Terraform
 
-**Data & Messaging:**
+</div>
 
-- PostgreSQL, MongoDB
+### 💾 Data & Messaging
+
+<div class="tech-stack">
+
+- PostgreSQL
+- MongoDB
 - Kafka
 
-**Monitoring & Observability:**
+</div>
 
-- Grafana, Prometheus
+### 📊 Monitoring & Observability
 
-**Principles:**
+<div class="tech-stack">
 
-- Simplicity, Maintainability, Accessibility
+- Grafana
+- Prometheus
+
+</div>
+
+### 🎨 Principles & Methodologies
+
+<div class="tech-stack">
+
 - Domain-Driven Design
+- Event Storming
+- Simplicity & Maintainability
+- Agile Methodologies
+
+</div>
+
+</div>
 
 ## My Strengths
 
@@ -85,13 +123,12 @@ cross-team knowledge sharing, or diving deep into architectural patterns.
 
 ## Looking Forward
 
-I’m particularly driven by software architecture, always looking at the bigger picture and thinking
-about how to design systems that are maintainable and scalable.
-I’m also eager to deepen my knowledge of cloud technologies.
-On top of that, I’m passionate about diving into AI tools and discovering the opportunities they
-bring to modern software projects.
+I'm particularly driven by software architecture, always looking at the bigger picture and thinking
+about how to design systems that are maintainable and scalable. I'm also eager to deepen my
+knowledge of cloud technologies. On top of that, I'm passionate about diving into AI tools and
+discovering the opportunities they bring to modern software projects.
 
 ## Connect with Me
 
 Feel free to reach out via GitHub or LinkedIn.
-I'm looking forward connecting with you!
+I'm looking forward to connecting with you!

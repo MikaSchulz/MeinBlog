@@ -4,6 +4,9 @@ title = "Mika Schulz"
 defaultContentLanguage = "de"
 defaultContentLanguageInSubdir = false
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [languages]
   [languages.de]
     languageName = "Deutsch"

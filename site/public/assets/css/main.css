@@ -451,136 +451,25 @@ input[type="button"] {
   color: white;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
   cursor: pointer;
+  border-radius: 4px;
   font-size: 1rem;
+  transition: opacity 0.2s;
 }
 
 button:hover,
-.button:hover {
+.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
   opacity: 0.9;
 }
 
-/* About Page Specific Styles */
-.about-page {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.about-hero {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  margin-bottom: 3rem;
-  padding: 2rem 0;
-  border-bottom: 2px solid var(--color-border);
-}
-
-.about-image-wrapper {
-  flex: 0 0 200px;
-}
-
-.about-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  border: 4px solid var(--color-border);
-}
-
-.about-intro h1 {
-  margin: 0;
-  font-size: 3rem;
-  background: linear-gradient(135deg, var(--color-heading-primary), var(--color-link-hover));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.about-content {
-  max-width: 800px;
-}
-
-.about-content > p:first-child {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-  color: var(--color-text);
-  opacity: 0.95;
-}
-
-/* Skills & Tech Section Styling */
-.about-content h2 {
-  margin-top: 3rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--color-button);
-  display: inline-block;
-  margin-bottom: 1.5rem;
-}
-
-.about-content h3 {
-  margin-top: 2rem;
-  color: var(--color-link-hover);
-  font-size: 1.3rem;
-}
-
-.about-content strong {
-  color: var(--color-heading-secondary);
-  font-weight: 600;
-}
-
-/* Skill Lists Enhancement */
-.about-content ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin: 1.5rem 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.about-content ul li {
-  background: var(--color-code-background);
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  border-left: 3px solid var(--color-button);
-  transition: all 0.2s;
-  list-style: none;
-  margin: 0;
-}
-
-.about-content ul li:hover {
-  transform: translateX(5px);
-  border-left-color: var(--color-link-hover);
-  box-shadow: 0 2px 8px rgba(255, 109, 0, 0.2);
-}
-
-/* Nested lists (for skills under categories) should be simple */
-.about-content ul ul {
-  display: block;
-  margin: 0.5rem 0 0 0;
-  padding-left: 0;
-}
-
-.about-content ul ul li {
-  background: transparent;
-  padding: 0.3rem 0;
-  border-left: none;
-  transform: none;
-}
-
-.about-content ul ul li:hover {
-  transform: none;
-  box-shadow: none;
-}
-
-/* Career Timeline Enhancement */
-.about-content h3 + p strong {
-  display: block;
-  color: var(--color-heading-primary);
-  font-size: 1.1rem;
-  margin-top: 1rem;
+button:focus,
+.button:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus {
+  outline: 2px solid var(--color-link-hover);
+  outline-offset: 2px;
 }
 
 /* Responsive Design for About Page */
@@ -609,10 +498,313 @@ button:hover,
   }
 }
 
+/* Values Grid - Special styling for "Was mich antreibt" */
+.values-grid ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.values-grid ul li {
+  background: linear-gradient(135deg, var(--color-code-background) 0%, rgba(18, 69, 89, 0.3) 100%);
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--color-button);
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.values-grid ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(255, 109, 0, 0.3);
+  border-left-color: var(--color-link-hover);
+}
+
+/* Experience Grid - Special styling for "Berufliche Erfahrung" */
+.experience-grid ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.experience-grid ul li {
+  background: var(--color-code-background);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-top: 3px solid var(--color-button);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.experience-grid ul li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 109, 0, 0.25);
+  border-top-color: var(--color-link-hover);
+}
+
+.experience-grid ul li strong {
+  color: var(--color-link-hover);
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Skills Section - Modern Card Layout */
+.skills-section {
+  margin: 3rem 0;
+}
+
+.skills-section > h3 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--color-button);
+  color: var(--color-heading-primary);
+}
+
+.tech-stack ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  padding: 0;
+  margin: 1rem 0 2rem 0;
+  list-style: none;
+}
+
+.tech-stack ul li {
+  background: var(--color-code-background);
+  color: var(--color-text);
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 2px solid var(--color-border);
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+}
+
+.tech-stack ul li:hover {
+  background: var(--color-button);
+  color: white;
+  border-color: var(--color-link-hover);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 109, 0, 0.4);
+}
+
+/* Reset default about-content ul styles for special sections */
+.values-grid ul,
+.experience-grid ul,
+.tech-stack ul {
+  /* Override the default grid layout */
+  padding-left: 0 !important;
+}
+
+.values-grid ul li,
+.experience-grid ul li,
+.tech-stack ul li {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+/* Responsive adjustments for skills */
+@media (max-width: 768px) {
+  .values-grid ul,
+  .experience-grid ul {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-stack ul {
+    justify-content: center;
+  }
+
+  .skills-section > h3 {
+    font-size: 1.3rem;
+  }
+}
+
 /* Ensure sufficient color contrast for WCAG 2.1 AA */
 @media (prefers-contrast: high) {
   :root {
     --primary-color: #000;
     --link-color: #0000EE;
+  }
+}
+
+/* Timeline Styles - Vertical Timeline with Modern Design */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem 0;
+}
+
+/* Vertical line in the middle */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg,
+    var(--color-button) 0%,
+    var(--color-link-hover) 50%,
+    var(--color-metadata) 100%);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline marker (the circle on the line) */
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  background: var(--color-button);
+  border: 4px solid var(--color-background);
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 0 4px var(--color-button);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+  transform: translateX(-50%) scale(1.3);
+  box-shadow: 0 0 0 6px rgba(255, 109, 0, 0.3);
+  background: var(--color-link-hover);
+}
+
+/* Timeline content cards */
+.timeline-content {
+  width: calc(50% - 40px);
+  background: var(--color-code-background);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Arrow pointing to the timeline */
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  right: -15px;
+  border-width: 15px 0 15px 15px;
+  border-color: transparent transparent transparent var(--color-code-background);
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  left: -15px;
+  border-width: 15px 15px 15px 0;
+  border-color: transparent var(--color-code-background) transparent transparent;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 109, 0, 0.25);
+}
+
+/* Timeline date badge */
+.timeline-date {
+  display: inline-block;
+  background: var(--color-button);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 2px 6px rgba(255, 109, 0, 0.3);
+}
+
+/* Timeline title */
+.timeline-title {
+  color: var(--color-heading-primary);
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+  line-height: 1.3;
+}
+
+/* Timeline location */
+.timeline-location {
+  color: var(--color-metadata);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Responsive Timeline - Mobile */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    margin-bottom: 2rem;
+  }
+
+  .timeline-marker {
+    left: 30px;
+  }
+
+  .timeline-content {
+    width: calc(100% - 80px);
+    margin-left: 80px !important;
+    margin-right: 0 !important;
+  }
+
+  .timeline-content::before {
+    left: -15px !important;
+    right: auto !important;
+    border-width: 15px 15px 15px 0 !important;
+    border-color: transparent var(--color-code-background) transparent transparent !important;
+  }
+
+  .timeline-title {
+    font-size: 1.2rem;
+  }
+
+  .timeline-date {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
   }
 }
