@@ -612,7 +612,8 @@ input[type="button"]:focus {
 .experience-grid ul li,
 .tech-stack ul li {
   list-style: none !important;
-  padding-left: 0 !important;
+  justify-content: center;
+  content-justify: center;
 }
 
 /* Responsive adjustments for skills */

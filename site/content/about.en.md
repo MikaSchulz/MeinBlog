@@ -18,15 +18,36 @@ tackle exciting challenges along the way.
 
 ### Education & Career Path
 
-**Current**  
-Java Software-Engineer at Otto GmbH & Co. KGaA
+<div class="timeline">
 
-**2020 - 2023**  
-Apprenticeship as IT Specialist for Application Development (Fachinformatiker für
-Anwendungsentwicklung) at Otto GmbH & Co. KGaA
+<div class="timeline-item">
+<div class="timeline-marker"></div>
+<div class="timeline-content">
+<div class="timeline-date">Current</div>
+<h3 class="timeline-title">Java Software-Engineer</h3>
+<div class="timeline-location">Otto GmbH & Co. KGaA</div>
+</div>
+</div>
 
-**2017 - 2020**  
-Abitur (German high school diploma) from Johannes-Brahms-Schule, Pinneberg
+<div class="timeline-item">
+<div class="timeline-marker"></div>
+<div class="timeline-content">
+<div class="timeline-date">2020 - 2023</div>
+<h3 class="timeline-title">Apprenticeship as IT Specialist for Application Development (Fachinformatiker für Anwendungsentwicklung)</h3>
+<div class="timeline-location">Otto GmbH & Co. KGaA</div>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-marker"></div>
+<div class="timeline-content">
+<div class="timeline-date">2017 - 2020</div>
+<h3 class="timeline-title">Abitur (German high school diploma)</h3>
+<div class="timeline-location">Johannes-Brahms-Schule, Pinneberg</div>
+</div>
+</div>
+
+</div>
 
 ## What Drives Me
 
@@ -45,10 +66,13 @@ I work as a software developer with a focus on:
 
 <div class="experience-grid">
 
-- 🚀 **Feature Development & Deployment** – Building and shipping features based on agile methodologies
-- ☁️ **Infrastructure & Operations** – Maintaining and improving cloud infrastructure, monitoring systems through dashboards, metrics, and logs
+- 🚀 **Feature Development & Deployment** – Building and shipping features based on agile
+  methodologies
+- ☁️ **Infrastructure & Operations** – Maintaining and improving cloud infrastructure, monitoring
+  systems through dashboards, metrics, and logs
 - 🤝 **Cross-Team Collaboration** – Coordinating with multiple teams and stakeholders
-- 🏗️ **Domain Modeling** – Working with Event Storming to design both business and technical architectures
+- 🏗️ **Domain Modeling** – Working with Event Storming to design both business and technical
+  architectures
 
 </div>
 

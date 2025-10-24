@@ -66,10 +66,10 @@ Ich arbeite als Software-Entwickler mit Schwerpunkt auf:
 
 <div class="experience-grid">
 
-- 🚀 **Feature-Entwicklung & Deployment** – Entwicklung und Auslieferung von Features basierend auf agilen Methoden
-- ☁️ **Infrastruktur & Betrieb** – Wartung und Verbesserung von Cloud-Infrastruktur, Monitoring von Systemen durch Dashboards, Metriken und Logs
-- 🤝 **Team-übergreifende Zusammenarbeit** – Koordination mit mehreren Teams und Stakeholdern
-- 🏗️ **Domain Modeling** – Arbeit mit Event Storming zur Gestaltung von Business- und technischen Architekturen
+- 🚀 **Feature-Entwicklung & Deployment** Entwicklung und Auslieferung von Features basierend auf agilen Methoden
+- ☁️ **Infrastruktur & Betrieb** Wartung und Verbesserung von Cloud-Infrastruktur, Monitoring von Systemen durch Dashboards, Metriken und Logs
+- 🤝 **Team-übergreifende Zusammenarbeit** Koordination mit mehreren Teams und Stakeholdern
+- 🏗️ **Domain Modeling** Arbeit mit Event Storming zur Gestaltung von Business- und technischen Architekturen
 
 </div>
 
