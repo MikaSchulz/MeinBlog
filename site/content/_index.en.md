@@ -6,9 +6,12 @@ description: "Mika Schulz - Software Developer"
 image: "/assets/images/profile.jpg"
 ---
 
-Hi, I'm **Mika Schulz** – a passionate software developer focused on modern web technologies and
-clean code.
+# Hi, I'm Mika
 
-Here I share my thoughts, projects, and experiences from the world of software development.
+I'm a Java software engineer focused on scalable backend services, clear architecture, and domain modeling.
 
- 
+Continuous learning and improving engineering processes matter to me as much as writing clean, maintainable code.
+
+Currently I'm deepening cloud architecture and experimenting with AI-assisted developer tools.
+
+Learn more: [/about](/en/about)

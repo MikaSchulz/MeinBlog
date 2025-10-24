@@ -6,7 +6,13 @@ description: "Mika Schulz - Software Developer"
 image: "/assets/images/profile.jpg"
 ---
 
-Hi, ich bin **Mika Schulz** – ein leidenschaftlicher Software-Entwickler mit Fokus auf moderne
-Web-Technologien und Clean Code.
+# Hallo, ich bin Mika
 
-Hier teile ich meine Gedanken, Projekte und Erfahrungen aus der Welt der Softwareentwicklung.
+Ich bin Java Software-Engineer mit Fokus auf skalierbare Backend-Services, klare Architektur und Domänenmodellierung.
+
+Kontinuierliches Lernen und das Verbessern von Entwicklungsprozessen gehören für mich genauso dazu wie sauberes, wartbares Code-Design.
+
+Aktuell vertiefe ich Cloud-Architektur und experimentiere mit KI-gestützten Developer-Tools.
+
+Mehr über mich: [/about](/about)
+

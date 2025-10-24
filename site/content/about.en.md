@@ -142,9 +142,6 @@ technical decisions. I'm proactive, take ownership of my work, and actively cont
 team. I believe in clear communication, asking the right questions, and working collaboratively
 across team boundaries.
 
-I'm committed to continuous learning—whether through exploring new technologies, participating in
-cross-team knowledge sharing, or diving deep into architectural patterns.
-
 ## Looking Forward
 
 I'm particularly driven by software architecture, always looking at the bigger picture and thinking

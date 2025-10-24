@@ -139,10 +139,6 @@ technischen Entscheidungen. Ich bin proaktiv, übernehme Verantwortung für mein
 aktiv Ideen zum Team bei. Ich glaube an klare Kommunikation, das Stellen der richtigen Fragen und 
 die Zusammenarbeit über Team-Grenzen hinweg.
 
-Ich bin dem kontinuierlichen Lernen verpflichtet – sei es durch die Erkundung neuer Technologien, 
-die Teilnahme an team-übergreifendem Wissensaustausch oder das tiefe Eintauchen in architektonische 
-Muster.
-
 ## Zukunftsausblick
 
 Besonders treiben mich Software-Architektur und der Blick auf das große Ganze an. Ich denke darüber 
