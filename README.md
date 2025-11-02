@@ -178,6 +178,12 @@ Deploy the `public/` folder to any static hosting service:
 - Vercel
 - Cloudflare Pages
 
+## Build docker file
+
+```bash
+docker build -t eyetealer/hugo-meinblog:latest .
+```
+
 ## License
 
 [Add your license here]
