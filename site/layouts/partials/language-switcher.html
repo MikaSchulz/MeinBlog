@@ -1,9 +1,71 @@
-{{ if .IsTranslated }}
-{{ range .Translations }}
-<li class="language-switcher">
-    <a href="{{ .Permalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}" aria-label="{{ printf "Switch to %s" .Language.LanguageName }}">
-        {{ .Language.LanguageName }}
-    </a>
-</li>
-{{ end }}
-{{ end }}
+{{ $currentLang := .Language.Lang }}
+<div class="language-switcher-dropdown">
+    <button class="language-switcher-button" aria-label="Change language" aria-expanded="false">
+        {{ if eq $currentLang "de" }}
+        <svg class="flag-icon" viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg">
+            <rect width="5" height="1" y="0" fill="#000"/>
+            <rect width="5" height="1" y="1" fill="#D00"/>
+            <rect width="5" height="1" y="2" fill="#FFCE00"/>
+        </svg>
+        {{ else }}
+        <svg class="flag-icon" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+            <clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+            <clipPath id="t"><path d="M30,15 h30 v15 z v-30 h-30 z h-30 v15 z v-30 h30 z"/></clipPath>
+            <g clip-path="url(#s)">
+                <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+            </g>
+        </svg>
+        {{ end }}
+        <span class="dropdown-arrow">▼</span>
+    </button>
+    <div class="language-switcher-menu">
+        {{ range .Site.Languages }}
+        {{ $lang := .Lang }}
+        {{ $isActive := eq $currentLang $lang }}
+        {{ $permalink := "" }}
+        {{ if $isActive }}
+            {{ $permalink = "#" }}
+        {{ else }}
+            {{ if $.IsTranslated }}
+                {{ range $.Translations }}
+                    {{ if eq .Language.Lang $lang }}
+                        {{ $permalink = .Permalink }}
+                    {{ end }}
+                {{ end }}
+            {{ else }}
+                {{ $permalink = $lang | relLangURL }}
+            {{ end }}
+        {{ end }}
+        <a href="{{ $permalink }}"
+           lang="{{ $lang }}"
+           {{ if not $isActive }}hreflang="{{ $lang }}"{{ end }}
+           class="language-option {{ if $isActive }}active{{ end }}"
+           aria-label="{{ if $isActive }}Current language: {{ else }}Switch to {{ end }}{{ .LanguageName }}">
+            {{ if eq $lang "de" }}
+            <svg class="flag-icon" viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg">
+                <rect width="5" height="1" y="0" fill="#000"/>
+                <rect width="5" height="1" y="1" fill="#D00"/>
+                <rect width="5" height="1" y="2" fill="#FFCE00"/>
+            </svg>
+            {{ else }}
+            <svg class="flag-icon" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+                <clipPath id="s{{ $lang }}"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+                <clipPath id="t{{ $lang }}"><path d="M30,15 h30 v15 z v-30 h-30 z h-30 v15 z v-30 h30 z"/></clipPath>
+                <g clip-path="url(#s{{ $lang }})">
+                    <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t{{ $lang }})" stroke="#C8102E" stroke-width="4"/>
+                    <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                    <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+                </g>
+            </svg>
+            {{ end }}
+            <span class="language-name">{{ .LanguageName }}</span>
+        </a>
+        {{ end }}
+    </div>
+</div>

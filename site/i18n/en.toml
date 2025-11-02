@@ -1,9 +1,14 @@
 [skipToMain]
 other = "Skip to main content"
 
+[home]
+other = "Home"
+
+[about]
+other = "About"
+
 [in]
 other = "in"
 
 [post]
 other = "post"
-

@@ -1,99 +1,152 @@
 ---
-title: "About Me"
+title: "Über Mich"
 date: 2025-10-17
 draft: false
 image: "/assets/images/profile.jpg"
-imageAlt: "Profile photo of the blog author"
+imageAlt: "Profilbild des Blog-Autors"
 ---
 
-# About Me
+Hi, ich bin Mika, ein Software-Entwickler, der aktuell bei der Otto GmbH & Co. KGaA arbeitet.
+Meine Leidenschaft für IT begann schon in jungen Jahren, und seitdem lässt sie mich nicht mehr los. 
+Alles fing mit Minecraft-Modding an, wo ich zum ersten Mal mit Java in Berührung kam, die Grundlagen 
+der Software-Architektur kennenlernte und sogar erste Erfahrungen im Projektmanagement sammelte.
 
-Hi, I’m Mika, a software developer currently working at Otto GmbH & Co. KGaA.
-My passion for IT started at a young age, and ever since, I’ve been hooked. It all began with
-Minecraft modding, where I first got hands-on with Java, explored the basics of software
-architecture, and even got a taste of project management.
+Im Laufe der Zeit habe ich diese Leidenschaft zum Beruf gemacht und meine Fähigkeiten während meiner 
+Ausbildung zum Fachinformatiker für Anwendungsentwicklung vertieft. Heute arbeite ich als Java-Entwickler 
+bei der Otto GmbH & Co. KGaA und bin immer bereit, zu experimentieren, Neues zu lernen und spannende 
+Herausforderungen anzugehen.
 
-Over time, I turned this passion into a career, deepening my skills during my apprenticeship as an
-IT specialist in application development (Fachinformatiker für Anwendungsentwicklung). Today, I work
-as a Java developer at Otto GmbH & Co. KGaA, always eager to experiment, learn new things, and
-tackle exciting challenges along the way.
+## Ausbildung & Karriereweg
 
-### Education & Career Path
+<div class="timeline">
 
-**Current**  
-Java Software-Engineer at Otto GmbH & Co. KGaA
+<div class="timeline-item">
+<div class="timeline-marker"></div>
+<div class="timeline-content">
+<div class="timeline-date">Aktuell</div>
+<h3 class="timeline-title">Java Software-Engineer</h3>
+<div class="timeline-location">Otto GmbH & Co. KGaA</div>
+</div>
+</div>
 
-**2020 - 2023**  
-Apprenticeship as IT Specialist for Application Development (Fachinformatiker für
-Anwendungsentwicklung) at Otto GmbH & Co. KGaA
+<div class="timeline-item">
+<div class="timeline-marker"></div>
+<div class="timeline-content">
+<div class="timeline-date">2020 - 2023</div>
+<h3 class="timeline-title">Ausbildung zum Fachinformatiker für Anwendungsentwicklung</h3>
+<div class="timeline-location">Otto GmbH & Co. KGaA</div>
+</div>
+</div>
 
-**2017 - 2020**  
-Abitur 3.0 (German high school diploma) from Johannes-Brahms-Schule, Pinneberg
+<div class="timeline-item">
+<div class="timeline-marker"></div>
+<div class="timeline-content">
+<div class="timeline-date">2017 - 2020</div>
+<h3 class="timeline-title">Abitur</h3>
+<div class="timeline-location">Johannes-Brahms-Schule, Pinneberg</div>
+</div>
+</div>
 
-## What Drives Me
+</div>
 
-- Clean code
-- Keeping things simple
-- Thinking ahead and seeing the bigger picture
-- Striking a balance between elegant design and unnecessary complexity
-- Always learning
+## Was mich antreibt
 
-## Professional Experience
+<div class="values-grid">
 
-I work as a software developer with a focus on:
+- 💎 **Clean Code** - Lesbar, wartbar, durch Coding Patterns und Best Practices
+- 🔭 **Big Picture** – Das große Ganze im Blick
+- ⚖️ **Balance** – Eleganz ohne unnötige Komplexität
+- 📚 **Kontinuierliches Lernen** – Immer neugierig bleiben
 
-- **Feature Development & Deployment**: Building and shipping features based on agile methodologies
-- **Infrastructure & Operations**: Maintaining and improving cloud infrastructure, monitoring
-  systems through dashboards, metrics, and logs
-- **Cross-Team Collaboration**: Coordinating with multiple teams and stakeholders
-- **Domain Modeling**: Working with Event Storming to design both business and technical
-  architectures
+</div>
 
-## Skills & Technologies
+## Berufliche Erfahrung
 
-**Languages & Frameworks:**
+Ich arbeite als Software-Entwickler mit Schwerpunkt auf:
 
-- Java, Spring Boot, Gradle, Python
+<div class="experience-grid">
 
-**Cloud & Infrastructure:**
+- 🚀 **Feature-Entwicklung & Deployment** Entwicklung und Auslieferung von Features basierend auf agilen Methoden
+- ☁️ **Infrastruktur & Betrieb** Wartung und Verbesserung von Cloud-Infrastruktur, Monitoring von Systemen durch Dashboards, Metriken und Logs
+- 🤝 **Team-übergreifende Zusammenarbeit** Koordination mit mehreren Teams und Stakeholdern
+- 🏗️ **Domain Modeling** Arbeit mit Event Storming zur Gestaltung von Business- und technischen Architekturen
 
-- AWS (i.e. EKS, SQS, SNS, S3, EC2, RDS, SSM)
-- Kubernetes, Helm, Docker
+</div>
+
+## Skills & Technologien
+
+<div class="skills-section">
+
+### 💻 Sprachen & Frameworks
+
+<div class="tech-stack">
+
+- Java
+- Spring Boot
+- Gradle
+- Python
+
+</div>
+
+### ☁️ Cloud & Infrastruktur
+
+<div class="tech-stack">
+
+- AWS (EKS, SQS, SNS, S3, EC2, RDS, SSM)
+- Kubernetes
+- Helm
+- Docker
 - Terraform
 
-**Data & Messaging:**
+</div>
 
-- PostgreSQL, MongoDB
+### 💾 Daten & Messaging
+
+<div class="tech-stack">
+
+- PostgreSQL
+- MongoDB
 - Kafka
 
-**Monitoring & Observability:**
+</div>
 
-- Grafana, Prometheus
+### 📊 Monitoring & Observability
 
-**Principles:**
+<div class="tech-stack">
 
-- Simplicity, Maintainability, Accessibility
+- Grafana
+- Prometheus
+
+</div>
+
+### 🎨 Prinzipien & Methoden
+
+<div class="tech-stack">
+
 - Domain-Driven Design
+- Event Storming
+- Einfachheit & Wartbarkeit
+- Agile Methoden
 
-## My Strengths
+</div>
 
-I bring deep domain knowledge into discussions and enjoy understanding the business context behind
-technical decisions. I'm proactive, take ownership of my work, and actively contribute ideas to the
-team. I believe in clear communication, asking the right questions, and working collaboratively
-across team boundaries.
+</div>
 
-I'm committed to continuous learning—whether through exploring new technologies, participating in
-cross-team knowledge sharing, or diving deep into architectural patterns.
+## Meine Stärken
 
-## Looking Forward
+Ich bringe tiefes Domain-Wissen in Diskussionen ein und verstehe gerne den Business-Kontext hinter 
+technischen Entscheidungen. Ich bin proaktiv, übernehme Verantwortung für meine Arbeit und trage 
+aktiv Ideen zum Team bei. Ich glaube an klare Kommunikation, das Stellen der richtigen Fragen und 
+die Zusammenarbeit über Team-Grenzen hinweg.
 
-I’m particularly driven by software architecture, always looking at the bigger picture and thinking
-about how to design systems that are maintainable and scalable.
-I’m also eager to deepen my knowledge of cloud technologies.
-On top of that, I’m passionate about diving into AI tools and discovering the opportunities they
-bring to modern software projects.
+## Zukunftsausblick
 
-## Connect with Me
+Besonders treiben mich Software-Architektur und der Blick auf das große Ganze an. Ich denke darüber 
+nach, wie man Systeme gestaltet, die wartbar und skalierbar sind. Außerdem möchte ich mein Wissen 
+über Cloud-Technologien vertiefen. Darüber hinaus interessiere ich mich sehr für KI-Tools und die 
+Möglichkeiten, die sie für moderne Software-Projekte bieten.
 
-Feel free to reach out via GitHub or LinkedIn! I'm always interested in
-connecting with fellow developers and learning from the community.
+## Kontakt
+
+Melde dich gerne über GitHub oder LinkedIn.
+Ich freue mich über einen Austausch!

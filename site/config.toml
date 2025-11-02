@@ -1,3 +1,25 @@
+baseURL = "https://example.com"
+languageCode = "de"
+title = "Mika Schulz"
+defaultContentLanguage = "de"
+defaultContentLanguageInSubdir = false
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[languages]
+  [languages.de]
+    languageName = "Deutsch"
+    weight = 1
+    title = "Dev Blog - Mika Schulz"
+    contentDir = "content"
+
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    title = "Dev Blog - Mika Schulz"
+    contentDir = "content"
+
 [params]
 
   description = "Thoughts and projects on my IT life."
@@ -5,3 +27,30 @@
   github = "https://github.com/MikaSchulz"
   linkedin = "https://www.linkedin.com/in/mika-schulz-538b5a246/"
 
+  # Color Configuration
+  # Customize your website colors using standard web formats:
+  # - Hexadecimal: #RRGGBB or #RGB (e.g., "#FFFFFF" or "#FFF")
+  # - RGB/RGBA: rgb(r,g,b) or rgba(r,g,b,a) (e.g., "rgb(255,255,255)" or "rgba(255,255,255,0.9)")
+  # - Named colors: CSS color names (e.g., "white", "black", "blue")
+  # All colors are validated at build time for format and WCAG AA accessibility standards.
+
+  [params.colors]
+    # Core colors (Priority P1)
+    background = "#01161e"           # Main page background color
+    text = "#c5d5c6"                 # Primary text color
+    link = "#FFFFFF"                 # Link color
+    linkHover = "#ffa864"            # Link hover/focus state color (Orange-Ton für Konsistenz und Sichtbarkeit)
+
+    # Interactive elements (Priority P2)
+    navigationLink = "#FFFFFF"       # Navigation menu link color
+    button = "#ff6d00"               # Button color
+    headerBackground = "#124559"     # Header background color
+    footerBackground = "#124559"     # Footer background color
+
+    # Accent and semantic colors (Priority P3)
+    headingPrimary = "#FFFFFF"       # Primary heading color (h1, h2)
+    headingSecondary = "#FFFFFF"     # Secondary heading color (h3, h4, h5, h6)
+    codeBackground = "#0a2a35"       # Code block background
+    codeText = "#e0f0e0"             # Code block text color
+    metadata = "#98b09a"             # Metadata text color
+    border = "#2a4a55"               # Border and divider color

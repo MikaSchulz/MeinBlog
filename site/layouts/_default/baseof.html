@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ .Site.Params.description }}">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+    {{- /* Favicon */ -}}
+    <link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | relURL }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32x32.png" | relURL }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon-16x16.png" | relURL }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ "/favicon-96x96.png" | relURL }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | relURL }}">
+
+    {{- /* Run color validation at build time */ -}}
+    {{- partial "color-validation.html" . -}}
+
+    {{- /* Inject CSS custom properties from color configuration */ -}}
+    {{- partial "color-variables.html" . -}}
+
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relURL }}">
 </head>
 <body>
@@ -18,6 +32,6 @@
     </main>
 
     {{ partial "footer.html" . }}
+    <script src="{{ "/assets/js/language-switcher.js" | relURL }}"></script>
 </body>
 </html>
-
