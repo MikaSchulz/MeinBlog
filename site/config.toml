@@ -1,4 +1,6 @@
-baseURL = "https://example.com"
+baseURL = "https://eyetealer.me/"
+[relativeURLs = true]
+[canonifyURLs = true]
 languageCode = "de"
 title = "Mika Schulz"
 defaultContentLanguage = "de"
