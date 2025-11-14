@@ -7,5 +7,4 @@ WORKDIR /data
 COPY download_repo.sh /data/download_repo.sh
 RUN chmod +x /data/download_repo.sh
 
-ENTRYPOINT ["/bin/bash", "-c", "./download_repo.sh && hugo server -s site/ --disableFastRender --bind 0.0.0.0 --port 1313 --baseURL 'https://eyetealer.me' --appendPort=false --watch=false"]
-EXPOSE 1313
+ENTRYPOINT ["/bin/bash", "-c", "./download_repo.sh && hugo -s site/ --baseURL 'https://eyetealer.me' --destination /data/public && tail -f /dev/null"]
