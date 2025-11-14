@@ -1,18 +1,20 @@
 ---
-title: "Mein erster Blogbeitrag"
+title: "Willkommen auf meinem Blog"
 date: 2025-10-17T10:00:00+01:00
 draft: false
 categories: ["Development"]
 tags: ["Hugo", "Blogging"]
 ---
 
-Das ist mein erster Blogbeitrag! Ich freue mich darauf, meine Reise in der Softwareentwicklung zu teilen.
+Herzlich willkommen auf meinem Blog!
 
-## What I'll Write About
+## Was dich hier erwartet
 
-- Tipps zur Softwareentwicklung
-- Clean-Code-Praktiken
-- Clean-Code-Praktiken
+Bald werden hier spannende Themen rund um meine Softwareentwicklungsreise folgen. Ich werde unter anderem über folgende Themen schreiben:
 
-Bleib dran für weitere Beiträge!
+- Meine Erfahrungen in der Softwareentwicklung
+- Persönliche Projekte und Learnings
+- Wie diese Seite errichtet wurde
+
+Bleibt dran
 

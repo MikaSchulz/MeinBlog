@@ -8,8 +8,6 @@ image: "/assets/images/profile.jpg"
 
 # Hallo, ich bin Mika
 
-123
-
 Ich bin Java Software-Engineer mit Fokus auf skalierbare Backend-Services, klare Architektur und Domänenmodellierung.
 
 Kontinuierliches Lernen und das Verbessern von Entwicklungsprozessen gehören für mich genauso dazu wie sauberes, wartbares Code-Design.

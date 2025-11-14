@@ -1,18 +1,20 @@
 ---
-title: "My First Blog Post"
+title: "Welcome to My Blog"
 date: 2025-10-17T10:00:00+01:00
 draft: false
 categories: ["Development"]
 tags: ["Hugo", "Blogging"]
 ---
 
-This is my first blog post! I'm excited to share my journey in software development.
+Welcome to my blog!
 
-## What I'll Write About
+## What to Expect Here
 
-- Software development tips
-- Clean code practices
-- Technology trends
+Soon, there will be exciting topics about my software development journey. Among other things, I will write about the following topics:
 
-Stay tuned for more posts!
+- My experiences in software development
+- Personal projects and learnings
+- How this site was built
+
+Stay tuned
 
