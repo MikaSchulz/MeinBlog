@@ -50,5 +50,7 @@ COPY --from=builder /src/public /usr/share/nginx/html
 
 EXPOSE 80
 
+# Use 127.0.0.1 explicitly — `localhost` resolves to ::1 in nginx:alpine
+# but the server only listens on IPv4, which would fail the healthcheck.
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD wget -q -O- http://localhost/ >/dev/null 2>&1 || exit 1
+    CMD wget -q -O- http://127.0.0.1/ >/dev/null 2>&1 || exit 1
