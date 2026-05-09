@@ -4,6 +4,7 @@
 ### Hugo ###
 # Generated files by hugo
 /public/
+site/public/
 /resources/_gen/
 /assets/jsconfig.json
 hugo_stats.json
@@ -15,6 +16,7 @@ hugo.linux
 
 # Temporary lock file while building
 /.hugo_build.lock
+site/.hugo_build.lock
 
 ### Intellij+all ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
