@@ -1,0 +1,32 @@
+{{ define "main" }}
+<article aria-labelledby="topics-title">
+    <h1 id="topics-title">{{ .Title }}</h1>
+    {{ .Content }}
+
+    <section aria-labelledby="topics-categories">
+        <h2 id="topics-categories">{{ i18n "categories" }}</h2>
+        {{ with site.Taxonomies.categories }}
+        <ul class="category-list" role="list">
+            {{ range .Alphabetical }}
+            <li class="category"><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }} <span class="topic-count">({{ .Count }})</span></a></li>
+            {{ end }}
+        </ul>
+        {{ else }}
+        <p class="no-posts" role="status">{{ i18n "noPosts" }}</p>
+        {{ end }}
+    </section>
+
+    <section aria-labelledby="topics-tags">
+        <h2 id="topics-tags">{{ i18n "tags" }}</h2>
+        {{ with site.Taxonomies.tags }}
+        <ul class="tag-list" role="list">
+            {{ range .Alphabetical }}
+            <li class="tag"><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }} <span class="topic-count">({{ .Count }})</span></a></li>
+            {{ end }}
+        </ul>
+        {{ else }}
+        <p class="no-posts" role="status">{{ i18n "noPosts" }}</p>
+        {{ end }}
+    </section>
+</article>
+{{ end }}

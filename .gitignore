@@ -107,3 +107,5 @@ fabric.properties
 !.idea/runConfigurations
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all,hugo
+# Drafts and planning notes live in a private repository, never in this public one
+drafts/

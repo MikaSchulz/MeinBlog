@@ -7,7 +7,7 @@ A simple, accessible developer blog built with Hugo. Live at [eyetealer.me](http
 - 📝 Clean, minimal design
 - 🌍 Multi-language support (German & English)
 - ♿ WCAG 2.1 AA accessibility compliant
-- 🏷️ Categories and tags for easy navigation
+- 🏷️ Categories and tags, browsable on the topics page
 - 📱 Responsive design
 - 🚀 Fast static site generation with Hugo
 
@@ -106,6 +106,11 @@ tags: ["Hugo", "Blogging"]
 Your content here...
 ```
 
+**Categories and tags:**
+- Exactly one category per post: `AI`, `Homelab`, `Smart Home`, `Maker` or `Misc`.
+- Any number of tags: lowercase English keywords such as `fun`, `diy`, `home-assistant`. Use the same names in German and English posts so the URLs stay the same.
+- All categories and tags are listed on the topics page (`/themen/`, English `/en/topics/`), linked in the navigation. Tags are shown with a decorative `#`.
+
 The teaser in the post lists is the `description`. Without one, Hugo uses the text before a `<!--more-->` line, or else the beginning of the post.
 
 Start headings in posts with `##`: the post title is already the page's only `<h1>`.
@@ -120,6 +125,7 @@ To preview drafts locally, use `hugo server -D`
 
 - Home page: `site/content/_index.md` (German) and `site/content/_index.en.md` (English). The profile photo next to the intro is set with `image` (and optionally `imageAlt`) in their front matter.
 - About page: `site/content/about.md` and `site/content/about.en.md`.
+- Topics page: intro text in `site/content/topics.md` and `site/content/topics.en.md`; the lists of categories and tags are generated.
 
 Images live in `site/static/assets/images/`. Resize photos before adding them (the home page shows the profile photo at no more than 250px wide).
 
@@ -141,7 +147,8 @@ site/
 │   └── assets/          # CSS, JS, images
 └── i18n/                # Translations (DE/EN)
 tests/
-└── smoke-test.sh        # Automated smoke tests
+├── smoke-test.sh        # Automated smoke tests
+└── fixtures/content/    # Test posts, only added to the test build
 specs/                   # Spec Kit specification, plan, tasks and manual tests
 ```
 
@@ -172,7 +179,7 @@ tests/smoke-test.sh
 HUGO=/path/to/hugo tests/smoke-test.sh
 ```
 
-The script builds the site and checks the user stories from `specs/dev-blog/spec.md` (post lists, drafts, about page, categories and tags, profile links, both languages) plus accessibility and link basics: complete translations, valid colors with sufficient contrast, one `<h1>` per page, alt text on images, no empty headings and no broken internal links.
+The script builds the site, together with the test posts from `tests/fixtures/content/` (so the checks don't depend on your real posts), and checks the user stories from `specs/dev-blog/spec.md` (post lists, drafts, about page, categories and tags, profile links, both languages) plus accessibility and link basics: complete translations, valid colors with sufficient contrast, one `<h1>` per page, alt text on images, no empty headings and no broken internal links.
 
 The tests run automatically on GitHub Actions for every push to `main` and every pull request (`.github/workflows/test.yml`).
 
