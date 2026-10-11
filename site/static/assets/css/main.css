@@ -140,6 +140,20 @@ nav .language-switcher::before {
   margin-right: 0.25rem;
 }
 
+/* Small screens: let brand and menu wrap instead of overflowing the viewport */
+@media (max-width: 768px) {
+  nav .nav-container {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+
+  nav .nav-menu {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    font-size: 1.1em;
+  }
+}
+
 /* Language Switcher Dropdown */
 .language-switcher-dropdown {
   position: relative;
