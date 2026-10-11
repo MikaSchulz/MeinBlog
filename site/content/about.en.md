@@ -16,7 +16,7 @@ IT specialist in application development (Fachinformatiker für Anwendungsentwic
 as a Java developer at Otto GmbH & Co. KGaA, always eager to experiment, learn new things, and
 tackle exciting challenges along the way.
 
-### Education & Career Path
+## Education & Career Path
 
 <div class="timeline">
 

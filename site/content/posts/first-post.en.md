@@ -8,6 +8,8 @@ tags: ["Hugo", "Blogging"]
 
 This is my first blog post! I'm excited to share my journey in software development.
 
+<!--more-->
+
 ## What I'll Write About
 
 - Software development tips
