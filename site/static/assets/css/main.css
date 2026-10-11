@@ -400,6 +400,32 @@ time {
   background-color: var(--color-code-background);
 }
 
+/* Post page */
+.post-header {
+  margin-bottom: 1.5rem;
+}
+
+.post-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.post-categories,
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.post-categories .category-list,
+.post-tags .tag-list {
+  margin: 0;
+  list-style: none;
+}
+
 /* Borders and dividers */
 hr {
   border: none;
