@@ -1,7 +1,7 @@
 # Stoffsammlung: Ein Blog über den Blog
 
 > **Arbeitsdokument, kein fertiger Artikel.** Grundlage sind die Git-Historie, die Spec-Kit-Dokumente, der Code und ein lokaler Build von `site/` mit Hugo 0.139.3 (Stand 11.10.2026). eyetealer.me selbst konnte ich aus meiner Umgebung nicht aufrufen.
-> Alles mit **[?]** ist eine Vermutung oder eine Frage an dich. Die gesammelten Fragen stehen in Abschnitt 12.
+> Deine Antworten auf die Fragen sind eingearbeitet (Abschnitt 12). Was mit **[?]** markiert ist, ist weiterhin offen.
 
 ---
 
@@ -24,32 +24,32 @@
 | | 21:40 | Umsetzungsplan + 32 Aufgaben | `/speckit.plan`, `/speckit.tasks` |
 | | 21:43–21:59 | Verfassung 1.1.0: neues Prinzip „Cross-Platform" (Bash statt PowerShell, `/` statt `\`) | `/speckit.constitution` |
 | So, 19.10.2025 | 10:45 | Komplette Umsetzung in **einem** Commit: 50 Dateien, +2.405 Zeilen, alle 32 Aufgaben abgehakt | `/speckit.implement` |
-| So, 02.11.2025 | 23:20 | Design & Inhalte: Farbsystem, dunkles Theme, Startseite mit Hero-Bereich, „Über mich" mit Zeitleiste, Sprachwahl mit Flaggen, Favicons, erstes Dockerfile (55 Dateien) | Copilot [?] |
-| | | ~6 Monate Pause [?] | |
+| So, 02.11.2025 | 23:20 | Design & Inhalte: Farbsystem (Farben von dir ausgesucht), dunkles Theme, Startseite mit Hero-Bereich, „Über mich" mit Zeitleiste (Texte im Pair mit der KI geschrieben), Sprachwahl mit Flaggen, Favicons, erstes Dockerfile (55 Dateien) | KI-Pairing |
 | Sa, 09.05.2026 | 12:37 | Produktions-Dockerfile (Multi-Stage: Hugo baut, nginx liefert aus) | Claude Code |
 | | 12:48 | `.gitignore`-Fix für Build-Artefakte | Claude Code |
 | | 13:11 | Healthcheck-Bug gefixt (IPv6 vs. `localhost`, siehe Abschnitt 6) | Claude Code |
 | | 13:23 | Leerer Commit, um die Webhook-Kette einmal komplett zu testen | Claude Code |
+| So, 11.10.2026 | | Diese Stoffsammlung, danach Review und Fix aller gefundenen Fehler, automatische Tests + CI (8 Commits, siehe Abschnitt 9) | Claude Code |
 
 **Zum Zitieren:**
 - Vom leeren Repo bis zur fertigen Spezifikation inklusive Plan und Aufgabenliste: **76 Minuten** an einem Freitagabend.
 - Deployment-Session: **46 Minuten** zwischen erstem und letztem Commit.
-- Vom ersten Commit bis zum Livegang: knapp **7 Monate**, davon die meiste Zeit Pause.
 
 ---
 
-## 3. Das Warum (aus dem Repo herausgelesen, bitte durch deinen Senf ersetzen)
+## 3. Das Warum
 
-Was der Blog selbst über dich sagt:
-- Startseite: *„Aktuell vertiefe ich Cloud-Architektur und experimentiere mit KI-gestützten Developer-Tools."*
-- Über mich → Zukunftsausblick: Software-Architektur, Cloud, und *„[ich] interessiere mich sehr für KI-Tools und die Möglichkeiten, die sie für moderne Software-Projekte bieten."*
+**Warum ein Blog?** Steht so auf deiner Startseite. Daraus zitieren statt neu formulieren:
+- *„Ich bin Java Software-Engineer mit Fokus auf skalierbare Backend-Services, klare Architektur und Domänenmodellierung."*
+- *„Kontinuierliches Lernen und das Verbessern von Entwicklungsprozessen gehören für mich genauso dazu wie sauberes, wartbares Code-Design."*
+- *„Aktuell vertiefe ich Cloud-Architektur und experimentiere mit KI-gestützten Developer-Tools."*
 - Seitenbeschreibung in der Config: *„Thoughts and projects on my IT life."*
 
-Mögliche Motive (Vermutungen):
-- Ein eigener Ort für Gedanken und Projekte, unabhängig von LinkedIn & Co.
-- Der Blog als **Versuchsobjekt**: ein kleines, aber vollständiges echtes Projekt, an dem man KI-Workflows ausprobieren kann (Spec-Driven Development, Coding-Agenten).
-- Bewusst **selbst gehostet** statt Medium, Substack oder WordPress.com. Das passt zu Docker, Kubernetes und Terraform in deinem Skill-Profil.
-- **Hugo** war deine Vorgabe: In der Spec steht es unter Annahmen („The blog will be built using Hugo"). Statisch, schnell, keine Datenbank, Inhalte als Markdown in Git.
+**Warum „eyetealer"?** Laut ausgesprochen klingt es wie **„ITler"**. Guter Aufhänger für den Einstieg.
+
+**Warum Hugo?** Simpel und übersichtlich. In der Spec steht es als Vorgabe unter den Annahmen („The blog will be built using Hugo"): statische Seiten, keine Datenbank, Inhalte als Markdown in Git.
+
+**Wer hat was gemacht?** Texte im Pair mit der KI geschrieben, Farben selbst ausgesucht, Barrierefreiheit und Mehrsprachigkeit als eigene Anforderung eingebracht. Code, Struktur und Deployment kamen von der KI.
 
 ---
 
@@ -61,6 +61,8 @@ Ein Open-Source-Toolkit von GitHub für **„Spec-Driven Development"**. Statt d
 Im Repo liegen die Befehle als Prompt-Dateien unter `.github/prompts/`. Das ist die Variante für **GitHub Copilot im VS Code Chat**: `.vscode/settings.json` schlägt die Prompts im Chat vor und erlaubt den Hilfsskripten unter `.specify/scripts/`, ohne Nachfrage im Terminal zu laufen.
 
 Die Befehle: `constitution`, `specify`, `clarify`, `plan`, `tasks`, `implement`, dazu `analyze` und `checklist`.
+
+*Hinweis für den Artikel:* Den Ablauf beschreiben, aber Spec Kit nicht bewerten. Das Werkzeug steckte damals noch in den Kinderschuhen, eine Einschätzung gehört nicht in diesen Beitrag.
 
 ### Schritt 1: Die „Verfassung" (`.specify/memory/constitution.md`)
 Spielregeln, an die sich jeder spätere Schritt halten muss. Deine Prinzipien:
@@ -95,7 +97,7 @@ Die KI stellt Rückfragen, statt zu raten. **7 Fragen, 7 Entscheidungen** (Sessi
 - Zweite Sprache: Deutsch.
 - Entwürfe über `draft: true`.
 
-Bemerkenswert: Mehrsprachigkeit und Barrierefreiheit standen nicht in deinem Satz. Sie kamen erst durch die Rückfragen in die Spec. [?] Hat die KI das vorgeschlagen, oder war das deine Antwort auf eine offene Frage?
+Bemerkenswert: Mehrsprachigkeit und Barrierefreiheit standen nicht in deinem Satz. Sie kamen in der Klärungsrunde **von dir** in die Spec. Die Rückfragen haben also den Raum geöffnet, die eigenen Anforderungen zu Ende zu denken.
 
 ### Schritt 4: Plan & Aufgaben
 - **`plan.md`:** Technik (Hugo, nur der Kern, keine Plugins), Ziele (Startseite lädt in < 1 s, Lighthouse > 90), Abgleich mit der Verfassung, Projektstruktur, Risiken und Gegenmaßnahmen.
@@ -118,9 +120,9 @@ Nebenbei wurde der Build-Output (`site/public/`) mit eingecheckt. Gelöscht wurd
 Der größte Einzel-Commit (55 Dateien, Commit-Message: „chore: some content"):
 
 - **Farbsystem:** Alle Farben stehen in `config.toml` unter `[params.colors]`, Standardwerte in `data/color-defaults.toml`. Beim Build werden sie als CSS-Variablen in die Seite geschrieben. Ein Hugo-Template prüft beim Build, ob die Werte gültig sind (Hex, `rgb()`, Farbnamen), und bricht sonst mit einer Fehlermeldung ab.
-- **Look:** dunkles Petrol (`#01161e` Hintergrund, `#124559` Header/Footer), weiße Überschriften, Orange als Akzent (`#ff6d00`, Hover `#ffa864`).
+- **Look (Farben von dir ausgesucht):** dunkles Petrol (`#01161e` Hintergrund, `#124559` Header/Footer), weiße Überschriften, Orange als Akzent (`#ff6d00`, Hover `#ffa864`).
 - **Startseite:** Hero-Bereich mit Kurzvorstellung und Profilbild, darunter die Beiträge.
-- **Über mich:** ausführlicher Werdegang (Minecraft-Modding → Ausbildung zum Fachinformatiker Anwendungsentwicklung bei Otto → Java Software Engineer), vertikale Zeitleiste, „Was mich antreibt"-Raster, Skills als Karten. Alles als HTML direkt im Markdown, deshalb ist im Markdown-Renderer `unsafe = true` gesetzt.
+- **Über mich (Text im Pair mit der KI geschrieben):** ausführlicher Werdegang (Minecraft-Modding → Ausbildung zum Fachinformatiker Anwendungsentwicklung bei Otto → Java Software Engineer), vertikale Zeitleiste, „Was mich antreibt"-Raster, Skills als Karten. Alles als HTML direkt im Markdown, deshalb ist im Markdown-Renderer `unsafe = true` gesetzt.
 - **Sprachwahl:** Dropdown mit SVG-Flaggen, mit der Tastatur bedienbar (Escape schließt), erkennt beim ersten Besuch die Browsersprache und leitet passend um.
 - **Favicons & Web-App-Manifest.**
 - **Erstes Docker-Setup:** ein Alpine-Container, der beim Start per GitHub-Token das Repo als Tarball herunterlädt (`download_repo.sh`) und dann `hugo server`, also den **Entwicklungsserver**, auf Port 1313 laufen lässt.
@@ -140,6 +142,7 @@ git push → GitHub-Webhook → Cloudflare Tunnel → Dokploy → Docker-Build
 
 - **Dokploy:** Open-Source-Plattform zum Selbsthosten, ähnlich wie Vercel oder Netlify, nur auf eigener Hardware. Baut aus dem Git-Repo ein Docker-Image und deployt es; nutzt intern Docker Swarm und Traefik als Reverse Proxy.
 - **Cloudflare Tunnel:** macht den Server von außen erreichbar, ohne Ports am Router oder an der Firewall zu öffnen [?].
+- **Hardware:** alles läuft lokal, Proxmox auf einem Intel NUC. *Im Artikel nur kurz erwähnen; Hosting und Kosten bekommen einen eigenen Beitrag.*
 - Ergebnis: Jeder Push auf `main` geht automatisch live.
 
 ### Was Claude Code geändert hat
@@ -169,7 +172,8 @@ Alle vier Commits tragen die Zeile `Co-Authored-By: Claude Opus 4.7`. Die KI-Bet
 | Planung & Umsetzung 2025 | GitHub Spec Kit + GitHub Copilot in VS Code |
 | Deployment 2026 | Claude Code |
 | Container | Multi-Stage: `hugomods/hugo` → `nginx:1.27-alpine` |
-| Hosting | Dokploy (Docker Swarm + Traefik), Cloudflare Tunnel, Auto-Deploy per GitHub-Webhook |
+| Hosting | Dokploy (Docker Swarm + Traefik) auf Proxmox auf einem Intel NUC, Cloudflare Tunnel, Auto-Deploy per GitHub-Webhook |
+| Qualitätssicherung (seit 11.10.2026) | `tests/smoke-test.sh` + GitHub Actions |
 | Domain | eyetealer.me |
 
 ---
@@ -177,8 +181,9 @@ Alle vier Commits tragen die Zeile `Co-Authored-By: Claude Opus 4.7`. Die KI-Bet
 ## 8. Zahlen & Fakten
 
 - **1 Satz** Input → ~120 Zeilen Spezifikation, **5** User Stories, **7** Klärungsfragen, **32** Aufgaben
-- **13** Commits, **78** Dateien im Repo
+- **13** Commits, **78** Dateien im Repo (Stand vor dem Fix am 11.10.2026; danach 23 inklusive dieser Stoffsammlung)
 - **~1.400** Zeilen eigener Code (Templates, CSS, JS, Config), davon ~810 Zeilen CSS
+- **30** automatische Prüfungen seit dem Fix, **0** vorher
 - **0** Themes, **0** npm-Pakete, **0** JS-Frameworks
 - **2** Sprachen, je ~150 Zeilen „Über mich"
 - **2** KI-Werkzeuge, **76** Minuten für die Planung, **46** Minuten für die Deployment-Session
@@ -187,7 +192,9 @@ Alle vier Commits tragen die Zeile `Co-Authored-By: Claude Opus 4.7`. Die KI-Bet
 
 ## 9. Der ehrliche Teil: Was die KI abgehakt, aber nicht erledigt hat
 
-Beim Durchsehen und lokalen Bauen ist einiges aufgefallen. Gutes Material für den Artikel („32 von 32 Aufgaben erledigt. Fast."). Einiges davon solltest du aber vermutlich **vor** dem ersten Beitrag fixen, weil es live sichtbar ist.
+> **Stand 11.10.2026: Alles in diesem Abschnitt ist behoben** (8 Commits von Claude Code auf dem Branch `claude/gifted-brown-fzogiy`, Details am Ende des Abschnitts). Die Liste beschreibt den Zustand **vorher** und bleibt als Material für den Artikel stehen.
+
+Beim Durchsehen und lokalen Bauen ist einiges aufgefallen. Gutes Material für den Artikel („32 von 32 Aufgaben erledigt. Fast.").
 
 ### Sichtbar auf der Seite
 - Die **Überschrift über den Beiträgen ist leer**, der „Weiterlesen"-Link zeigt nur „→", und vor dem Datum fehlt „Veröffentlicht am". Ursache: Die Übersetzungsschlüssel `recentPosts`, `publishedOn`, `readMore` und `posts` werden in den Templates benutzt, stehen aber in keiner Sprachdatei. Hugo warnt beim Bauen sogar davor.
@@ -201,12 +208,30 @@ Beim Durchsehen und lokalen Bauen ist einiges aufgefallen. Gutes Material für d
 - **Verfassung:** „Automated Testing … Tests are mandatory." **Geliefert:** manuelle Testanleitungen als Markdown. Automatisierte Tests gibt es keine.
 - Die **Testanleitungen** prüfen einen Beitrag „Understanding Hugo Static Sites", den es nie gab, und nutzen den Pfad `/d/Projects/MeinBlock/site` (Tippfehler „MeinBlock" steht auch im README).
 - **`config.toml` verspricht:** „All colors are validated at build time for format and WCAG AA accessibility standards." **Im Code steht:** „For now, we'll skip the actual contrast calculation". Geprüft wird nur, ob Text- und Hintergrundfarbe identisch sind.
-- **Aufgabe T030** „Bilder und CSS optimieren (Lighthouse > 90)" ist abgehakt. Das Profilbild ist aber **2,8 MB** groß und wird auf Start- und Über-mich-Seite geladen. Daneben liegen ein ungenutztes `profile.png` (**5,1 MB**) und ein ungenutztes `logo.png`.
+- **Aufgabe T030** „Bilder und CSS optimieren (Lighthouse > 90)" ist abgehakt. Das Profilbild ist aber **2,8 MB** groß (1821×2428 Pixel) und wird auf der Startseite mit höchstens 250 Pixel Breite angezeigt. Daneben liegen ein ungenutztes `profile.png` (**5,1 MB**, dasselbe Foto) und ein ungenutztes `logo.png`.
 - **RSS** steht in der Spec unter „Out of Scope". Hugo erzeugt standardmäßig trotzdem RSS-Feeds (`index.xml`).
 - Das **README** beschreibt noch Deployment auf GitHub Pages/Netlify/Vercel, nicht das tatsächliche Dokploy-Setup.
 
 ### Mögliche These daraus
 Spec Kit sorgt für Struktur und Nachvollziehbarkeit. Aber **eine abgehakte Checkbox ist eine Behauptung, kein Beweis.** Ohne echte, automatisierte Tests und ohne menschlichen Blick schlüpfen genau solche Dinge durch. Ironischerweise stand das Gegenmittel (Prinzip III: automatisierte Tests) schon in der Verfassung.
+
+### Nachtrag: Review und Fix vor dem ersten Beitrag (11.10.2026)
+Gleiche Session, gleiche KI: Erst die Stoffsammlung, dann auf „ja, behebe die Fehler bitte vorher" die Reparatur. Beim Fixen kamen noch vier weitere Fehler ans Licht:
+
+- **Die Standardfarben wurden nie geladen.** Die Datei heißt `color-defaults.toml`, die Templates lesen aber `color_defaults`. Mit deinen eigenen Farben fiel das nie auf; ohne sie hätte die Seite leere CSS-Variablen bekommen.
+- **Kontrast unter WCAG AA:** Die orangefarbenen Jahres-Badges auf der Über-mich-Seite hatten weiße Schrift auf `#ff6d00`, das sind **2,8:1**. Nötig sind 4,5:1. Jetzt: dunkle Schrift in der Hintergrundfarbe, **6,6:1**. Gefunden hat das erst die neue, echte Kontrastberechnung.
+- **Kaputte Barrierefreiheits-Verweise:** Der Hero-Bereich der Startseite verwies per `aria-labelledby` auf ein Element, das es nicht gab. Die Tag-Übersicht las Screenreadern „1 tags" vor.
+- **Unnötige Weiterleitung:** Deutsche Besucher wurden von `/` auf `/de/` geschickt, und von dort per Meta-Refresh wieder zurück auf `/`.
+
+Was jetzt anders ist:
+- Alle Übersetzungen vollständig, Datum in der jeweiligen Sprache, Beitragsseiten mit Datum, Kategorien und Tags, 404-Seite.
+- Die Kontrastprüfung rechnet wirklich (WCAG-Formel für relative Leuchtdichte, direkt im Hugo-Template) und bricht den Build ab, wenn eine Textfarbe unter 4,5:1 fällt.
+- Profilbild von 2,8 MB auf 100 KB, das ungenutzte PNG ist weg, Favicon-Name korrigiert.
+- RSS abgeschaltet (wie in der Spec festgelegt), `download_repo.sh` entfernt, README beschreibt das echte Deployment.
+- **Automatische Tests:** `tests/smoke-test.sh` baut die Seite, behandelt Warnungen als Fehler und prüft 30 Punkte (alle User Stories in beiden Sprachen, Skip-Link, Alt-Texte, genau eine `<h1>` pro Seite, keine leeren Überschriften, keine kaputten internen Links). GitHub Actions führt das bei jedem Push auf `main` und bei jedem Pull Request aus.
+- Gegenprobe: Auf dem alten Stand schlagen die Tests bei genau den Fehlern aus dieser Liste an.
+
+Möglicher Satz für den Artikel: *Die KI hat die Fehler eingebaut, die KI hat sie gefunden, und die KI hat sie behoben. Aber erst, als ein Mensch gefragt hat, was eigentlich wirklich fertig ist.*
 
 ---
 
@@ -230,36 +255,47 @@ Spec Kit sorgt für Struktur und Nachvollziehbarkeit. Aber **eine abgehakte Chec
 - „32 von 32 Aufgaben erledigt. Fast."
 
 ### Mögliche Gliederung
-1. **Einstieg:** Hallo, das ist der erste Beitrag, und der Blog, auf dem du ihn liest, wurde fast vollständig von KI gebaut.
+1. **Einstieg:** Hallo, das ist der erste Beitrag, und der Blog, auf dem du ihn liest, wurde fast vollständig von KI gebaut. Und ja: „eyetealer" klingt ausgesprochen wie „ITler".
 2. **Warum ein eigener Blog und warum mit KI?**
 3. **Spec-Driven Development:** vom Satz zur Spezifikation (Verfassung, Klärungsfragen, Plan)
 4. **Umsetzung:** 32 Aufgaben in einem Commit
 5. **Feinschliff:** Design und Inhalte
 6. **Live gehen mit Claude Code**, inklusive Healthcheck-Krimi
-7. **Der ehrliche Teil:** was die KI abgehakt, aber nicht erledigt hat
-8. **Fazit** und was als Nächstes kommt
+7. **Der ehrliche Teil:** was die KI abgehakt, aber nicht erledigt hat, und wie es vor diesem Beitrag repariert und mit Tests abgesichert wurde
+8. **Fazit** und was als Nächstes kommt (z. B. Ausblick auf den Beitrag über Hosting mit Proxmox auf dem NUC)
 
 ### Mögliche Schlusspointe
 Den Artikel selbst als Teil des Experiments zeigen: Die Stoffsammlung kam von der KI, Meinung, Auswahl und Text kamen von dir.
 
 ---
 
-## 12. Offene Fragen an dich
+## 12. Deine Antworten und was noch offen ist
 
-1. Warum gerade jetzt ein Blog? Worüber willst du schreiben, und für wen?
-2. Woher kommt der Name „eyetealer"?
-3. Warum Hugo: bewusste Wahl nach Vergleich oder einfach gesetzt?
-4. Welches Modell lief im Oktober 2025 hinter GitHub Copilot?
-5. Wie viel hast du selbst angefasst? (Über-mich-Text, Farben, Bilder? Der deutsche Kommentar in der Config, „Orange-Ton für Konsistenz und Sichtbarkeit", klingt nach Handarbeit oder nach einem deutschen Prompt.)
-6. Wie hat sich Spec Kit angefühlt: hilfreiche Struktur oder Overkill für einen Blog?
-7. Kamen Barrierefreiheit und Mehrsprachigkeit von dir oder von der KI?
-8. Was war in den sechs Monaten zwischen November und Mai los?
-9. Wo läuft Dokploy (Homelab, Raspberry Pi, VPS)? Warum selbst hosten statt GitHub Pages oder Netlify?
-10. Wie lange hast du den 502-Fehler gejagt, bevor Claude Code die Ursache gefunden hat?
-11. Was kostet das Ganze (KI-Abos, Domain, Server, Strom)?
-12. Würdest du es wieder so machen? Was würdest du anders machen?
+### Eingearbeitet
+| Frage | Antwort | Wo |
+|---|---|---|
+| Warum ein Blog? | Steht auf der Startseite | Abschnitt 3 |
+| Name „eyetealer"? | Klingt wie „ITler" | Abschnitt 3, Einstieg |
+| Warum Hugo? | Simpel und übersichtlich | Abschnitt 3 |
+| Wer hat was gemacht? | Texte im Pair mit der KI, Farben selbst ausgesucht | Abschnitte 3 und 5 |
+| Barrierefreiheit & Mehrsprachigkeit? | Kam von dir | Abschnitt 4 |
 
----
+### Nicht in diesen Beitrag
+- Bewertung von Spec Kit (steckte damals noch in den Kinderschuhen)
+- Welches Modell hinter GitHub Copilot lief
+- Die Pause zwischen November und Mai
+- Wie lange die Suche nach dem 502-Fehler gedauert hat
+- „Würde ich es wieder so machen?"
+
+### Eigener Beitrag später
+- Hosting: Proxmox auf einem Intel NUC, Dokploy, Cloudflare Tunnel
+- Kosten (alles läuft lokal)
+
+### Noch offen [?]
+1. Prinzip VI (Bash statt PowerShell, `/` statt `\`): Stimmt die Vermutung, dass die KI unter Windows ständig PowerShell-Befehle oder Windows-Pfade produziert hat?
+2. Das Farbsystem sieht nach einem zweiten Spec-Kit-Feature aus (Prioritäten P1/P2/P3, Verweis auf eine nie committete `COLOR-CONFIGURATION.md`). Gab es dafür eine eigene Spec?
+3. Für den Artikel egal, aber für die Seite: Auf der Über-mich-Seite war laut Spec ein Profilbild vorgesehen (Layout `layouts/about/single.html`, `image` im Front Matter). Das Layout wird von Hugo aber nie benutzt, das Bild erscheint nur auf der Startseite. Soll es auch auf die Über-mich-Seite, oder fliegt das ungenutzte Layout raus?
+4. RSS ist jetzt wie in der Spec abgeschaltet. Für einen Blog, den man regelmäßig liest, ist ein Feed eigentlich praktisch. Wieder einschalten?
 
 ## 13. Links für den Artikel
 
