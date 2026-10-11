@@ -1,8 +1,11 @@
-baseURL = "https://example.com"
+baseURL = "https://eyetealer.me/"
 languageCode = "de"
 title = "Mika Schulz"
 defaultContentLanguage = "de"
 defaultContentLanguageInSubdir = false
+
+# RSS feeds are out of scope (see specs/dev-blog/spec.md)
+disableKinds = ["rss"]
 
 [markup.goldmark.renderer]
 unsafe = true

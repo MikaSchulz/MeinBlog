@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const browserLang = navigator.language || navigator.userLanguage;
         const langCode = browserLang.split('-')[0]; // Get 'de' from 'de-DE' or 'en' from 'en-US'
 
-        // Only redirect if we're on the root path (not already on a language-specific page)
-        // and not on /de/ or /en/ paths
+        // Only redirect if we're on the root path (not already on a language-specific page).
+        // German is the default language and lives at the root, so only English needs a redirect.
         if (currentPath === '/' || currentPath === '/index.html') {
             const supportedLangs = ['de', 'en'];
             const targetLang = supportedLangs.includes(langCode) ? langCode : 'de'; // Default to 'de'
+            if (targetLang === 'de') return;
 
             // Check if user has already visited (don't redirect on every visit)
             const hasVisited = sessionStorage.getItem('language-detected');
