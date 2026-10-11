@@ -7,8 +7,57 @@ other = "Home"
 [about]
 other = "About"
 
+[blog]
+other = "Blog"
+
 [in]
 other = "in"
 
-[post]
-other = "post"
+[postCount]
+one = "{{ .Count }} post"
+other = "{{ .Count }} posts"
+
+[posts]
+other = "Posts"
+
+[recentPosts]
+other = "Recent posts"
+
+[publishedOn]
+other = "Published on"
+
+[readMore]
+other = "Read more"
+
+[readMoreAbout]
+other = "Read more: {{ .Title }}"
+
+[noPosts]
+other = "No posts available yet."
+
+[categories]
+other = "Categories"
+
+[tags]
+other = "Tags"
+
+[mainNavigation]
+other = "Main navigation"
+
+[changeLanguage]
+other = "Change language"
+
+[currentLanguage]
+other = "Current language: {{ .Name }}"
+
+[switchLanguage]
+other = "Switch to {{ .Name }}"
+
+[pageNotFound]
+other = "Page not found"
+
+[pageNotFoundText]
+other = "Sorry, this page doesn't exist (anymore)."
+
+[backHome]
+other = "Back to the home page"

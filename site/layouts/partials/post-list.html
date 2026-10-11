@@ -1,0 +1,11 @@
+{{- /* Renders a list of published posts. Context: a collection of pages. */ -}}
+{{ $pages := where . ".Draft" false }}
+{{ if $pages }}
+<ul class="posts-list" role="list">
+    {{ range $pages }}
+    {{ partial "post-item.html" . }}
+    {{ end }}
+</ul>
+{{ else }}
+<p class="no-posts" role="status">{{ i18n "noPosts" }}</p>
+{{ end }}

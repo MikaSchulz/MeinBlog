@@ -1,10 +1,10 @@
-<nav role="navigation" aria-label="Main navigation">
+<nav role="navigation" aria-label="{{ i18n "mainNavigation" }}">
     <ul class="nav-container">
         <li class="nav-brand"><a href="{{ "/" | relLangURL }}">Mika Schulz</a></li>
         <li class="nav-menu-wrapper">
             <div class="nav-menu">
-                <a href="{{ "/posts" | relLangURL }}">Blog</a>
-                <a href="{{ "/about" | relLangURL }}">{{ i18n "about" }}</a>
+                <a href="{{ "/posts/" | relLangURL }}">{{ i18n "blog" }}</a>
+                <a href="{{ "/about/" | relLangURL }}">{{ i18n "about" }}</a>
                 {{ if .Site.Params.github }}
                 <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
