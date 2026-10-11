@@ -39,11 +39,12 @@
 
 ## 3. Das Warum
 
-**Warum ein Blog?** Steht so auf deiner Startseite. Daraus zitieren statt neu formulieren:
-- *„Ich bin Java Software-Engineer mit Fokus auf skalierbare Backend-Services, klare Architektur und Domänenmodellierung."*
-- *„Kontinuierliches Lernen und das Verbessern von Entwicklungsprozessen gehören für mich genauso dazu wie sauberes, wartbares Code-Design."*
-- *„Aktuell vertiefe ich Cloud-Architektur und experimentiere mit KI-gestützten Developer-Tools."*
+**Warum ein Blog?** Steht so auf deiner (neuen) Startseite. Am besten darauf verlinken statt es zu wiederholen; die Kernsätze:
+- *„In diesem Blog könnt ihr mit Themen von A bis Z rechnen – alles, was ich spannend finde. Der Hauptfokus liegt auf IT und besonders auf KI […]"*
+- *„Ich berichte von meinen alltäglichen Erfahrungen, Ideen und Spaßprojekten. Nicht alles, was ich mache, ist fehlerfrei oder Best Practice."*
 - Seitenbeschreibung in der Config: *„Thoughts and projects on my IT life."*
+
+Passt gut zum Artikel: Der Blog-Beitrag über den Blog ist genau so ein Erfahrungsbericht, inklusive der Stellen, die nicht fehlerfrei waren (Abschnitt 9).
 
 **Warum „eyetealer"?** Laut ausgesprochen klingt es wie **„ITler"**. Guter Aufhänger für den Einstieg.
 
@@ -181,7 +182,7 @@ Alle vier Commits tragen die Zeile `Co-Authored-By: Claude Opus 4.7`. Die KI-Bet
 ## 8. Zahlen & Fakten
 
 - **1 Satz** Input → ~120 Zeilen Spezifikation, **5** User Stories, **7** Klärungsfragen, **32** Aufgaben
-- **13** Commits, **78** Dateien im Repo (Stand vor dem Fix am 11.10.2026; danach 23 inklusive dieser Stoffsammlung)
+- **13** Commits, **78** Dateien im Repo (Stand vor dem Fix am 11.10.2026; danach rund doppelt so viele Commits)
 - **~1.400** Zeilen eigener Code (Templates, CSS, JS, Config), davon ~810 Zeilen CSS
 - **30** automatische Prüfungen seit dem Fix, **0** vorher
 - **0** Themes, **0** npm-Pakete, **0** JS-Frameworks
