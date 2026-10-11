@@ -3,6 +3,8 @@
 #
 # Builds the site into a temporary directory and checks the user stories from
 # specs/dev-blog/spec.md plus a few accessibility and link basics.
+# The test build adds the posts from tests/fixtures/content, so the checks do
+# not depend on the real posts.
 #
 # Usage:
 #   tests/smoke-test.sh                       # uses `hugo` from PATH
@@ -43,7 +45,11 @@ not_exists() {
 
 echo "Building site with $("$HUGO" version | cut -d' ' -f1-2) ..."
 # Warnings (e.g. missing translations, unchecked color contrast) fail the build.
-if ! "$HUGO" --source "$ROOT/site" --destination "$OUT" --baseURL "/" \
+cp -R "$ROOT/site" "$TMP/site"
+rm -rf "$TMP/site/public" "$TMP/site/resources"
+cp -R "$ROOT/tests/fixtures/content/." "$TMP/site/content/"
+
+if ! "$HUGO" --source "$TMP/site" --destination "$OUT" --baseURL "/" \
     --printI18nWarnings --panicOnWarning > "$TMP/build.log" 2>&1; then
     cat "$TMP/build.log"
     echo "FAIL  Hugo build (missing translation, invalid color, insufficient contrast, ...)"
@@ -52,11 +58,11 @@ fi
 pass "Hugo build without warnings (translations complete, colors valid, contrast WCAG AA)"
 
 echo "US1 - View all blog posts"
-contains index.html 'Mein erster Blogbeitrag' "German home page lists published posts"
-contains en/index.html 'My First Blog Post' "English home page lists published posts"
-contains posts/index.html 'Mein erster Blogbeitrag' "Blog page lists published posts"
-not_exists posts/draft-post/index.html "Draft posts are not rendered"
-not_contains index.html 'Draft Post' "Draft posts are not listed"
+contains index.html 'Smoke-Test-Beitrag' "German home page lists published posts"
+contains en/index.html 'Smoke Test Post' "English home page lists published posts"
+contains posts/index.html 'Smoke-Test-Beitrag' "Blog page lists published posts"
+not_exists posts/smoke-test-draft/index.html "Draft posts are not rendered"
+not_contains index.html 'Smoke-Test-Entwurf' "Draft posts are not listed"
 contains index.html '17\. Oktober 2025' "Dates are localized (German)"
 contains en/index.html 'October 17, 2025' "Dates are localized (English)"
 
@@ -67,12 +73,17 @@ contains index.html 'href="/about/"' "Navigation links to the German about page"
 contains en/index.html 'href="/en/about/"' "Navigation links to the English about page"
 
 echo "US3 - Categories and tags"
-contains posts/first-post/index.html 'href="/categories/development/"' "Post page links its categories"
-contains posts/first-post/index.html 'href="/tags/hugo/"' "Post page links its tags"
-contains posts/first-post/index.html '<time datetime=' "Post page shows its date"
-contains categories/development/index.html 'Mein erster Blogbeitrag' "Category page lists matching posts"
-contains tags/hugo/index.html 'Mein erster Blogbeitrag' "Tag page lists matching posts"
-contains en/tags/hugo/index.html 'My First Blog Post' "English tag page lists matching posts"
+contains posts/smoke-test-post/index.html 'href="/categories/misc/"' "Post page links its categories"
+contains posts/smoke-test-post/index.html 'href="/tags/smoke-test/"' "Post page links its tags"
+contains posts/smoke-test-post/index.html '<time datetime=' "Post page shows its date"
+contains categories/misc/index.html 'Smoke-Test-Beitrag' "Category page lists matching posts"
+contains tags/smoke-test/index.html 'Smoke-Test-Beitrag' "Tag page lists matching posts"
+contains en/tags/smoke-test/index.html 'Smoke Test Post' "English tag page lists matching posts"
+contains index.html 'href="/themen/"' "Navigation links to the German topics page"
+contains en/index.html 'href="/en/topics/"' "Navigation links to the English topics page"
+contains themen/index.html 'href="/categories/misc/"' "Topics page lists categories"
+contains themen/index.html 'href="/tags/smoke-test/"' "Topics page lists tags"
+contains en/topics/index.html 'href="/en/tags/smoke-test/"' "English topics page lists tags"
 
 echo "US4/US5 - Profile links"
 contains index.html 'href="https://github.com/[^"]+" target="_blank" rel="noopener noreferrer"' "GitHub link opens in a new tab"
