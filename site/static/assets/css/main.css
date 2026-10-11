@@ -620,7 +620,7 @@ input[type="button"]:focus {
 
 .tech-stack ul li:hover {
   background: var(--color-button);
-  color: white;
+  color: var(--color-background);
   border-color: var(--color-link-hover);
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(255, 109, 0, 0.4);
@@ -774,7 +774,7 @@ input[type="button"]:focus {
 .timeline-date {
   display: inline-block;
   background: var(--color-button);
-  color: white;
+  color: var(--color-background);
   padding: 0.4rem 1rem;
   border-radius: 20px;
   font-size: 0.85rem;

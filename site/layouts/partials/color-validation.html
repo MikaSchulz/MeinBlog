@@ -23,24 +23,70 @@
   {{- end -}}
 
   {{- if not $valid -}}
-    {{- errorf "ERROR: Invalid color value for '%s': '%s'\nAccepted formats:\n  - Hexadecimal: #RRGGBB or #RGB (e.g., '#FFFFFF' or '#FFF')\n  - RGB/RGBA: rgb(r,g,b) or rgba(r,g,b,a) (e.g., 'rgb(255,255,255)')\n  - Named colors: CSS color names (e.g., 'white', 'black', 'blue')\nSee site/COLOR-CONFIGURATION.md for details." $name $color -}}
+    {{- errorf "ERROR: Invalid color value for '%s': '%s'\nAccepted formats:\n  - Hexadecimal: #RRGGBB or #RGB (e.g., '#FFFFFF' or '#FFF')\n  - RGB/RGBA: rgb(r,g,b) or rgba(r,g,b,a) (e.g., 'rgb(255,255,255)')\n  - Named colors: CSS color names (e.g., 'white', 'black', 'blue')\nSee the 'Colors' section in README.md for details." $name $color -}}
   {{- end -}}
 {{- end -}}
 
-{{- /* Helper function to convert hex to RGB for contrast calculation */ -}}
-{{- define "partials/hex-to-rgb" -}}
-  {{- $hex := .hex -}}
-  {{- $hex = strings.TrimPrefix "#" $hex -}}
-  {{- if eq (len $hex) 3 -}}
-    {{- $hex = printf "%s%s%s%s%s%s" (substr $hex 0 1) (substr $hex 0 1) (substr $hex 1 2) (substr $hex 1 2) (substr $hex 2 3) (substr $hex 2 3) -}}
+{{- /* Helper function returning the WCAG 2.1 relative luminance of a color, or -1 if it cannot be computed (transparent rgba) */ -}}
+{{- define "partials/color-luminance" -}}
+  {{- $named := dict
+    "white" "#ffffff" "black" "#000000" "red" "#ff0000" "green" "#008000" "blue" "#0000ff"
+    "yellow" "#ffff00" "orange" "#ffa500" "purple" "#800080" "pink" "#ffc0cb" "brown" "#a52a2a"
+    "gray" "#808080" "grey" "#808080" "navy" "#000080" "teal" "#008080" "lime" "#00ff00"
+    "cyan" "#00ffff" "aqua" "#00ffff" "magenta" "#ff00ff" "fuchsia" "#ff00ff" "silver" "#c0c0c0"
+    "maroon" "#800000" "olive" "#808000" -}}
+  {{- $color := lower (trim . " ") -}}
+  {{- with index $named $color }}{{ $color = . }}{{ end -}}
+
+  {{- $rgb := slice -}}
+  {{- if findRE "^#([0-9a-f]{3}|[0-9a-f]{6})$" $color -}}
+    {{- $hex := strings.TrimPrefix "#" $color -}}
+    {{- if eq (len $hex) 3 -}}
+      {{- $hex = printf "%s%s%s%s%s%s" (substr $hex 0 1) (substr $hex 0 1) (substr $hex 1 1) (substr $hex 1 1) (substr $hex 2 1) (substr $hex 2 1) -}}
+    {{- end -}}
+    {{- $digits := dict "0" 0 "1" 1 "2" 2 "3" 3 "4" 4 "5" 5 "6" 6 "7" 7 "8" 8 "9" 9 "a" 10 "b" 11 "c" 12 "d" 13 "e" 14 "f" 15 -}}
+    {{- range slice 0 2 4 -}}
+      {{- $rgb = $rgb | append (add (mul (index $digits (substr $hex . 1)) 16) (index $digits (substr $hex (add . 1) 1))) -}}
+    {{- end -}}
+  {{- else if findRE "^rgb\\s*\\(" $color -}}
+    {{- range first 3 (findRE "\\d{1,3}" $color) -}}
+      {{- $rgb = $rgb | append (float .) -}}
+    {{- end -}}
+  {{- else if findRE "^rgba\\s*\\(.*,\\s*1(\\.0*)?\\s*\\)$" $color -}}
+    {{- /* Fully opaque rgba behaves like rgb */ -}}
+    {{- range first 3 (findRE "\\d{1,3}" $color) -}}
+      {{- $rgb = $rgb | append (float .) -}}
+    {{- end -}}
   {{- end -}}
-  {{- $r := 0 -}}
-  {{- $g := 0 -}}
-  {{- $b := 0 -}}
-  {{- /* Note: Hugo doesn't have native hex parsing, so we'll use a simplified approach */ -}}
-  {{- /* For now, we'll skip the actual contrast calculation in Hugo and rely on manual verification */ -}}
-  {{- /* A full implementation would require a custom Hugo function or external tool */ -}}
-  {{- dict "r" $r "g" $g "b" $b -}}
+
+  {{- $luminance := -1.0 -}}
+  {{- if eq (len $rgb) 3 -}}
+    {{- $luminance = 0.0 -}}
+    {{- range $i, $weight := slice 0.2126 0.7152 0.0722 -}}
+      {{- $c := div (float (index $rgb $i)) 255.0 -}}
+      {{- if le $c 0.03928 -}}
+        {{- $c = div $c 12.92 -}}
+      {{- else -}}
+        {{- $c = math.Pow (div (add $c 0.055) 1.055) 2.4 -}}
+      {{- end -}}
+      {{- $luminance = add $luminance (mul $weight $c) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- return $luminance -}}
+{{- end -}}
+
+{{- /* Helper function failing the build if a text/background pair is below the WCAG AA minimum of 4.5:1 */ -}}
+{{- define "partials/validate-contrast" -}}
+  {{- $fg := partial "color-luminance" .fg -}}
+  {{- $bg := partial "color-luminance" .bg -}}
+  {{- if and (ge $fg 0.0) (ge $bg 0.0) -}}
+    {{- $ratio := div (add (math.Max $fg $bg) 0.05) (add (math.Min $fg $bg) 0.05) -}}
+    {{- if lt $ratio 4.5 -}}
+      {{- errorf "ERROR: Insufficient contrast for %s: '%s' on '%s' is %.2f:1\nWCAG AA requires a minimum contrast ratio of 4.5:1 for normal text.\nUse a contrast checker tool: https://webaim.org/resources/contrastchecker/" .name .fg .bg $ratio -}}
+    {{- end -}}
+  {{- else -}}
+    {{- warnf "Contrast for %s ('%s' on '%s') could not be checked automatically (invalid or semi-transparent color)." .name .fg .bg -}}
+  {{- end -}}
 {{- end -}}
 
 {{- /* Validate all color parameters */ -}}
@@ -66,6 +112,12 @@
   {{- if $colors.button -}}
     {{- partial "validate-color-format" (dict "color" $colors.button "name" "button") -}}
   {{- end -}}
+  {{- if $colors.headerBackground -}}
+    {{- partial "validate-color-format" (dict "color" $colors.headerBackground "name" "headerBackground") -}}
+  {{- end -}}
+  {{- if $colors.footerBackground -}}
+    {{- partial "validate-color-format" (dict "color" $colors.footerBackground "name" "footerBackground") -}}
+  {{- end -}}
 
   {{- /* Accent colors validation */ -}}
   {{- if $colors.headingPrimary -}}
@@ -86,22 +138,26 @@
   {{- if $colors.border -}}
     {{- partial "validate-color-format" (dict "color" $colors.border "name" "border") -}}
   {{- end -}}
+{{- end -}}
 
-  {{- /* Contrast validation warnings (simplified - full calculation requires external tool) */ -}}
-  {{- /* Note: Hugo's template engine doesn't support complex color calculations */ -}}
-  {{- /* For production, consider using a build script or Hugo module for full WCAG validation */ -}}
-  {{- if and $colors.text $colors.background -}}
-    {{- if eq $colors.text $colors.background -}}
-      {{- errorf "ERROR: Insufficient contrast - text and background colors are identical ('%s')\nWCAG AA requires minimum 4.5:1 contrast ratio for normal text.\nUse a contrast checker tool: https://webaim.org/resources/contrastchecker/" $colors.text -}}
-    {{- end -}}
-  {{- end -}}
+{{- /* Contrast validation of the effective colors (configured value or default), mirroring color-variables.html */ -}}
+{{- $background := default $defaults.background $colors.background -}}
+{{- $codeBackground := default $defaults.codeBackground $colors.codeBackground -}}
+{{- $headerBackground := default "#2c3e50" $colors.headerBackground -}}
+{{- $button := default $defaults.button $colors.button -}}
 
-  {{- if and $colors.codeText $colors.codeBackground -}}
-    {{- if eq $colors.codeText $colors.codeBackground -}}
-      {{- errorf "ERROR: Insufficient contrast - code text and code background colors are identical ('%s')\nWCAG AA requires minimum 4.5:1 contrast ratio.\nUse a contrast checker tool: https://webaim.org/resources/contrastchecker/" $colors.codeText -}}
-    {{- end -}}
-  {{- end -}}
+{{- range slice
+  (dict "name" "text" "fg" (default $defaults.text $colors.text) "bg" $background)
+  (dict "name" "link" "fg" (default $defaults.link $colors.link) "bg" $background)
+  (dict "name" "linkHover" "fg" (default $defaults.linkHover $colors.linkHover) "bg" $background)
+  (dict "name" "headingPrimary" "fg" (default $defaults.headingPrimary $colors.headingPrimary) "bg" $background)
+  (dict "name" "headingSecondary" "fg" (default $defaults.headingSecondary $colors.headingSecondary) "bg" $background)
+  (dict "name" "metadata" "fg" (default $defaults.metadata $colors.metadata) "bg" $background)
+  (dict "name" "codeText" "fg" (default $defaults.codeText $colors.codeText) "bg" $codeBackground)
+  (dict "name" "navigationLink" "fg" (default $defaults.navigationLink $colors.navigationLink) "bg" $headerBackground)
+  (dict "name" "button (badge text uses the background color)" "fg" $background "bg" $button)
+-}}
+  {{- partial "validate-contrast" . -}}
 {{- end -}}
 
 {{- /* Output nothing - this partial is for validation only */ -}}
-

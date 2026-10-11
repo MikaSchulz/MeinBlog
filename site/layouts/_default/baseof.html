@@ -14,7 +14,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | relURL }}">
 
     {{- /* Run color validation at build time */ -}}
-    {{- partial "color-validation.html" . -}}
+    {{- partialCached "color-validation.html" . -}}
 
     {{- /* Inject CSS custom properties from color configuration */ -}}
     {{- partial "color-variables.html" . -}}

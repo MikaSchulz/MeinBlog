@@ -32,7 +32,8 @@ unsafe = true
   # - Hexadecimal: #RRGGBB or #RGB (e.g., "#FFFFFF" or "#FFF")
   # - RGB/RGBA: rgb(r,g,b) or rgba(r,g,b,a) (e.g., "rgb(255,255,255)" or "rgba(255,255,255,0.9)")
   # - Named colors: CSS color names (e.g., "white", "black", "blue")
-  # All colors are validated at build time for format and WCAG AA accessibility standards.
+  # All colors are validated at build time for format and WCAG AA accessibility standards
+  # (text colors need a contrast ratio of at least 4.5:1 against their background).
 
   [params.colors]
     # Core colors (Priority P1)
