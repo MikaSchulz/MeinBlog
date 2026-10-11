@@ -10,6 +10,9 @@ other = "About"
 [blog]
 other = "Blog"
 
+[topics]
+other = "Topics"
+
 [in]
 other = "in"
 

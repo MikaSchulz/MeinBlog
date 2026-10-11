@@ -4,6 +4,7 @@
         <li class="nav-menu-wrapper">
             <div class="nav-menu">
                 <a href="{{ "/posts/" | relLangURL }}">{{ i18n "blog" }}</a>
+                {{ with site.GetPage "/topics" }}<a href="{{ .RelPermalink }}">{{ i18n "topics" }}</a>{{ end }}
                 <a href="{{ "/about/" | relLangURL }}">{{ i18n "about" }}</a>
                 {{ if .Site.Params.github }}
                 <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon">

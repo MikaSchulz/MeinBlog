@@ -383,6 +383,8 @@ time {
   gap: 0.5rem;
   flex-wrap: wrap;
   margin: 0.5rem 0;
+  padding-left: 0;
+  list-style: none;
 }
 
 .category a,
@@ -423,7 +425,17 @@ time {
 .post-categories .category-list,
 .post-tags .tag-list {
   margin: 0;
-  list-style: none;
+}
+
+/* Tags are shown as hashtags; the "#" is decorative and hidden from screen readers */
+.tag a::before {
+  content: "#";
+  content: "#" / "";
+}
+
+/* Topics page */
+.topic-count {
+  font-size: 0.8em;
 }
 
 /* Borders and dividers */
