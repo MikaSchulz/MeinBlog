@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article role="article" aria-labelledby="page-title">
+    <div class="post-header">
+        <h1 id="page-title">{{ .Title }}</h1>
+        {{ partial "post-date.html" . }}
+    </div>
+    <div class="content">
+        {{ .Content }}
+    </div>
+    <div class="post-footer">
+        {{ partial "taxonomy-links.html" . }}
+    </div>
+</article>
+{{ end }}

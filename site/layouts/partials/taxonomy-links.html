@@ -1,22 +1,21 @@
-{{ if .Params.categories }}
-<div class="post-categories" aria-label="{{ i18n "categories" }}">
-    <strong>{{ i18n "categories" }}:</strong>
-    <ul>
-        {{ range .Params.categories }}
-        <li><a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+{{ with .GetTerms "categories" }}
+<div class="post-categories">
+    <strong id="post-categories-label">{{ i18n "categories" }}:</strong>
+    <ul class="category-list" aria-labelledby="post-categories-label">
+        {{ range . }}
+        <li class="category"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
         {{ end }}
     </ul>
 </div>
 {{ end }}
 
-{{ if .Params.tags }}
-<div class="post-tags" aria-label="{{ i18n "tags" }}">
-    <strong>{{ i18n "tags" }}:</strong>
-    <ul>
-        {{ range .Params.tags }}
-        <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+{{ with .GetTerms "tags" }}
+<div class="post-tags">
+    <strong id="post-tags-label">{{ i18n "tags" }}:</strong>
+    <ul class="tag-list" aria-labelledby="post-tags-label">
+        {{ range . }}
+        <li class="tag"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
         {{ end }}
     </ul>
 </div>
 {{ end }}
-

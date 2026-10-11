@@ -1,0 +1,7 @@
+{{ define "main" }}
+<section aria-labelledby="not-found-title">
+    <h1 id="not-found-title">{{ i18n "pageNotFound" }}</h1>
+    <p>{{ i18n "pageNotFoundText" }}</p>
+    <p><a href="{{ "/" | relLangURL }}">{{ i18n "backHome" }}</a></p>
+</section>
+{{ end }}

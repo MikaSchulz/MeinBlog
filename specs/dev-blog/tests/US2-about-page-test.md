@@ -40,7 +40,7 @@ Verify that the About Me page displays author information correctly in both Engl
 ## Manual Test Execution
 
 ```bash
-cd /d/Projects/MeinBlock/site
+cd site
 hugo server
 # Visit http://localhost:1313/about
 # Test navigation and content

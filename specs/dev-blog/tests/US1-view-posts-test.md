@@ -10,11 +10,10 @@ Verify that all published posts are listed chronologically on the main page and 
 
 ### Test 1: Verify Published Posts Are Displayed
 1. Navigate to the main page (/)
-2. Verify that "My First Blog Post" is visible
-3. Verify that "Understanding Hugo Static Sites" is visible
-4. Verify posts are sorted by date (newest first)
+2. Verify that "Mein erster Blogbeitrag" (DE) / "My First Blog Post" (EN, /en/) is visible
+3. Verify posts are sorted by date (newest first)
 
-**Expected Result**: Both published posts are visible and sorted correctly.
+**Expected Result**: All published posts are visible and sorted correctly.
 
 ### Test 2: Verify Draft Posts Are Hidden
 1. Navigate to the main page (/)
@@ -33,7 +32,7 @@ Verify that all published posts are listed chronologically on the main page and 
 
 To run this test manually:
 ```bash
-cd /d/Projects/MeinBlock/site
+cd site
 hugo server -D  # Include drafts to verify they appear
 hugo server     # Without drafts to verify they're hidden
 ```

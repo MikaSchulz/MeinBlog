@@ -12,9 +12,9 @@ Verify that GitHub and LinkedIn profile links are displayed correctly, open in n
 1. Add GitHub URL to site/config.toml: `github = "https://github.com/yourusername"`
 2. Rebuild the site
 3. Navigate to any page
-4. Verify GitHub link appears in the footer
+4. Verify GitHub link appears in the navigation
 
-**Expected Result**: GitHub link is visible in the footer.
+**Expected Result**: GitHub link is visible in the navigation.
 
 ### Test 2: GitHub Link Opens Correctly
 1. Click on the GitHub link
@@ -27,7 +27,7 @@ Verify that GitHub and LinkedIn profile links are displayed correctly, open in n
 1. Remove or leave empty the GitHub URL in config.toml: `github = ""`
 2. Rebuild the site
 3. Navigate to any page
-4. Verify GitHub link is NOT shown in the footer
+4. Verify GitHub link is NOT shown in the navigation
 
 **Expected Result**: No GitHub link visible when not configured.
 
@@ -35,9 +35,9 @@ Verify that GitHub and LinkedIn profile links are displayed correctly, open in n
 1. Add LinkedIn URL to site/config.toml: `linkedin = "https://linkedin.com/in/yourprofile"`
 2. Rebuild the site
 3. Navigate to any page
-4. Verify LinkedIn link appears in the footer
+4. Verify LinkedIn link appears in the navigation
 
-**Expected Result**: LinkedIn link is visible in the footer.
+**Expected Result**: LinkedIn link is visible in the navigation.
 
 ### Test 5: LinkedIn Link Opens Correctly
 1. Click on the LinkedIn link
@@ -50,14 +50,14 @@ Verify that GitHub and LinkedIn profile links are displayed correctly, open in n
 1. Remove or leave empty the LinkedIn URL in config.toml: `linkedin = ""`
 2. Rebuild the site
 3. Navigate to any page
-4. Verify LinkedIn link is NOT shown in the footer
+4. Verify LinkedIn link is NOT shown in the navigation
 
 **Expected Result**: No LinkedIn link visible when not configured.
 
 ### Test 7: Both Links Work Together
 1. Configure both GitHub and LinkedIn URLs in config.toml
 2. Rebuild the site
-3. Verify both links appear in the footer
+3. Verify both links appear in the navigation
 4. Verify both links work correctly
 
 **Expected Result**: Both links visible and functional when configured.
@@ -72,11 +72,11 @@ Verify that GitHub and LinkedIn profile links are displayed correctly, open in n
 ## Manual Test Execution
 
 ```bash
-cd /d/Projects/MeinBlock/site
+cd site
 # Edit config.toml to add your GitHub/LinkedIn URLs
 hugo server
 # Visit http://localhost:1313
-# Check footer for social links
+# Check the navigation for the GitHub and LinkedIn icons
 ```
 
 ## Test Status

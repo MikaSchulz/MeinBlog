@@ -17,7 +17,7 @@ Verify that filtering and browsing by category or tag works correctly in both En
 **Expected Result**: Category filter page displays only posts tagged with that category.
 
 ### Test 2: Tag Navigation Works
-1. Navigate to a blog post (e.g., "Understanding Hugo Static Sites")
+1. Navigate to a blog post (e.g., "My First Blog Post")
 2. Verify tags are displayed below the post
 3. Click on a tag link (e.g., "Hugo")
 4. Verify that only posts with that tag are shown
@@ -56,7 +56,7 @@ Verify that filtering and browsing by category or tag works correctly in both En
 ## Manual Test Execution
 
 ```bash
-cd /d/Projects/MeinBlock/site
+cd site
 hugo server
 # Visit http://localhost:1313
 # Click on categories/tags in posts

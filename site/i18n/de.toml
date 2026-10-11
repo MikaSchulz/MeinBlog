@@ -7,8 +7,57 @@ other = "Startseite"
 [about]
 other = "Über mich"
 
+[blog]
+other = "Blog"
+
 [in]
 other = "in"
 
-[post]
-other = "Beitrag"
+[postCount]
+one = "{{ .Count }} Beitrag"
+other = "{{ .Count }} Beiträge"
+
+[posts]
+other = "Beiträge"
+
+[recentPosts]
+other = "Neueste Beiträge"
+
+[publishedOn]
+other = "Veröffentlicht am"
+
+[readMore]
+other = "Weiterlesen"
+
+[readMoreAbout]
+other = "Weiterlesen: {{ .Title }}"
+
+[noPosts]
+other = "Noch keine Beiträge verfügbar."
+
+[categories]
+other = "Kategorien"
+
+[tags]
+other = "Tags"
+
+[mainNavigation]
+other = "Hauptnavigation"
+
+[changeLanguage]
+other = "Sprache wechseln"
+
+[currentLanguage]
+other = "Aktuelle Sprache: {{ .Name }}"
+
+[switchLanguage]
+other = "Wechseln zu {{ .Name }}"
+
+[pageNotFound]
+other = "Seite nicht gefunden"
+
+[pageNotFoundText]
+other = "Diese Seite gibt es leider nicht (mehr)."
+
+[backHome]
+other = "Zur Startseite"

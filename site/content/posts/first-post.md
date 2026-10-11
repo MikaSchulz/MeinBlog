@@ -8,11 +8,12 @@ tags: ["Hugo", "Blogging"]
 
 Das ist mein erster Blogbeitrag! Ich freue mich darauf, meine Reise in der Softwareentwicklung zu teilen.
 
-## What I'll Write About
+<!--more-->
+
+## Worüber ich schreiben werde
 
 - Tipps zur Softwareentwicklung
 - Clean-Code-Praktiken
-- Clean-Code-Praktiken
+- Technologie-Trends
 
 Bleib dran für weitere Beiträge!
-

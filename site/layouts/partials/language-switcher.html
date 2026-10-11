@@ -1,6 +1,6 @@
 {{ $currentLang := .Language.Lang }}
 <div class="language-switcher-dropdown">
-    <button class="language-switcher-button" aria-label="Change language" aria-expanded="false">
+    <button class="language-switcher-button" aria-label="{{ i18n "changeLanguage" }}" aria-expanded="false">
         {{ if eq $currentLang "de" }}
         <svg class="flag-icon" viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg">
             <rect width="5" height="1" y="0" fill="#000"/>
@@ -44,7 +44,7 @@
            lang="{{ $lang }}"
            {{ if not $isActive }}hreflang="{{ $lang }}"{{ end }}
            class="language-option {{ if $isActive }}active{{ end }}"
-           aria-label="{{ if $isActive }}Current language: {{ else }}Switch to {{ end }}{{ .LanguageName }}">
+           aria-label="{{ if $isActive }}{{ i18n "currentLanguage" (dict "Name" .LanguageName) }}{{ else }}{{ i18n "switchLanguage" (dict "Name" .LanguageName) }}{{ end }}">
             {{ if eq $lang "de" }}
             <svg class="flag-icon" viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg">
                 <rect width="5" height="1" y="0" fill="#000"/>
