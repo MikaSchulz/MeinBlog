@@ -18,6 +18,6 @@ Since the blog has already existed for a year now without me writing anything, I
 
 So if you want to get in touch with me, reach out on [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/), [GitHub](https://github.com/MikaSchulz), or send me an email at [info@eyetealer.me](mailto:info@eyetealer.me).
 
-And a small fun fact for you: in Germany, IT people are sometimes called "ITler", and "eyetealer" sounds just like that. So that's where my name came from.
+And a small fun fact for you: in Germany, IT people are sometimes called "ITler", and "eyetealer" sounds just like that. So that's where my name came from. ;)
 
 All right, final words: I'll start by writing about the blog itself. Actually, most of it was built by AI. Not the content, though: I'm writing all of this myself. Okay, I'll tell you all about it in the next post. See ya!
