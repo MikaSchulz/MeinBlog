@@ -1,5 +1,5 @@
 ---
-title: "Über Mich"
+title: "Über mich"
 date: 2025-10-17
 draft: false
 image: "/assets/images/profile.jpg"

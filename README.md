@@ -50,7 +50,8 @@ The built site will be in `site/public/`
 
 Edit `site/config.toml` to customize:
 
-- **Site title and description**: Update `title` and `params.description`
+- **Site title and description**: Update `title` and `params.description` (the German description is under `[languages.de.params]`). The description is used for search engines and link previews of the home page and the lists.
+- **Preview image**: `params.shareImage` is the image shown when a page is shared, for example on LinkedIn (Open Graph). A post can set its own with `image` in its front matter.
 - **Author name**: Update `params.author`
 - **Languages**: German (default) and English are pre-configured
 - **Social links**: Add your GitHub and LinkedIn URLs:
@@ -111,7 +112,9 @@ Your content here...
 - Any number of tags: lowercase English keywords such as `fun`, `diy`, `home-assistant`. Use the same names in German and English posts so the URLs stay the same.
 - All categories and tags are listed on the topics page (`/themen/`, English `/en/topics/`), linked in the navigation. Tags are shown with a decorative `#`.
 
-The teaser in the post lists is the `description`. Without one, Hugo uses the text before a `<!--more-->` line, or else the beginning of the post.
+The teaser in the post lists is the `description`. Without one, Hugo uses the text before a `<!--more-->` line, or else the beginning of the post. The same text is the page description for search engines and link previews.
+
+Each page gets its own browser title (`Post title | Site title`). To show a specific image in link previews, add `image` to the front matter: a file in the post's page bundle (e.g. `image: "cover.jpg"`) or a path below `static/`.
 
 Start headings in posts with `##`: the post title is already the page's only `<h1>`.
 
@@ -160,6 +163,7 @@ The blog supports German (default, served at `/`) and English (served at `/en/`)
 - Translation files: `site/i18n/de.toml` and `site/i18n/en.toml`. Every key must exist in both files; the smoke tests fail on missing translations.
 - Language switcher is automatically shown in the navigation
 - To add an English version of a post, create it in the same location with `.en.md` extension
+- Translated pages link each other with `hreflang` links in `<head>`, so search engines show the right language. There is deliberately no automatic redirect based on the browser language (search engines crawl with English browsers).
 
 ## Accessibility
 
@@ -180,7 +184,7 @@ tests/smoke-test.sh
 HUGO=/path/to/hugo tests/smoke-test.sh
 ```
 
-The script builds the site, together with the test posts from `tests/fixtures/content/` (so the checks don't depend on your real posts), and checks the user stories from `specs/dev-blog/spec.md` (post lists, drafts, about page, categories and tags, profile links, both languages) plus accessibility and link basics: complete translations, valid colors with sufficient contrast, one `<h1>` per page, alt text on images, no empty headings and no broken internal links.
+The script builds the site, together with the test posts from `tests/fixtures/content/` (so the checks don't depend on your real posts), and checks the user stories from `specs/dev-blog/spec.md` (post lists, drafts, about page, categories and tags, profile links, both languages, page titles, link previews and `hreflang` links) plus accessibility and link basics: complete translations, valid colors with sufficient contrast, one `<h1>` per page, alt text on images, no empty headings and no broken internal links.
 
 The tests run automatically on GitHub Actions for every push to `main` and every pull request (`.github/workflows/test.yml`).
 
@@ -202,7 +206,7 @@ Use [Lighthouse](https://developer.chrome.com/docs/lighthouse/) or [axe DevTools
 The site is deployed as a Docker image built from the `Dockerfile`:
 
 1. **Build stage:** `hugomods/hugo:0.139.3` builds the minified site from `site/`.
-2. **Runtime stage:** `nginx:1.27-alpine` serves the static files (long cache for assets, clean URLs, custom 404 page) with a healthcheck.
+2. **Runtime stage:** `nginx:1.27-alpine` serves the static files with a healthcheck: long cache for assets (CSS and JS have a content hash in their file name), gzip compression, clean URLs, a German and an English 404 page, and security headers. The Content Security Policy only allows files from this site; embedding content from other sites (e.g. videos) needs an extra source in the `Dockerfile`.
 
 A self-hosted [Dokploy](https://dokploy.com) instance rebuilds and redeploys the image automatically on every push to `main` (GitHub webhook via Cloudflare Tunnel).
 
@@ -220,5 +224,5 @@ The base URL defaults to `https://eyetealer.me/` and can be overridden with `--b
 
 ## Contact
 
-- GitHub: [MikaSchulz](https://github.com/MikaSchulz)
 - LinkedIn: [Mika Schulz](https://www.linkedin.com/in/mika-schulz-538b5a246/)
+- Email: [info@eyetealer.me](mailto:info@eyetealer.me)

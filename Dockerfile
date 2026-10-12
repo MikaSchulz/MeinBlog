@@ -22,15 +22,34 @@ COPY <<'EOF' /etc/nginx/conf.d/default.conf
 server {
     listen 80;
     server_name _;
+    server_tokens off;
 
     root /usr/share/nginx/html;
     index index.html;
 
+    # Security headers on every response, error pages included. They are only
+    # inherited by locations without add_header of their own, so keep it that way.
+    # The CSP allows only files from this site; inline styles are needed for the
+    # color variables in <head>. Embeds from other sites (e.g. videos) need an
+    # extra source here.
+    add_header Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-Frame-Options "DENY" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;
+
+    # Compress text responses (HTML is always included)
+    gzip on;
+    gzip_comp_level 5;
+    gzip_min_length 256;
+    gzip_proxied any;
+    gzip_vary on;
+    gzip_types text/css application/javascript image/svg+xml application/manifest+json application/xml text/plain;
+
     # Long cache for static files, short for HTML. CSS and JS carry a content
     # hash in their file name (Hugo fingerprint), so changes reach visitors at once.
-    location ~* \.(?:css|js|png|jpg|jpeg|gif|ico|svg|woff2?|ttf|eot)$ {
+    location ~* \.(?:css|js|png|jpg|jpeg|gif|ico|svg|webp|woff2?|ttf|eot)$ {
         expires 7d;
-        add_header Cache-Control "public, max-age=604800";
         access_log off;
         try_files $uri =404;
     }
@@ -39,9 +58,16 @@ server {
         try_files $uri $uri/ $uri/index.html =404;
     }
 
-    # Custom 404
+    # Custom 404, in English below /en/
     error_page 404 /404.html;
+    location /en/ {
+        try_files $uri $uri/ $uri/index.html =404;
+        error_page 404 /en/404.html;
+    }
     location = /404.html {
+        internal;
+    }
+    location = /en/404.html {
         internal;
     }
 }
