@@ -16,7 +16,7 @@ Deswegen gleich vorweg: Was ich hier teile, muss nicht immer richtig oder Best P
 
 Weil der Blog jetzt schon fast ein Jahr existiert, ohne dass ich was geschrieben habe, hat sich tatsächlich einiges angesammelt. Meine Themenliste ist lang, und ich arbeite sie jetzt nach und nach ab. Gerade am Anfang dürft ihr euch also auf viele Beiträge freuen. Das wird mit der Zeit sicherlich etwas weniger, aber mein Ziel ist es trotzdem, regelmäßig zu schreiben.
 
-Also, meldet euch gerne über [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/), [GitHub](https://github.com/MikaSchulz) oder per E-Mail an [info@eyetealer.me](mailto:info@eyetealer.me).
+Also, meldet euch gerne über [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/) oder per E-Mail an [info@eyetealer.me](mailto:info@eyetealer.me).
 
 Und kleiner Fun Fact, den ihr euch wahrscheinlich schon denken könnt: eyetealer klingt wie ITler, deswegen der Name. ;)
 

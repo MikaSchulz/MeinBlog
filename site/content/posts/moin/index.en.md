@@ -16,7 +16,7 @@ So whatever I share here doesn't have to be right or best practice. You can crit
 
 Since the blog has already existed for a year now without me writing anything, I have a huge backlog of topics I want to write about. And I'll work through it bit by bit now. Especially in the beginning, you can look forward to a lot of posts. That will probably slow down in the future, but my goal is to keep writing on a regular basis.
 
-So if you want to get in touch with me, reach out on [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/), [GitHub](https://github.com/MikaSchulz), or send me an email at [info@eyetealer.me](mailto:info@eyetealer.me).
+So if you want to get in touch with me, reach out on [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/) or send me an email at [info@eyetealer.me](mailto:info@eyetealer.me).
 
 And a small fun fact for you: in Germany, IT people are sometimes called "ITler", and "eyetealer" sounds just like that. So that's where my name came from. ;)
 

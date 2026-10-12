@@ -148,5 +148,5 @@ Möglichkeiten, die sie für moderne Software-Projekte bieten.
 
 ## Kontakt
 
-Melde dich gerne über GitHub oder LinkedIn.
+Melde dich gerne über [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/) oder per E-Mail an [info@eyetealer.me](mailto:info@eyetealer.me).
 Ich freue mich über einen Austausch!
