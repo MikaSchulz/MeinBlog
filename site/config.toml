@@ -7,6 +7,9 @@ defaultContentLanguageInSubdir = false
 # RSS feeds are out of scope (see specs/dev-blog/spec.md)
 disableKinds = ["rss"]
 
+# Show tags as written (lowercase hashtags like #blog), not title-cased
+capitalizeListTitles = false
+
 [markup.goldmark.renderer]
 unsafe = true
 

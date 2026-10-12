@@ -353,6 +353,11 @@ h4 { font-size: 1.5rem; }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1.1rem; }
 
+/* Paragraph spacing in posts and pages */
+.content p {
+  margin-bottom: 1rem;
+}
+
 /* Code blocks */
 code {
   background-color: var(--color-code-background);
