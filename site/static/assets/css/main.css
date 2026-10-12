@@ -353,9 +353,18 @@ h4 { font-size: 1.5rem; }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1.1rem; }
 
-/* Paragraph spacing in posts and pages */
+/* Paragraphs in posts and pages: spacing, plus justified text with hyphenation on wider
+   screens (on narrow phone screens justified text leaves large gaps between words) */
 .content p {
   margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+  .content p {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
 }
 
 /* Code blocks */
