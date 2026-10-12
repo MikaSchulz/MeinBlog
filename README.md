@@ -134,6 +134,7 @@ Images live in `site/static/assets/images/`. Resize photos before adding them (t
 ```
 site/
 ├── config.toml          # Site configuration (languages, params, colors)
+├── assets/              # CSS and JS (published with a content hash in the file name)
 ├── content/             # All content (Markdown)
 │   ├── posts/           # Blog posts
 │   └── about.md         # About page
@@ -143,8 +144,8 @@ site/
 │   ├── posts/           # Post page layout
 │   ├── partials/        # Reusable components
 │   └── 404.html         # "Page not found" page
-├── static/              # Static assets
-│   └── assets/          # CSS, JS, images
+├── static/              # Static files (favicons, images)
+│   └── assets/images/   # Images
 └── i18n/                # Translations (DE/EN)
 tests/
 ├── smoke-test.sh        # Automated smoke tests

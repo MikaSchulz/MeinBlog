@@ -19,7 +19,9 @@
     {{- /* Inject CSS custom properties from color configuration */ -}}
     {{- partial "color-variables.html" . -}}
 
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relURL }}">
+    {{- /* Fingerprinted file name: nginx caches CSS/JS for 7 days, so every change needs a new URL */ -}}
+    {{- $css := resources.Get "css/main.css" | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 </head>
 <body>
     {{ partial "skip-link.html" . }}
@@ -32,6 +34,7 @@
     </main>
 
     {{ partial "footer.html" . }}
-    <script src="{{ "/assets/js/language-switcher.js" | relURL }}"></script>
+    {{- $js := resources.Get "js/language-switcher.js" | fingerprint }}
+    <script src="{{ $js.RelPermalink }}"></script>
 </body>
 </html>
