@@ -48,6 +48,12 @@ body {
   padding: 0 20px;
 }
 
+/* Narrower column for the page content: about 75-80 characters per line are easier to read.
+   Not on the home page, where the photo next to the intro already narrows the text. */
+.container-narrow {
+  max-width: 640px;
+}
+
 /* Header */
 header {
   background: var(--color-header-background);
@@ -269,7 +275,8 @@ main {
 
 .hero-text {
   flex: 1;
-  min-width: 300px;
+  /* min() keeps very narrow phones (320px) from scrolling sideways */
+  min-width: min(300px, 100%);
 }
 
 .hero-text h1 {
@@ -353,19 +360,10 @@ h4 { font-size: 1.5rem; }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1.1rem; }
 
-/* Body text everywhere (posts, pages, home page, post lists): spacing between paragraphs,
-   plus justified text with hyphenation on wider screens (on narrow phone screens justified
-   text leaves large gaps between words) */
+/* Body text everywhere (posts, pages, home page, post lists): spacing between paragraphs.
+   Left-aligned on purpose: justified text leaves uneven gaps between words (WCAG 1.4.8) */
 main p {
   margin-bottom: 1rem;
-}
-
-@media (min-width: 600px) {
-  main p {
-    text-align: justify;
-    -webkit-hyphens: auto;
-    hyphens: auto;
-  }
 }
 
 /* Code blocks */
@@ -486,6 +484,26 @@ article {
 
 article:last-child {
   border-bottom: none;
+}
+
+/* Post lists (home page, blog, categories, tags): no bullets, a line between posts */
+.posts-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.posts-list > li {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.posts-list > li:last-child {
+  border-bottom: none;
+}
+
+.posts-list article {
+  margin-bottom: 0;
 }
 
 /* Footer */
@@ -680,7 +698,6 @@ input[type="button"]:focus {
 .tech-stack ul li {
   list-style: none !important;
   justify-content: center;
-  content-justify: center;
 }
 
 /* Responsive adjustments for skills */
@@ -707,19 +724,19 @@ input[type="button"]:focus {
   }
 }
 
-/* Timeline Styles - Vertical Timeline with Modern Design */
+/* Timeline Styles - vertical line on the left, cards on the right
+   (one column: the content column is too narrow for cards on both sides) */
 .timeline {
   position: relative;
-  max-width: 800px;
   margin: 3rem auto;
   padding: 2rem 0;
 }
 
-/* Vertical line in the middle */
+/* Vertical line */
 .timeline::before {
   content: '';
   position: absolute;
-  left: 50%;
+  left: 30px;
   transform: translateX(-50%);
   width: 4px;
   height: 100%;
@@ -732,7 +749,7 @@ input[type="button"]:focus {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
 }
@@ -744,7 +761,7 @@ input[type="button"]:focus {
 /* Timeline marker (the circle on the line) */
 .timeline-marker {
   position: absolute;
-  left: 50%;
+  left: 30px;
   transform: translateX(-50%);
   width: 24px;
   height: 24px;
@@ -764,7 +781,8 @@ input[type="button"]:focus {
 
 /* Timeline content cards */
 .timeline-content {
-  width: calc(50% - 40px);
+  width: calc(100% - 80px);
+  margin-left: 80px;
   background: var(--color-code-background);
   padding: 1.5rem 2rem;
   border-radius: 12px;
@@ -773,35 +791,16 @@ input[type="button"]:focus {
   transition: all 0.3s ease;
 }
 
-.timeline-item:nth-child(odd) .timeline-content {
-  margin-right: auto;
-  margin-left: 0;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-  margin-left: auto;
-  margin-right: 0;
-}
-
 /* Arrow pointing to the timeline */
 .timeline-content::before {
   content: '';
   position: absolute;
   top: 50%;
+  left: -15px;
   transform: translateY(-50%);
   width: 0;
   height: 0;
   border-style: solid;
-}
-
-.timeline-item:nth-child(odd) .timeline-content::before {
-  right: -15px;
-  border-width: 15px 0 15px 15px;
-  border-color: transparent transparent transparent var(--color-code-background);
-}
-
-.timeline-item:nth-child(even) .timeline-content::before {
-  left: -15px;
   border-width: 15px 15px 15px 0;
   border-color: transparent var(--color-code-background) transparent transparent;
 }
@@ -842,31 +841,6 @@ input[type="button"]:focus {
 
 /* Responsive Timeline - Mobile */
 @media (max-width: 768px) {
-  .timeline::before {
-    left: 30px;
-  }
-
-  .timeline-item {
-    margin-bottom: 2rem;
-  }
-
-  .timeline-marker {
-    left: 30px;
-  }
-
-  .timeline-content {
-    width: calc(100% - 80px);
-    margin-left: 80px !important;
-    margin-right: 0 !important;
-  }
-
-  .timeline-content::before {
-    left: -15px !important;
-    right: auto !important;
-    border-width: 15px 15px 15px 0 !important;
-    border-color: transparent var(--color-code-background) transparent transparent !important;
-  }
-
   .timeline-title {
     font-size: 1.2rem;
   }

@@ -19,6 +19,8 @@ unsafe = true
     weight = 1
     title = "Dev Blog - Mika Schulz"
     contentDir = "content"
+    [languages.de.params]
+      description = "Gedanken und Projekte aus meinem IT-Leben."
 
   [languages.en]
     languageName = "English"
@@ -28,7 +30,10 @@ unsafe = true
 
 [params]
 
+  # Site description for search engines and link previews (German version under [languages.de.params])
   description = "Thoughts and projects on my IT life."
+  # Default preview image when a page is shared (Open Graph); a post can set its own with `image`
+  shareImage = "/assets/images/profile.jpg"
   author = "Mika Schulz"
   github = "https://github.com/MikaSchulz"
   linkedin = "https://www.linkedin.com/in/mika-schulz-538b5a246/"

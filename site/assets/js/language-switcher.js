@@ -1,30 +1,7 @@
+// Language dropdown in the navigation. There is deliberately no automatic redirect
+// based on the browser language: search engines crawl with English browsers, and
+// the hreflang links in <head> already point to the other language.
 document.addEventListener('DOMContentLoaded', function() {
-    // Auto-detect browser language and redirect if needed
-    function detectAndRedirectLanguage() {
-        const currentPath = window.location.pathname;
-        const browserLang = navigator.language || navigator.userLanguage;
-        const langCode = browserLang.split('-')[0]; // Get 'de' from 'de-DE' or 'en' from 'en-US'
-
-        // Only redirect if we're on the root path (not already on a language-specific page).
-        // German is the default language and lives at the root, so only English needs a redirect.
-        if (currentPath === '/' || currentPath === '/index.html') {
-            const supportedLangs = ['de', 'en'];
-            const targetLang = supportedLangs.includes(langCode) ? langCode : 'de'; // Default to 'de'
-            if (targetLang === 'de') return;
-
-            // Check if user has already visited (don't redirect on every visit)
-            const hasVisited = sessionStorage.getItem('language-detected');
-
-            if (!hasVisited) {
-                sessionStorage.setItem('language-detected', 'true');
-                window.location.href = '/' + targetLang + '/';
-            }
-        }
-    }
-
-    // Run language detection
-    detectAndRedirectLanguage();
-
     const dropdown = document.querySelector('.language-switcher-dropdown');
     if (!dropdown) return;
 

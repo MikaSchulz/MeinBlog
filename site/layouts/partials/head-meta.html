@@ -1,0 +1,62 @@
+{{- /* Page title, description, canonical URL, language alternates and link previews (Open Graph) */ -}}
+{{- $title := site.Title -}}
+{{- if eq .Kind "404" -}}
+    {{- $title = printf "%s | %s" (i18n "pageNotFound") site.Title -}}
+{{- else if not .IsHome -}}
+    {{- $title = printf "%s | %s" .Title site.Title -}}
+{{- end -}}
+
+{{- /* Posts and pages describe themselves (description or the beginning of the text), lists use the site description */ -}}
+{{- $description := site.Params.description -}}
+{{- if .IsPage -}}
+    {{- with .Description -}}
+        {{- $description = . -}}
+    {{- else -}}
+        {{- with .Summary | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | truncate 160 -}}
+            {{- $description = . -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- /* Preview image: the page's own image (bundle resource or path), else the site default */ -}}
+{{- $image := "" -}}
+{{- with .Params.image -}}
+    {{- with $.Resources.GetMatch . -}}
+        {{- $image = .Permalink -}}
+    {{- else -}}
+        {{- $image = absURL . -}}
+    {{- end -}}
+{{- else -}}
+    {{- with site.Params.shareImage -}}
+        {{- $image = absURL . -}}
+    {{- end -}}
+{{- end }}
+    <title>{{ $title }}</title>
+    <meta name="description" content="{{ $description }}">
+{{- if ne .Kind "404" }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{- if gt (len .AllTranslations) 1 }}
+    {{- range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+    {{- if not .Site.LanguagePrefix }}
+    <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+    {{- end }}
+    {{- end }}
+    {{- end }}
+
+    <meta property="og:site_name" content="{{ site.Title }}">
+    <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:description" content="{{ $description }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:locale" content="{{ if eq .Language.Lang "de" }}de_DE{{ else }}en_US{{ end }}">
+    {{- if and .IsPage (eq .Section "posts") }}
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+    {{- else }}
+    <meta property="og:type" content="website">
+    {{- end }}
+    {{- with $image }}
+    <meta property="og:image" content="{{ . }}">
+    {{- end }}
+    <meta name="twitter:card" content="summary">
+{{- end }}

@@ -2,7 +2,6 @@
 title: "Mika Schulz"
 date: 2025-10-17
 draft: false
-description: "Mika Schulz - Software Developer"
 image: "/assets/images/profile.jpg"
 ---
 
