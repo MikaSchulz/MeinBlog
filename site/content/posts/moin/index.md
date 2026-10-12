@@ -4,7 +4,10 @@ date: 2026-10-12T21:00:00+02:00
 description: "Mit rund einem Jahr Verspätung geht's los: warum es diesen Blog gibt, was euch hier erwartet und woher der Name kommt."
 categories: ["Misc"]
 tags: ["blog"]
+image: "juststart.png"
 ---
+
+{{< figure src="juststart.png" width="1200" height="630" alt="Der Hashtag #juststart über einem Terminalfenster: Das Skript start-blog.sh überspringt den Perfektionismus und veröffentlicht den ersten Beitrag." >}}
 
 Moin, da bin ich endlich! Mit rund einem Jahr Verspätung geht's hier jetzt endlich los. Und ich muss gestehen: So war das eigentlich nicht geplant. Upsi.
 

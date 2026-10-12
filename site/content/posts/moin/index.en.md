@@ -4,7 +4,10 @@ date: 2026-10-12T21:00:00+02:00
 description: "About a year late, it's finally starting: why this blog exists, what to expect here and where the name comes from."
 categories: ["Misc"]
 tags: ["blog"]
+image: "juststart.png"
 ---
+
+{{< figure src="juststart.png" width="1200" height="630" alt="The hashtag #juststart above a terminal window: the script start-blog.sh skips perfectionism and publishes the first post." >}}
 
 Yo, here I am, finally. With a delay of around a year, I finally made it. Yeah, this wasn't actually planned. Oopsie.
 
