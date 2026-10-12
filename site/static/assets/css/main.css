@@ -353,9 +353,19 @@ h4 { font-size: 1.5rem; }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1.1rem; }
 
-/* Paragraph spacing in posts and pages */
-.content p {
+/* Body text everywhere (posts, pages, home page, post lists): spacing between paragraphs,
+   plus justified text with hyphenation on wider screens (on narrow phone screens justified
+   text leaves large gaps between words) */
+main p {
   margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+  main p {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
 }
 
 /* Code blocks */
