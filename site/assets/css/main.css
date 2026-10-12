@@ -366,6 +366,17 @@ main p {
   margin-bottom: 1rem;
 }
 
+/* Images in posts and pages: never wider than the text column, keep their aspect ratio */
+.content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.content figure {
+  margin: 1.5rem 0;
+}
+
 /* Code blocks */
 code {
   background-color: var(--color-code-background);
