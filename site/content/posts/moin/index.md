@@ -10,7 +10,7 @@ Moin, da bin ich endlich! Mit rund einem Jahr Verspätung geht's hier jetzt endl
 
 Also, falls ihr mich noch nicht kennt: Ich bin Mika aus Hamburg, einfach ein normaler Typ, der gern Sachen ausprobiert, insbesondere wenn es um IT geht, und das mit der Welt teilen will. Herausgekommen ist dann dieser Blog.
 
-Also, warum erst jetzt? Ich bin ziemlich perfektionistisch und wusste ehrlich gesagt nicht, wie ich anfangen soll. Wenn ich an Blogs denke, denke ich immer an irgendwelche Experten, die wissenschaftliche Texte schreiben oder Best Practices formulieren. Aber das bin ich nicht. Ich bin einfach ein Typ aus Hamburg, der so ein bisschen seine Sachen teilen will. Entsprechend hat es eine Weile gedauert, bis ich gemerkt habe: Ich muss einfach anfangen.
+Also, warum erst jetzt? Ich bin ziemlich perfektionistisch und wusste ehrlich gesagt nicht, wie ich anfangen soll. Wenn ich an Blogs denke, denke ich immer an irgendwelche Experten, die wissenschaftliche Texte schreiben oder Best Practices formulieren. Aber das bin ich nicht. Ich bin einfach ein Typ, der gern seine Erfahrungen teilen will. Entsprechend hat es eine Weile gedauert, bis ich gemerkt habe: Ich muss einfach anfangen.
 
 Deswegen gleich vorweg: Was ich hier teile, muss nicht immer richtig oder Best Practice sein. Ihr dürft die Dinge gern kritisieren oder anders machen. Ich glaube, ich mache bereits vieles richtig, und wenn nicht, dann freue ich mich über den Austausch mit euch, übers Diskutieren und gemeinsame Dazulernen.
 
