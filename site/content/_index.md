@@ -14,4 +14,4 @@ Also, kurz zu mir: Ich komme aus Hamburg. Angefangen hat alles mit Minecraft-Mod
 
 In diesem Blog könnt ihr mit Themen von A bis Z rechnen – alles, was ich spannend finde. Der Hauptfokus liegt auf IT und besonders auf KI, aber es geht auch um andere Sachen wie Bastelprojekte, egal ob Klemmbausteine oder Elektrotechnik.
 
-Ich berichte von meinen alltäglichen Erfahrungen, Ideen und Spaßprojekten. Nicht alles, was ich mache, ist fehlerfrei oder Best Practice. Wenn ihr was besser wisst: Schreibt mir – am einfachsten über [GitHub](https://github.com/MikaSchulz) oder [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/). Danke und viel Spaß beim Lesen!
+Ich berichte von meinen alltäglichen Erfahrungen, Ideen und Spaßprojekten. Nicht alles, was ich mache, ist fehlerfrei oder Best Practice. Wenn ihr was besser wisst: Schreibt mir – am einfachsten über [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/) oder per E-Mail an [info@eyetealer.me](mailto:info@eyetealer.me). Danke und viel Spaß beim Lesen!

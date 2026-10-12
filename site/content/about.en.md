@@ -151,5 +151,5 @@ discovering the opportunities they bring to modern software projects.
 
 ## Connect with Me
 
-Feel free to reach out via GitHub or LinkedIn.
+Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/) or by email at [info@eyetealer.me](mailto:info@eyetealer.me).
 I'm looking forward to connecting with you!

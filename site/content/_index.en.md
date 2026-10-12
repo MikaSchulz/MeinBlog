@@ -14,4 +14,4 @@ So, a quick bit about me: I'm from Hamburg. It all started with Minecraft moddin
 
 On this blog you can expect topics from A to Z – anything I find exciting. The main focus is on IT, especially AI, but there'll be other stuff too, like tinkering projects, whether it's building bricks or electronics.
 
-I write about my everyday experiences, ideas and fun projects. Not everything I do is flawless or best practice. If you know better: drop me a message – easiest via [GitHub](https://github.com/MikaSchulz) or [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/). Thanks, and enjoy reading!
+I write about my everyday experiences, ideas and fun projects. Not everything I do is flawless or best practice. If you know better: drop me a message – easiest via [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/) or by email at [info@eyetealer.me](mailto:info@eyetealer.me). Thanks, and enjoy reading!
