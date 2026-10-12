@@ -26,7 +26,8 @@ server {
     root /usr/share/nginx/html;
     index index.html;
 
-    # Long cache for hashed assets, short for HTML.
+    # Long cache for static files, short for HTML. CSS and JS carry a content
+    # hash in their file name (Hugo fingerprint), so changes reach visitors at once.
     location ~* \.(?:css|js|png|jpg|jpeg|gif|ico|svg|woff2?|ttf|eot)$ {
         expires 7d;
         add_header Cache-Control "public, max-age=604800";
