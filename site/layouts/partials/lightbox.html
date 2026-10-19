@@ -1,0 +1,7 @@
+{{- /* Dialog for enlarged images (figure shortcode), filled by lightbox.js */ -}}
+<dialog class="lightbox" aria-label="{{ i18n "enlargedImage" }}">
+    <button type="button" class="lightbox-close" aria-label="{{ i18n "close" }}">×</button>
+    <figure class="lightbox-figure"></figure>
+</dialog>
+{{- $js := resources.Get "js/lightbox.js" | fingerprint }}
+<script src="{{ $js.RelPermalink }}"></script>

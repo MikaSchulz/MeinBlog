@@ -64,3 +64,12 @@ other = "Diese Seite gibt es leider nicht (mehr)."
 
 [backHome]
 other = "Zur Startseite"
+
+[enlargeImage]
+other = "Bild vergrößern"
+
+[enlargedImage]
+other = "Vergrößertes Bild"
+
+[close]
+other = "Schließen"

@@ -114,6 +114,20 @@ contains posts/smoke-test-post/index.html '<p>Ein Testbegriff<span class="info">
 contains posts/smoke-test-post/index.html '<span class="info-popup" id="info-0"><strong class="info-title">Testbegriff</strong> Erklärung für den Smoke-Test.</span></span> mitten im Satz.</p>' "Info popup belongs to the button and keeps the sentence intact"
 exists_js=$(ls "$OUT"/js/info.*.js 2>/dev/null | head -1)
 [ -n "$exists_js" ] && pass "Info script is published" || fail "Info script is published (js/info.*.js missing)"
+contains posts/smoke-test-post/index.html '<a href="/assets/images/profile.jpg" class="zoom-link">' "Figure image links to its enlarged view"
+contains posts/smoke-test-post/index.html '<span class="visually-hidden">Bild vergrößern</span>' "Image link tells screen readers that it enlarges the image"
+contains posts/smoke-test-post/index.html '<figcaption>Testbildunterschrift</figcaption>' "Figure shows its caption"
+contains posts/smoke-test-post/index.html '<dialog class="lightbox" aria-label="Vergrößertes Bild">' "Pages with images have the image dialog"
+not_contains about/index.html '<dialog' "Pages without images have no image dialog"
+exists_js=$(ls "$OUT"/js/lightbox.*.js 2>/dev/null | head -1)
+[ -n "$exists_js" ] && pass "Lightbox script is published" || fail "Lightbox script is published (js/lightbox.*.js missing)"
+cp -R "$TMP/site" "$TMP/site-no-alt"
+printf -- '---\ntitle: "Ohne Alt-Text"\n---\n\n{{< figure src="/assets/images/profile.jpg" >}}\n' > "$TMP/site-no-alt/content/posts/no-alt.md"
+if "$HUGO" --source "$TMP/site-no-alt" --destination "$TMP/public-no-alt" > /dev/null 2>&1; then
+    fail "A figure without alt text fails the build"
+else
+    pass "A figure without alt text fails the build"
+fi
 
 echo "Accessibility and links"
 html_files=$(cd "$OUT" && find . -name '*.html' ! -path './de/*' | sed 's|^\./||' | sort)

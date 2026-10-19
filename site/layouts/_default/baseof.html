@@ -38,5 +38,8 @@
     <script src="{{ $js.RelPermalink }}"></script>
     {{- $info := resources.Get "js/info.js" | fingerprint }}
     <script src="{{ $info.RelPermalink }}"></script>
+    {{- if .HasShortcode "figure" }}
+    {{ partial "lightbox.html" . }}
+    {{- end }}
 </body>
 </html>
