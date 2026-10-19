@@ -118,6 +118,18 @@ Each page gets its own browser title (`Post title | Site title`). To show a spec
 
 Start headings in posts with `##`: the post title is already the page's only `<h1>`.
 
+**Images and info boxes:**
+- Put images next to the post in its folder (page bundle) and embed them with `{{< figure src="image.webp" width="…" height="…" alt="…" caption="…" >}}`. Images never get wider than the text column.
+- Explain terms not every reader knows in an expandable info box instead of the running text:
+
+  ```markdown
+  {{< info "What's a NUC?" >}}
+  Explanation in Markdown.
+  {{< /info >}}
+  ```
+
+  The box is closed by default, needs no JavaScript and works with the keyboard and screen readers.
+
 **Draft vs Published:**
 - `draft: true` - Post is hidden from the live site (use for work-in-progress)
 - `draft: false` or no draft field - Post is published and visible

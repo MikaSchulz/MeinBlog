@@ -106,6 +106,10 @@ contains posts/smoke-test-post/index.html '<link rel="canonical" href="/posts/sm
 contains posts/smoke-test-post/index.html '<meta property="og:title" content="Smoke-Test-Beitrag"' "Post page has a link preview title (Open Graph)"
 contains posts/smoke-test-post/index.html '<meta property="og:image" content="[^"]+"' "Post page has a link preview image (Open Graph)"
 
+echo "Shortcodes"
+contains posts/smoke-test-post/index.html '<details class="info-box">' "Info box shortcode renders an expandable box"
+contains posts/smoke-test-post/index.html '<summary><span class="info-box-icon" aria-hidden="true">i</span>Testbegriff</summary>' "Info box shows its title in the summary"
+
 echo "Accessibility and links"
 html_files=$(cd "$OUT" && find . -name '*.html' ! -path './de/*' | sed 's|^\./||' | sort)
 missing_skip=0; img_without_alt=0; empty_headings=0; wrong_h1=0
