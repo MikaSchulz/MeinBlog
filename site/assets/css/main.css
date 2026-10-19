@@ -158,6 +158,12 @@ nav .language-switcher::before {
     gap: 0.5rem 1rem;
     font-size: 1.1em;
   }
+
+  /* When the menu wraps, keep the language switcher at the right end of its row
+     like on desktop, so its right-aligned dropdown does not run off the left edge */
+  nav .language-switcher-dropdown {
+    margin-left: auto;
+  }
 }
 
 /* Language Switcher Dropdown */
