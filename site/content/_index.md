@@ -3,6 +3,7 @@ title: "Mika Schulz"
 date: 2025-10-17
 draft: false
 image: "/assets/images/profile.jpg"
+imageAlt: "Mika mit Brille, lächelnd, im Hintergrund bunte Laternen und Lichterketten"
 ---
 
 # Moin, ich bin Mika 👋

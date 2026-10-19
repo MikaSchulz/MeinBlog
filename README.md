@@ -120,6 +120,8 @@ Start headings in posts with `##`: the post title is already the page's only `<h
 
 **Images and info boxes:**
 - Put images next to the post in its folder (page bundle) and embed them with `{{< figure src="image.webp" width="…" height="…" alt="…" caption="…" >}}`. Images never get wider than the text column.
+- The alt text describes the image for screen readers and is required: the build fails without it. The caption is optional.
+- A click or tap on an image (or Enter on the focused image) shows it enlarged on the whole screen, with its caption. The close button, Escape or a click outside the caption closes it. Without JavaScript, the image file opens instead. A small magnifier in the corner of the image shows that it can be enlarged.
 - Explain terms not every reader knows with a small "i" right after the term, instead of in the running text. Write it inside the sentence, on one line:
 
   ```markdown
@@ -194,7 +196,7 @@ tests/smoke-test.sh
 HUGO=/path/to/hugo tests/smoke-test.sh
 ```
 
-The script builds the site, together with the test posts from `tests/fixtures/content/` (so the checks don't depend on your real posts), and checks the user stories from `specs/dev-blog/spec.md` (post lists, drafts, about page, categories and tags, profile links, both languages, page titles, link previews and `hreflang` links) plus accessibility and link basics: complete translations, valid colors with sufficient contrast, one `<h1>` per page, alt text on images, no empty headings and no broken internal links.
+The script builds the site, together with the test posts from `tests/fixtures/content/` (so the checks don't depend on your real posts), and checks the user stories from `specs/dev-blog/spec.md` (post lists, drafts, about page, categories and tags, profile links, both languages, page titles, link previews and `hreflang` links) plus the info and figure shortcodes (enlarged images, required alt text) and accessibility and link basics: complete translations, valid colors with sufficient contrast, one `<h1>` per page, alt text on images, no empty headings and no broken internal links.
 
 The tests run automatically on GitHub Actions for every push to `main` and every pull request (`.github/workflows/test.yml`).
 

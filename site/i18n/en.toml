@@ -64,3 +64,12 @@ other = "Sorry, this page doesn't exist (anymore)."
 
 [backHome]
 other = "Back to the home page"
+
+[enlargeImage]
+other = "Enlarge image"
+
+[enlargedImage]
+other = "Enlarged image"
+
+[close]
+other = "Close"
