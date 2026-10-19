@@ -10,7 +10,7 @@
         {{ else }}
         <svg class="flag-icon" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
             <clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
-            <clipPath id="t"><path d="M30,15 h30 v15 z v-30 h-30 z h-30 v15 z v-30 h30 z"/></clipPath>
+            <clipPath id="t"><path d="M30 15H60V30ZM30 15V30H0ZM30 15H0V0ZM30 15V0H60Z"/></clipPath>
             <g clip-path="url(#s)">
                 <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
                 <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
@@ -54,7 +54,7 @@
             {{ else }}
             <svg class="flag-icon" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
                 <clipPath id="s{{ $lang }}"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
-                <clipPath id="t{{ $lang }}"><path d="M30,15 h30 v15 z v-30 h-30 z h-30 v15 z v-30 h30 z"/></clipPath>
+                <clipPath id="t{{ $lang }}"><path d="M30 15H60V30ZM30 15V30H0ZM30 15H0V0ZM30 15V0H60Z"/></clipPath>
                 <g clip-path="url(#s{{ $lang }})">
                     <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
                     <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
