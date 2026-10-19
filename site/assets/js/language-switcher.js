@@ -12,6 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
         e.stopPropagation();
         const isExpanded = button.getAttribute('aria-expanded') === 'true';
         button.setAttribute('aria-expanded', !isExpanded);
+        if (!isExpanded) {
+            // The menu hangs from the button's right edge. On small screens the button
+            // can wrap to the left edge, so the menu would leave the screen: hang it
+            // from the left edge instead. The closed menu is only invisible, so it can be measured.
+            dropdown.classList.remove('align-left');
+            if (menu.getBoundingClientRect().left < 0) {
+                dropdown.classList.add('align-left');
+            }
+        }
         dropdown.classList.toggle('open');
     });
 

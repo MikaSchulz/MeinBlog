@@ -237,6 +237,12 @@ nav .language-switcher::before {
   transform: translateY(0);
 }
 
+/* Set by language-switcher.js when the button is too far left for the menu to fit */
+.language-switcher-dropdown.align-left .language-switcher-menu {
+  left: 0;
+  right: auto;
+}
+
 .language-option {
   display: flex;
   align-items: center;
