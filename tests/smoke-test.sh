@@ -106,6 +106,12 @@ contains posts/smoke-test-post/index.html '<link rel="canonical" href="/posts/sm
 contains posts/smoke-test-post/index.html '<meta property="og:title" content="Smoke-Test-Beitrag"' "Post page has a link preview title (Open Graph)"
 contains posts/smoke-test-post/index.html '<meta property="og:image" content="[^"]+"' "Post page has a link preview image (Open Graph)"
 
+echo "Shortcodes"
+contains posts/smoke-test-post/index.html '<p>Ein Testbegriff<span class="info"><button type="button" class="info-button" aria-expanded="false" aria-controls="info-0" aria-label="Testbegriff">i</button>' "Info shortcode renders a button inside the sentence"
+contains posts/smoke-test-post/index.html '<span class="info-popup" id="info-0"><strong class="info-title">Testbegriff</strong> Erklärung für den Smoke-Test.</span></span> mitten im Satz.</p>' "Info popup belongs to the button and keeps the sentence intact"
+exists_js=$(ls "$OUT"/js/info.*.js 2>/dev/null | head -1)
+[ -n "$exists_js" ] && pass "Info script is published" || fail "Info script is published (js/info.*.js missing)"
+
 echo "Accessibility and links"
 html_files=$(cd "$OUT" && find . -name '*.html' ! -path './de/*' | sed 's|^\./||' | sort)
 missing_skip=0; img_without_alt=0; empty_headings=0; wrong_h1=0

@@ -118,6 +118,16 @@ Each page gets its own browser title (`Post title | Site title`). To show a spec
 
 Start headings in posts with `##`: the post title is already the page's only `<h1>`.
 
+**Images and info boxes:**
+- Put images next to the post in its folder (page bundle) and embed them with `{{< figure src="image.webp" width="…" height="…" alt="…" caption="…" >}}`. Images never get wider than the text column.
+- Explain terms not every reader knows with a small "i" right after the term, instead of in the running text. Write it inside the sentence, on one line:
+
+  ```markdown
+  … so I went for my NUC{{< info "What's a NUC?" >}}Explanation in Markdown.{{< /info >}}.
+  ```
+
+  On wide screens, hovering the "i" shows the explanation. A click or tap toggles it (on narrower screens it appears at the bottom of the screen), Escape or a click elsewhere closes it. Screen readers get a button with the title as its label.
+
 **Draft vs Published:**
 - `draft: true` - Post is hidden from the live site (use for work-in-progress)
 - `draft: false` or no draft field - Post is published and visible
