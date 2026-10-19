@@ -12,6 +12,4 @@ Dieser Beitrag existiert nur im Test-Build von `tests/smoke-test.sh`.
 
 Etwas Text.
 
-{{< info "Testbegriff" >}}
-Erklärung für den Smoke-Test.
-{{< /info >}}
+Ein Testbegriff{{< info "Testbegriff" >}}Erklärung für den Smoke-Test.{{< /info >}} mitten im Satz.

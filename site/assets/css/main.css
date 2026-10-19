@@ -383,63 +383,107 @@ main p {
   font-size: 0.9rem;
 }
 
-/* Info boxes ({{< info >}} shortcode): expandable explanations of terms */
-.info-box {
-  margin: 1.5rem 0;
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-button);
-  border-radius: 6px;
+/* Info buttons ({{< info >}} shortcode): a small "i" after a term in the text.
+   Mouse: hover shows the explanation. Touch and keyboard: the button toggles it (info.js). */
+.info {
+  position: relative;
 }
 
-.info-box summary {
-  display: flex;
+.info-button {
+  position: relative;
+  display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.6rem 1rem;
+  justify-content: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0 0.15rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-button);
+  color: var(--color-background);
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  vertical-align: 0.1em;
   cursor: pointer;
-  font-weight: 600;
-  color: var(--color-heading-secondary);
-  list-style: none;
 }
 
-.info-box summary::-webkit-details-marker {
-  display: none;
+/* Larger touch target than the visible circle */
+.info-button::before {
+  content: "";
+  position: absolute;
+  inset: -0.4rem;
 }
 
-.info-box summary:focus-visible {
+.info-button:focus-visible {
   outline: 2px solid var(--color-link-hover);
   outline-offset: 2px;
 }
 
-/* Plus or minus shows whether the box is open; screen readers announce the state themselves */
-.info-box summary::after {
-  content: "+";
-  content: "+" / "";
-  margin-left: auto;
+.info-popup {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 21rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-button);
+  border-radius: 6px;
+  background: var(--color-background);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  color: var(--color-text);
+  font-size: 0.9rem;
   font-weight: 400;
-  color: var(--color-metadata);
+  line-height: 1.5;
 }
 
-.info-box[open] summary::after {
-  content: "−";
-  content: "−" / "";
+/* Bridge the gap between button and popup, so the mouse can move onto the popup */
+.info-popup::before {
+  content: "";
+  position: absolute;
+  top: -0.6rem;
+  left: 0;
+  right: 0;
+  height: 0.6rem;
 }
 
-.info-box-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 1.4rem;
-  height: 1.4rem;
-  border-radius: 50%;
-  background: var(--color-button);
-  color: var(--color-background);
-  font-size: 0.85rem;
-  font-weight: 700;
+.info-title {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--color-heading-secondary);
 }
 
-.info-box-content {
-  padding: 0 1rem 0.25rem;
+.info-button[aria-expanded="true"] + .info-popup {
+  display: block;
+}
+
+/* Hover only where the popup sits next to the button (wide screens with a mouse) */
+@media (hover: hover) and (min-width: 1001px) {
+  .info:hover:not(.is-dismissed) .info-popup {
+    display: block;
+  }
+}
+
+/* Narrower screens: the popup sits at the bottom of the screen, so it never runs off the edge */
+@media (max-width: 1000px) {
+  .info-popup {
+    position: fixed;
+    top: auto;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    transform: none;
+  }
+
+  .info-popup::before {
+    display: none;
+  }
 }
 
 /* Code blocks */

@@ -120,15 +120,13 @@ Start headings in posts with `##`: the post title is already the page's only `<h
 
 **Images and info boxes:**
 - Put images next to the post in its folder (page bundle) and embed them with `{{< figure src="image.webp" width="…" height="…" alt="…" caption="…" >}}`. Images never get wider than the text column.
-- Explain terms not every reader knows in an expandable info box instead of the running text:
+- Explain terms not every reader knows with a small "i" right after the term, instead of in the running text. Write it inside the sentence, on one line:
 
   ```markdown
-  {{< info "What's a NUC?" >}}
-  Explanation in Markdown.
-  {{< /info >}}
+  … so I went for my NUC{{< info "What's a NUC?" >}}Explanation in Markdown.{{< /info >}}.
   ```
 
-  The box is closed by default, needs no JavaScript and works with the keyboard and screen readers.
+  On wide screens, hovering the "i" shows the explanation. A click or tap toggles it (on narrower screens it appears at the bottom of the screen), Escape or a click elsewhere closes it. Screen readers get a button with the title as its label.
 
 **Draft vs Published:**
 - `draft: true` - Post is hidden from the live site (use for work-in-progress)

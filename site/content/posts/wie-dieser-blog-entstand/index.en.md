@@ -21,25 +21,13 @@ Once the decision was made, it was time to build. So I grabbed Claude Code and t
 
 ## Off to the NUC: Dokploy
 
-Hugo rebuilds the site after every change, and the result fits nicely into a Docker container.
+Hugo rebuilds the site after every change, and the result fits nicely into a Docker container{{< info "What's a Docker container?" >}}A Docker container is a packaged application that brings everything it needs to run, so it runs the same everywhere. In my case, it holds a small web server (nginx) with the finished site.{{< /info >}}.
 
-{{< info "What's a Docker container?" >}}
-A Docker container is a packaged application that brings everything it needs to run, so it runs the same everywhere. In my case, it holds a small web server (nginx) with the finished site.
-{{< /info >}}
-
-The container can now be hosted on pretty much any platform. Lots of providers let you upload your containers and run them, even for free. But that was a little too easy for me. I wanted to host it myself, so I went for my NUC.
-
-{{< info "What's a NUC?" >}}
-NUC is actually the name of Intel's line of mini PCs, but it has become a common term for small mini PCs in general. Mine is an ACEMAGICIAN V1 with an Intel N150, 16 GB of RAM and a 256 GB SSD. It came with Windows 11; I first installed Ubuntu and now Proxmox.
-{{< /info >}}
+The container can now be hosted on pretty much any platform. Lots of providers let you upload your containers and run them, even for free. But that was a little too easy for me. I wanted to host it myself, so I went for my NUC{{< info "What's a NUC?" >}}NUC is actually the name of Intel's line of mini PCs, but it has become a common term for small mini PCs in general. Mine is an ACEMAGICIAN V1 with an Intel N150, 16 GB of RAM and a 256 GB SSD. It came with Windows 11; I first installed Ubuntu and now Proxmox.{{< /info >}}.
 
 I could have simply hosted the website as its own Proxmox container, but I wanted a platform that could host all my Docker containers anyway. I compared [Coolify](https://coolify.io) and [Dokploy](https://dokploy.com), both open source. You can think of them as a self-hosted Vercel. Coolify is older, has a bigger community and more features. Dokploy is newer, leaner and cleaner. I don't need a lot of features, I just want simplicity. Since I had already used Coolify in another project, I went for Dokploy.
 
-I pushed the blog to a public GitHub repo, created the project in Dokploy and connected it. You then get a webhook, which you add to the repo. Whenever there's a push to the main branch, GitHub calls the webhook, and Dokploy builds and deploys the container. Thanks to cloudflared, the blog is now reachable on the internet.
-
-{{< info "What's cloudflared?" >}}
-cloudflared is the small program behind Cloudflare Tunnel. Cloudflare itself is a big network that sits in front of lots of websites. cloudflared runs in my home network and opens an outgoing connection to Cloudflare from the inside: the tunnel. When you open eyetealer.me, you land at Cloudflare, and your request is passed through this tunnel to my server. That's why I don't have to open any port on my router, and nobody gets directly into my home network. More on that in a separate post.
-{{< /info >}}
+I pushed the blog to a public GitHub repo, created the project in Dokploy and connected it. You then get a webhook, which you add to the repo. Whenever there's a push to the main branch, GitHub calls the webhook, and Dokploy builds and deploys the container. Thanks to cloudflared{{< info "What's cloudflared?" >}}cloudflared is the small program behind Cloudflare Tunnel. Cloudflare itself is a big network that sits in front of lots of websites. cloudflared runs in my home network and opens an outgoing connection to Cloudflare from the inside: the tunnel. When you open eyetealer.me, you land at Cloudflare, and your request is passed through this tunnel to my server. That's why I don't have to open any port on my router, and nobody gets directly into my home network. More on that in a separate post.{{< /info >}}, the blog is now reachable on the internet.
 
 What a cool feeling to finally see the blog live, under my own domain and hosted at home.
 

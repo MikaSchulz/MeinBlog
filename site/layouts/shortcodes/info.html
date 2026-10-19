@@ -1,11 +1,8 @@
 {{- /*
-  Expandable box that explains a term, so the text itself stays short.
-  Closed by default; works without JavaScript and with the keyboard.
-  Usage: {{< info "Was ist ein NUC?" >}}Explanation in Markdown{{< /info >}}
+  Small "i" right after a term in the text. Hovering (mouse) or clicking/tapping it shows a short
+  explanation, so the text itself stays short. Escape or a click elsewhere closes it.
+  Usage, inline in a sentence: … meinen NUC{{< info "Was ist ein NUC?" >}}Explanation in Markdown{{< /info >}} zurück.
 */ -}}
-<details class="info-box">
-  <summary><span class="info-box-icon" aria-hidden="true">i</span>{{ .Get 0 }}</summary>
-  <div class="info-box-content">
-    {{ .Inner | .Page.RenderString (dict "display" "block") }}
-  </div>
-</details>
+{{- $id := printf "info-%d" .Ordinal -}}
+<span class="info"><button type="button" class="info-button" aria-expanded="false" aria-controls="{{ $id }}" aria-label="{{ .Get 0 }}">i</button><span class="info-popup" id="{{ $id }}"><strong class="info-title">{{ .Get 0 }}</strong> {{ .Inner | strings.TrimSpace | .Page.RenderString }}</span></span>
+{{- /* no trailing newline: the shortcode sits inside a sentence */ -}}

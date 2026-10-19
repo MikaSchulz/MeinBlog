@@ -20,25 +20,13 @@ Nach der Entscheidung musste erstmal gebaut werden. Ich habe mir also Claude Cod
 
 ## Ab auf den NUC: Dokploy
 
-Hugo baut die Seite nach jeder Änderung neu zusammen, und das Ergebnis lässt sich gut in einen Docker-Container packen.
+Hugo baut die Seite nach jeder Änderung neu zusammen, und das Ergebnis lässt sich gut in einen Docker-Container{{< info "Was ist ein Docker-Container?" >}}Ein Docker-Container ist eine verpackte Anwendung, die alles mitbringt, was sie zum Laufen braucht, und deshalb überall gleich läuft. In meinem Fall steckt darin ein kleiner Webserver (nginx) mit der fertigen Seite.{{< /info >}} packen.
 
-{{< info "Was ist ein Docker-Container?" >}}
-Ein Docker-Container ist eine verpackte Anwendung, die alles mitbringt, was sie zum Laufen braucht, und deshalb überall gleich läuft. In meinem Fall steckt darin ein kleiner Webserver (nginx) mit der fertigen Seite.
-{{< /info >}}
-
-Der Container lässt sich nun auf nahezu allen Plattformen hosten. Bei vielen Anbietern kann man seine Docker-Container einfach hochladen und ausführen lassen. Und das sogar kostenlos. Aber das war mir etwas zu einfach. Ich wollte es selbst hosten und griff auf meinen NUC zurück.
-
-{{< info "Was ist ein NUC?" >}}
-NUC ist eigentlich der Name von Intels Mini-PC-Reihe, hat sich aber für kleine Mini-PCs allgemein eingebürgert. Meiner ist ein ACEMAGICIAN V1 mit Intel N150, 16 GB RAM und 256 GB SSD. Ab Werk lief darauf Windows 11, ich habe zunächst Ubuntu und mittlerweile Proxmox aufgespielt.
-{{< /info >}}
+Der Container lässt sich nun auf nahezu allen Plattformen hosten. Bei vielen Anbietern kann man seine Docker-Container einfach hochladen und ausführen lassen. Und das sogar kostenlos. Aber das war mir etwas zu einfach. Ich wollte es selbst hosten und griff auf meinen NUC{{< info "Was ist ein NUC?" >}}NUC ist eigentlich der Name von Intels Mini-PC-Reihe, hat sich aber für kleine Mini-PCs allgemein eingebürgert. Meiner ist ein ACEMAGICIAN V1 mit Intel N150, 16 GB RAM und 256 GB SSD. Ab Werk lief darauf Windows 11, ich habe zunächst Ubuntu und mittlerweile Proxmox aufgespielt.{{< /info >}} zurück.
 
 Ich hätte die Webseite auch einfach als eigenen Proxmox-Container hosten können, allerdings wollte ich sowieso eine Plattform haben, die all meine Docker-Container hosten kann. Verglichen habe ich [Coolify](https://coolify.io) und [Dokploy](https://dokploy.com), beide Open Source. Sie sind vergleichbar mit einem selbst gehosteten Vercel. Coolify ist älter, hat eine größere Community und mehr Features. Dokploy ist jünger, schlanker und aufgeräumter. Ich brauche nicht viel Funktionalität, sondern Einfachheit. Und da ich Coolify bereits in einem anderen Projekt genutzt habe, habe ich mich für Dokploy entschieden.
 
-Den Blog habe ich in ein öffentliches GitHub-Repo gepusht. In Dokploy habe ich dann das Projekt angelegt und mit GitHub verbunden. Daraufhin bekommt man einen Webhook, den man im GitHub-Repo hinterlegt. Gibt es nun einen Push auf den Main-Branch, ruft GitHub den Webhook auf, und Dokploy baut den Container und deployt ihn. Dank cloudflared ist der Blog jetzt im Internet erreichbar.
-
-{{< info "Was ist cloudflared?" >}}
-cloudflared ist das kleine Programm hinter Cloudflare Tunnel. Cloudflare selbst ist ein großes Netzwerk, das vor vielen Webseiten sitzt. cloudflared läuft bei mir im Heimnetz und baut von innen eine ausgehende Verbindung zu Cloudflare auf, den Tunnel. Wer eyetealer.me aufruft, landet bei Cloudflare, und die Anfrage wird durch diesen Tunnel an meinen Server weitergereicht. Deshalb muss ich im Router keinen Port öffnen, und niemand kommt direkt in mein Heimnetz. Mehr dazu in einem eigenen Beitrag.
-{{< /info >}}
+Den Blog habe ich in ein öffentliches GitHub-Repo gepusht. In Dokploy habe ich dann das Projekt angelegt und mit GitHub verbunden. Daraufhin bekommt man einen Webhook, den man im GitHub-Repo hinterlegt. Gibt es nun einen Push auf den Main-Branch, ruft GitHub den Webhook auf, und Dokploy baut den Container und deployt ihn. Dank cloudflared{{< info "Was ist cloudflared?" >}}cloudflared ist das kleine Programm hinter Cloudflare Tunnel. Cloudflare selbst ist ein großes Netzwerk, das vor vielen Webseiten sitzt. cloudflared läuft bei mir im Heimnetz und baut von innen eine ausgehende Verbindung zu Cloudflare auf, den Tunnel. Wer eyetealer.me aufruft, landet bei Cloudflare, und die Anfrage wird durch diesen Tunnel an meinen Server weitergereicht. Deshalb muss ich im Router keinen Port öffnen, und niemand kommt direkt in mein Heimnetz. Mehr dazu in einem eigenen Beitrag.{{< /info >}} ist der Blog jetzt im Internet erreichbar.
 
 Ein cooles Gefühl, den Blog endlich live zu sehen – unter der eigenen Domain und gehostet bei mir zu Hause.
 
