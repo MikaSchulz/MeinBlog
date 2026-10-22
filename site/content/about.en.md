@@ -10,7 +10,7 @@ image: "/assets/images/profile-square.jpg"
 imageAlt: "Mika wearing glasses and smiling, with colorful lanterns and string lights in the background"
 role: "Software Engineer · Logistics at Otto"
 location: "Hamburg, Germany"
-intro: "Moin! I first started programming at twelve, writing Minecraft mods. Today I work at Otto, where I also did most of my apprenticeship. My favorite topic at work is architecture: building processes that stay simple and easy to follow. And what excites me most right now is how AI is evolving and how to work well together with it."
+intro: "Moin. I first started programming at 12 as a Minecraft modder. Today I work at Otto as a software developer, where I also did my apprenticeship. What I enjoy most is software architecture: mapping processes into technology in a clean, traceable and understandable way. What excites me most right now is how AI is evolving and how we will work with it in the future."
 ---
 
 ## Career
@@ -24,11 +24,11 @@ intro: "Moin! I first started programming at twelve, writing Minecraft mods. Tod
 <h3 class="timeline-title">Software Engineer</h3>
 <div class="timeline-location">Otto, Hamburg · Logistics</div>
 
-Our services work out how best to split the items of an order into parcels, based on stock levels, warehouse capacity, item size and weight, and dangerous goods rules. The goal is as few parcels as possible while keeping the promised delivery date.
+Our core process is distributing ordered items across parcels in the best possible way. That means taking stock levels, warehouse utilization, size, weight and dangerous goods classes into account. The goal: few parcels and delivery dates kept.
 
-- Shipment planning: played a key role in separating order lines from delivery lines, so failed deliveries can be retried cleanly
-- Building and running our services the "you build it, you run it" way, with infrastructure in Terraform on Google Cloud and AWS
-- Domain modeling with Domain-Driven Design and Event Storming
+- Shipment planning: played a key role in building order processing vs. delivery processing. A delivery has a different lifecycle than the order: it can get lost, while the order should continue and lead to a new delivery. Promises such as delivery dates should ideally still be kept.
+- "You build it, you run it": backend development focused on Java and Spring Boot, plus operations on AWS and GCP
+- Agile environment with Domain-Driven Design and Test-Driven Development
 
 </div>
 </div>
@@ -40,7 +40,7 @@ Our services work out how best to split the items of an order into parcels, base
 <h3 class="timeline-title">Apprenticeship as an IT Specialist for Application Development</h3>
 <div class="timeline-location">AXRO, from 07/2021 Otto, Hamburg · Fachinformatiker für Anwendungsentwicklung</div>
 
-- Shortened to two and a half years, final exam graded "good" (82 out of 100 points)
+- Apprenticeship shortened to 2.5 years, final exam graded "good" (82 out of 100 points)
 - At AXRO: data warehouse with ETL pipelines on Microsoft SQL Server, modeled following Data Vault 2.0
 - At Otto: rotations through business intelligence and data science (Power BI, forecasts with Python and machine learning) and IT security (OWASP Top 10), finally Java development with Spring Boot
 - Final project: a stock correction service. Corrections are stored as events and posted to the inventory system.
@@ -119,6 +119,7 @@ Our services work out how best to split the items of an order into parcels, base
 
 - **Domain-Driven Design**
 - Event Storming
+- Test-Driven Development
 - Agile teams
 - Jira & Confluence
 - GitHub Copilot

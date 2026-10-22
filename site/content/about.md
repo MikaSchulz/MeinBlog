@@ -10,7 +10,7 @@ image: "/assets/images/profile-square.jpg"
 imageAlt: "Mika mit Brille, lächelnd, im Hintergrund bunte Laternen und Lichterketten"
 role: "Software Engineer · Logistik bei Otto"
 location: "Hamburg"
-intro: "Moin! Zum ersten Mal programmiert habe ich mit zwölf, als Minecraft-Modder. Heute arbeite ich bei Otto, wo ich auch den größten Teil meiner Ausbildung gemacht habe. Mein Lieblingsthema im Job ist Architektur: Abläufe so zu bauen, dass sie einfach und nachvollziehbar bleiben. Und am meisten reizt mich gerade, wie sich KI entwickelt und wie man gut mit ihr zusammenarbeitet."
+intro: "Moin. Zum ersten Mal programmiert habe ich mit 12 als Minecraft-Modder. Heute arbeite ich bei Otto als Softwareentwickler, wo ich auch meine Ausbildung absolviert habe. Am liebsten beschäftige ich mich mit Softwarearchitektur: Prozesse sauber, nachvollziehbar und verständlich technisch abzubilden. Am meisten reizt mich gerade die Entwicklung von KI und wie wir in Zukunft mit ihr arbeiten werden."
 ---
 
 ## Werdegang
@@ -24,11 +24,11 @@ intro: "Moin! Zum ersten Mal programmiert habe ich mit zwölf, als Minecraft-Mod
 <h3 class="timeline-title">Software Engineer</h3>
 <div class="timeline-location">Otto, Hamburg · Logistik</div>
 
-Aus den bestellten Artikeln berechnen unsere Services, wie sie am besten auf Pakete verteilt werden. Dabei zählen Bestände, Lagerkapazitäten, Größe und Gewicht der Artikel und Gefahrgutregeln. Ziel sind möglichst wenige Pakete bei gehaltenem Liefertermin.
+Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dabei gilt es, Lagerbestände, Lagerauslastung sowie Größe, Gewicht und Gefahrgutklassen zu berücksichtigen. Mit dem Ziel: wenige Pakete und eingehaltene Liefertermine.
 
-- Sendungsbildung: maßgeblich an der Trennung von Auftrags- und Lieferposition beteiligt, damit gescheiterte Lieferungen sauber neu abgewickelt werden können
-- Entwicklung und Betrieb nach „You build it, you run it", Infrastruktur mit Terraform in der Google Cloud und in AWS
-- Fachliche Modellierung mit Domain-Driven Design und Event Storming
+- Sendungsbildung: maßgeblich beteiligt am Aufbau von Auftragsabwicklung vs. Lieferabwicklung. Eine Lieferung hat einen anderen Lifecycle als der Auftrag: Sie kann verloren gehen, der Auftrag soll fortbestehen und in einer neuen Lieferung münden. Versprechen wie Liefertermine sollten dabei idealerweise weiterhin eingehalten werden.
+- „You build it, you run it": Backend-Entwicklung mit Fokus auf Java und Spring Boot sowie Betrieb in AWS und GCP
+- Agiles Umfeld mit Domain-Driven Design und Test-Driven Development
 
 </div>
 </div>
@@ -40,7 +40,7 @@ Aus den bestellten Artikeln berechnen unsere Services, wie sie am besten auf Pak
 <h3 class="timeline-title">Ausbildung zum Fachinformatiker für Anwendungsentwicklung</h3>
 <div class="timeline-location">AXRO, ab 07/2021 Otto, Hamburg</div>
 
-- Auf zweieinhalb Jahre verkürzt, Abschlussprüfung mit „gut" (82 Punkte)
+- Ausbildung auf 2,5 Jahre verkürzt, Abschlussprüfung mit „gut" (82 Punkte)
 - Bei AXRO: Data Warehouse mit ETL-Strecken auf Microsoft SQL Server, modelliert nach Data Vault 2.0
 - Bei Otto: Einsätze in Business Intelligence und Data Science (Power BI, Prognosen mit Python und Machine Learning) und in der IT-Security (OWASP Top 10), zuletzt in der Java-Entwicklung mit Spring Boot
 - Abschlussprojekt: ein Service zur Bestandskorrektur. Korrekturen werden als Events gespeichert und im Bestandssystem verbucht.
@@ -118,6 +118,7 @@ Aus den bestellten Artikeln berechnen unsere Services, wie sie am besten auf Pak
 
 - **Domain-Driven Design**
 - Event Storming
+- Test-Driven Development
 - Agile Teams
 - Jira & Confluence
 - GitHub Copilot
