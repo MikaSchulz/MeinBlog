@@ -6,8 +6,8 @@ lastmod: 2026-10-22
 draft: false
 type: about
 wide: true
-image: "/assets/images/profile-square.jpg"
-imageAlt: "Mika mit Brille, lächelnd, im Hintergrund bunte Laternen und Lichterketten"
+image: "/assets/images/cv-photo.jpg"
+imageAlt: "Mika mit Brille und hellem Strickpolo mit dunklem Kragen, lächelnd, vor hellgrauem Hintergrund"
 role: "Software Engineer · Logistik bei Otto"
 location: "Hamburg"
 intro: "Moin. Zum ersten Mal programmiert habe ich mit 12 als Minecraft-Modder. Heute arbeite ich bei Otto als Softwareentwickler, wo ich auch meine Ausbildung absolviert habe. Am liebsten beschäftige ich mich mit Software- und Systemarchitektur: Prozesse sauber, nachvollziehbar und verständlich technisch abzubilden. Am meisten reizt mich gerade die Entwicklung von KI und wie wir in Zukunft mit ihr arbeiten werden."

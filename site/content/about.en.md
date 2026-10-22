@@ -6,8 +6,8 @@ lastmod: 2026-10-22
 draft: false
 type: about
 wide: true
-image: "/assets/images/profile-square.jpg"
-imageAlt: "Mika wearing glasses and smiling, with colorful lanterns and string lights in the background"
+image: "/assets/images/cv-photo.jpg"
+imageAlt: "Mika wearing glasses and a light knitted polo shirt with a dark collar, smiling, in front of a light grey background"
 role: "Software Engineer · Logistics at Otto"
 location: "Hamburg, Germany"
 intro: "Moin. I started programming at 12 as a Minecraft modder. Today I work at Otto as a software developer, where I also did my apprenticeship. What I enjoy most is software and system architecture: mapping processes into technology in a clean, traceable and understandable way. What excites me most right now is how AI is evolving and how we will work with it in the future."
