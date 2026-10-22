@@ -10,7 +10,7 @@ image: "/assets/images/profile-square.jpg"
 imageAlt: "Mika mit Brille, lächelnd, im Hintergrund bunte Laternen und Lichterketten"
 role: "Software Engineer · Logistik bei Otto"
 location: "Hamburg"
-intro: "Moin. Zum ersten Mal programmiert habe ich mit 12 als Minecraft-Modder. Heute arbeite ich bei Otto als Softwareentwickler, wo ich auch meine Ausbildung absolviert habe. Am liebsten beschäftige ich mich mit Softwarearchitektur: Prozesse sauber, nachvollziehbar und verständlich technisch abzubilden. Am meisten reizt mich gerade die Entwicklung von KI und wie wir in Zukunft mit ihr arbeiten werden."
+intro: "Moin. Zum ersten Mal programmiert habe ich mit 12 als Minecraft-Modder. Heute arbeite ich bei Otto als Softwareentwickler, wo ich auch meine Ausbildung absolviert habe. Am liebsten beschäftige ich mich mit Software- und Systemarchitektur: Prozesse sauber, nachvollziehbar und verständlich technisch abzubilden. Am meisten reizt mich gerade die Entwicklung von KI und wie wir in Zukunft mit ihr arbeiten werden."
 ---
 
 ## Werdegang
@@ -42,8 +42,8 @@ Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dab
 
 - Ausbildung auf 2,5 Jahre verkürzt, Abschlussprüfung mit „gut" (82 Punkte)
 - Bei AXRO: Data Warehouse mit ETL-Strecken auf Microsoft SQL Server, modelliert nach Data Vault 2.0
-- Bei Otto: Einsätze in Business Intelligence und Data Science (Power BI, Prognosen mit Python und Machine Learning) und in der IT-Security (OWASP Top 10), zuletzt in der Java-Entwicklung mit Spring Boot
-- Abschlussprojekt: ein Service zur Bestandskorrektur. Korrekturen werden als Events gespeichert und im Bestandssystem verbucht.
+- Bei Otto: Einsätze in BI und Data Science (Power BI, Prognosen mit Python und Machine Learning) und in der IT-Security (v. a. OWASP Top 10), den Großteil der Zeit in der Java-Entwicklung mit Spring Boot
+- Abschlussprojekt: Service zur Korrektur von Beständen; die Korrekturen werden als Events gespeichert und im Bestandssystem verbucht.
 
 </div>
 </div>
@@ -54,8 +54,8 @@ Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dab
 <div class="timeline-date">Bis 2020</div>
 <h3 class="timeline-title">Abitur</h3>
 
-- Informatik ab der 7. Klasse, im Abitur Teil meines Medienprofils
-- Nebenbei erste eigene Projekte in Java: Minecraft-Mods (Forge, LabyMod-Addon), Spielmodi und ein Lobby-System für kleinere Server
+- Informatik ab der 7. Klasse, im Abitur Teil des Medienprofils
+- Nebenbei erste eigene Projekte in Java: Minecraft-Mods (Forge, LabyMod-Addon) sowie Pluginentwicklung für Server (Spigot, Paper): Spielmodi und ein Lobby-System
 
 </div>
 </div>
@@ -64,7 +64,7 @@ Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dab
 
 ## Kenntnisse
 
-<p class="cv-legend">Fett und orange umrandet: mein Schwerpunkt im Job</p>
+<p class="cv-legend">Fett und orange umrandet: Schwerpunkte im Job</p>
 
 <div class="skills-section">
 
@@ -85,7 +85,7 @@ Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dab
 
 - **Google Cloud (Cloud Run)**
 - AWS (EKS, SQS, SNS, S3, EC2, RDS, SSM)
-- Terraform
+- **Terraform**
 - Docker
 - Kubernetes & Helm (gelegentlich)
 
@@ -95,10 +95,9 @@ Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dab
 
 <div class="tech-stack">
 
-- PostgreSQL
-- MongoDB Atlas
+- **MongoDB Atlas**
 - **Kafka**
-- SQL
+- SQL (PostgreSQL)
 
 </div>
 
@@ -117,8 +116,8 @@ Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dab
 <div class="tech-stack">
 
 - **Domain-Driven Design**
-- Event Storming
 - Test-Driven Development
+- Event Storming
 - Agile Teams
 - Jira & Confluence
 - GitHub Copilot
@@ -154,18 +153,20 @@ Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dab
 
 ## Interessen
 
-Smart Home und Homelab, Fitness (dreimal die Woche im Gym), Meal Prep, Klemmbausteine, Musik, Reisen.
+Smart Home, Fitness, Meal Prep, Klemmbausteine, Musik, Reisen.
 
 </section>
 </div>
 
 ## Wie ich arbeite
 
-Am liebsten beschäftige ich mich mit Architektur. Meine Faustregel:
+Bei Architektur interessiert mich vor allem das große Ganze. Meine Faustregel:
 
 <blockquote class="cv-quote"><p>Die Technik soll die fachlichen Abläufe abbilden.</p></blockquote>
 
-Laufen beide auseinander, wird jede kleine Änderung im Business zu einer großen in der Technik. Ich denke lieber zweimal nach und finde einen Standard, als mehrere ähnliche Abläufe zu pflegen. Beim Programmieren ist KI mein Pair-Programming-Partner: Sie fährt, ich navigiere. Ausführlicher schreibe ich darüber nach und nach hier im Blog.
+Laufen beide auseinander, wird jede Änderung im Business zu einer größeren in der Technik. Ich denke lieber vorher nach, überlege mir einen Standard und verschlanke Abläufe, anstatt sie doppelt zu pflegen.
+
+KI ist mein Pair-Programming-Partner: Sie fährt (Driver), ich gebe Anweisungen (Navigator). Aber KI entwickelt sich sehr rasant. Ausführlicher schreibe ich darüber hier im Blog.
 
 <div class="cv-contact">
 

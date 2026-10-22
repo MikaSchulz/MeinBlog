@@ -10,7 +10,7 @@ image: "/assets/images/profile-square.jpg"
 imageAlt: "Mika wearing glasses and smiling, with colorful lanterns and string lights in the background"
 role: "Software Engineer · Logistics at Otto"
 location: "Hamburg, Germany"
-intro: "Moin. I first started programming at 12 as a Minecraft modder. Today I work at Otto as a software developer, where I also did my apprenticeship. What I enjoy most is software architecture: mapping processes into technology in a clean, traceable and understandable way. What excites me most right now is how AI is evolving and how we will work with it in the future."
+intro: "Moin. I first started programming at 12 as a Minecraft modder. Today I work at Otto as a software developer, where I also did my apprenticeship. What I enjoy most is software and system architecture: mapping processes into technology in a clean, traceable and understandable way. What excites me most right now is how AI is evolving and how we will work with it in the future."
 ---
 
 ## Career
@@ -42,8 +42,8 @@ Our core process is distributing ordered items across parcels in the best possib
 
 - Apprenticeship shortened to 2.5 years, final exam graded "good" (82 out of 100 points)
 - At AXRO: data warehouse with ETL pipelines on Microsoft SQL Server, modeled following Data Vault 2.0
-- At Otto: rotations through business intelligence and data science (Power BI, forecasts with Python and machine learning) and IT security (OWASP Top 10), finally Java development with Spring Boot
-- Final project: a stock correction service. Corrections are stored as events and posted to the inventory system.
+- At Otto: rotations through BI and data science (Power BI, forecasts with Python and machine learning) and IT security (mainly OWASP Top 10), most of the time in Java development with Spring Boot
+- Final project: a service for correcting stock levels; the corrections are stored as events and posted to the inventory system.
 
 </div>
 </div>
@@ -55,8 +55,8 @@ Our core process is distributing ordered items across parcels in the best possib
 <h3 class="timeline-title">Abitur</h3>
 <div class="timeline-location">German university entrance qualification</div>
 
-- Computer science from year 7, part of my media-focused profile in the Abitur
-- On the side, my first projects in Java: Minecraft mods (Forge, LabyMod add-on), game modes and a lobby system for smaller servers
+- Computer science from year 7, part of the media-focused profile in the Abitur
+- On the side, my first projects in Java: Minecraft mods (Forge, LabyMod add-on) and plugin development for servers (Spigot, Paper): game modes and a lobby system
 
 </div>
 </div>
@@ -65,7 +65,7 @@ Our core process is distributing ordered items across parcels in the best possib
 
 ## Skills
 
-<p class="cv-legend">Bold with an orange outline: my main focus at work</p>
+<p class="cv-legend">Bold with an orange outline: main focus areas at work</p>
 
 <div class="skills-section">
 
@@ -86,7 +86,7 @@ Our core process is distributing ordered items across parcels in the best possib
 
 - **Google Cloud (Cloud Run)**
 - AWS (EKS, SQS, SNS, S3, EC2, RDS, SSM)
-- Terraform
+- **Terraform**
 - Docker
 - Kubernetes & Helm (occasionally)
 
@@ -96,10 +96,9 @@ Our core process is distributing ordered items across parcels in the best possib
 
 <div class="tech-stack">
 
-- PostgreSQL
-- MongoDB Atlas
+- **MongoDB Atlas**
 - **Kafka**
-- SQL
+- SQL (PostgreSQL)
 
 </div>
 
@@ -118,8 +117,8 @@ Our core process is distributing ordered items across parcels in the best possib
 <div class="tech-stack">
 
 - **Domain-Driven Design**
-- Event Storming
 - Test-Driven Development
+- Event Storming
 - Agile teams
 - Jira & Confluence
 - GitHub Copilot
@@ -155,18 +154,20 @@ Our core process is distributing ordered items across parcels in the best possib
 
 ## Interests
 
-Smart home and homelab, fitness (gym three times a week), meal prep, building bricks, music, travel.
+Smart home, fitness, meal prep, building bricks, music, travel.
 
 </section>
 </div>
 
 ## How I Work
 
-Architecture is what I enjoy most. My rule of thumb:
+When it comes to architecture, what interests me most is the big picture. My rule of thumb:
 
 <blockquote class="cv-quote"><p>The technology should mirror the business processes.</p></blockquote>
 
-When the two drift apart, every small change on the business side turns into a big one on the technical side. I'd rather think twice and find a standard than maintain several similar flows. When coding, AI is my pair programming partner: it drives, I navigate. I'll write about all of this in more detail here on the blog, bit by bit.
+When the two drift apart, every change on the business side turns into a bigger one on the technical side. I'd rather think ahead, come up with a standard and streamline processes instead of maintaining them twice.
+
+AI is my pair programming partner: it drives (driver), I give directions (navigator). But AI is evolving very fast. I write about it in more detail here on the blog.
 
 <div class="cv-contact">
 
