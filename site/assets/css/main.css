@@ -799,6 +799,28 @@ input[type="button"]:focus {
   outline-offset: 2px;
 }
 
+/* About page: profile photo to the right of the short profile at the top */
+.author-image {
+  float: right;
+  width: 150px;
+  height: auto;
+  margin: 0.4rem 0 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* The first section starts below the photo */
+.about-page .content h2 {
+  clear: both;
+}
+
+@media (max-width: 768px) {
+  .author-image {
+    width: 110px;
+    margin-left: 1rem;
+  }
+}
+
 /* About page: skills as chips, one group per heading.
    The chips are no links, so hovering only highlights the border. */
 .skills-section {

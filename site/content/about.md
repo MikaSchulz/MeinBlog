@@ -2,6 +2,7 @@
 title: "Über mich"
 date: 2025-10-17
 draft: false
+type: about
 image: "/assets/images/profile.jpg"
 imageAlt: "Mika mit Brille, lächelnd, im Hintergrund bunte Laternen und Lichterketten"
 ---

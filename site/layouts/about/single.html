@@ -1,9 +1,10 @@
 {{ define "main" }}
-<article role="article" aria-labelledby="about-title">
+<article class="about-page" role="article" aria-labelledby="about-title">
     <h1 id="about-title">{{ .Title }}</h1>
 
-    {{ if .Params.image }}
-    <img src="{{ .Params.image }}" alt="{{ .Params.imageAlt | default "Author profile photo" }}" class="author-image">
+    {{ with .Params.image }}
+    {{- $size := imageConfig (path.Join "static" .) }}
+    <img src="{{ . | relURL }}" alt="{{ $.Params.imageAlt | default "Author profile photo" }}" class="author-image" width="{{ $size.Width }}" height="{{ $size.Height }}">
     {{ end }}
 
     <div class="content">
