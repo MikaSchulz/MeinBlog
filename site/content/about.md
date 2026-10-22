@@ -3,150 +3,170 @@ title: "Über mich"
 date: 2025-10-17
 draft: false
 image: "/assets/images/profile.jpg"
-imageAlt: "Profilbild des Blog-Autors"
+imageAlt: "Mika mit Brille, lächelnd, im Hintergrund bunte Laternen und Lichterketten"
 ---
 
-Hi, ich bin Mika, ein Software-Entwickler, der aktuell bei der Otto GmbH & Co. KGaA arbeitet.
-Meine Leidenschaft für IT begann schon in jungen Jahren, und seitdem lässt sie mich nicht mehr los. 
-Alles fing mit Minecraft-Modding an, wo ich zum ersten Mal mit Java in Berührung kam, die Grundlagen 
-der Software-Architektur kennenlernte und sogar erste Erfahrungen im Projektmanagement sammelte.
+Moin, ich bin Mika, Software Engineer aus Hamburg. Seit 2023 arbeite ich bei Otto in der Logistik, vorher habe ich dort meine Ausbildung zum Fachinformatiker für Anwendungsentwicklung gemacht. Zum ersten Mal programmiert habe ich mit zwölf, als Minecraft-Modder. Am meisten reizt mich Architektur: Abläufe so zu bauen, dass sie einfach und nachvollziehbar bleiben.
 
-Im Laufe der Zeit habe ich diese Leidenschaft zum Beruf gemacht und meine Fähigkeiten während meiner 
-Ausbildung zum Fachinformatiker für Anwendungsentwicklung vertieft. Heute arbeite ich als Java-Entwickler 
-bei der Otto GmbH & Co. KGaA und bin immer bereit, zu experimentieren, Neues zu lernen und spannende 
-Herausforderungen anzugehen.
-
-## Ausbildung & Karriereweg
+## Werdegang
 
 <div class="timeline">
 
 <div class="timeline-item">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
-<div class="timeline-date">Aktuell</div>
-<h3 class="timeline-title">Java Software-Engineer</h3>
-<div class="timeline-location">Otto GmbH & Co. KGaA</div>
+<div class="timeline-date">Seit 2023</div>
+<h3 class="timeline-title">Software Engineer</h3>
+<div class="timeline-location">Otto, Hamburg · Logistik</div>
+
+Aus den bestellten Artikeln berechnen unsere Services, wie sie am besten auf Pakete verteilt werden. Dabei zählen Bestände, Lagerkapazitäten, Größe und Gewicht der Artikel und Gefahrgutregeln. Ziel sind möglichst wenige Pakete bei gehaltenem Liefertermin.
+
+- Sendungsbildung: maßgeblich an der Trennung von Auftrags- und Lieferposition beteiligt, damit gescheiterte Lieferungen sauber neu abgewickelt werden können
+- Entwicklung und Betrieb nach „You build it, you run it", Infrastruktur mit Terraform in der Google Cloud und in AWS
+- Fachliche Modellierung mit Domain-Driven Design und Event Storming
+- Abstimmung im Team und mit anderen Teams
+
 </div>
 </div>
 
 <div class="timeline-item">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
-<div class="timeline-date">2020 - 2023</div>
+<div class="timeline-date">2020–2023</div>
 <h3 class="timeline-title">Ausbildung zum Fachinformatiker für Anwendungsentwicklung</h3>
-<div class="timeline-location">Otto GmbH & Co. KGaA</div>
+<div class="timeline-location">Otto, Hamburg</div>
+
+- Auf zweieinhalb Jahre verkürzt, Abschlussprüfung mit „gut" (82 Punkte)
+- Data Warehouse: ETL-Strecken mit SQL nach Data Vault 2.0
+- Business Intelligence und Data Science: erste Schritte mit Power BI, Umsatzprognosen mit Python und Machine Learning
+- IT-Security: OWASP Top 10 durchgearbeitet, in der wöchentlichen Security-Runde aktuelle Themen vorgestellt
+- Java-Entwicklung mit Spring Boot, dabei bin ich geblieben
+- Im Azubi-Team Aufträge aus anderen Teams umgesetzt
+- Abschlussprojekt: ein Service zur Bestandskorrektur. Korrekturen werden als Events gespeichert und im Bestandssystem verbucht.
+
 </div>
 </div>
 
 <div class="timeline-item">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
-<div class="timeline-date">2017 - 2020</div>
+<div class="timeline-date">Bis 2020</div>
 <h3 class="timeline-title">Abitur</h3>
-<div class="timeline-location">Johannes-Brahms-Schule, Pinneberg</div>
-</div>
-</div>
+
+- Informatik ab der 7. Klasse, im Abitur Teil meines Medienprofils
+- Nebenbei erste eigene Projekte in Java: Minecraft-Mods (Forge, LabyMod-Addon), Spielmodi und ein Lobby-System für kleinere Server
 
 </div>
-
-## Was mich antreibt
-
-<div class="values-grid">
-
-- 💎 **Clean Code** - Lesbar, wartbar, durch Coding Patterns und Best Practices
-- 🔭 **Big Picture** – Das große Ganze im Blick
-- ⚖️ **Balance** – Eleganz ohne unnötige Komplexität
-- 📚 **Kontinuierliches Lernen** – Immer neugierig bleiben
+</div>
 
 </div>
 
-## Berufliche Erfahrung
-
-Ich arbeite als Software-Entwickler mit Schwerpunkt auf:
-
-<div class="experience-grid">
-
-- 🚀 **Feature-Entwicklung & Deployment** Entwicklung und Auslieferung von Features basierend auf agilen Methoden
-- ☁️ **Infrastruktur & Betrieb** Wartung und Verbesserung von Cloud-Infrastruktur, Monitoring von Systemen durch Dashboards, Metriken und Logs
-- 🤝 **Team-übergreifende Zusammenarbeit** Koordination mit mehreren Teams und Stakeholdern
-- 🏗️ **Domain Modeling** Arbeit mit Event Storming zur Gestaltung von Business- und technischen Architekturen
-
-</div>
-
-## Skills & Technologien
+## Kenntnisse
 
 <div class="skills-section">
 
-### 💻 Sprachen & Frameworks
+### Sprachen & Frameworks
 
 <div class="tech-stack">
 
 - Java
 - Spring Boot
 - Gradle
-- Python
 
 </div>
 
-### ☁️ Cloud & Infrastruktur
+### Cloud & Infrastruktur
 
 <div class="tech-stack">
 
+- Google Cloud (Cloud Run)
 - AWS (EKS, SQS, SNS, S3, EC2, RDS, SSM)
-- Kubernetes
-- Helm
-- Docker
 - Terraform
+- Docker
 
 </div>
 
-### 💾 Daten & Messaging
+### Daten & Messaging
 
 <div class="tech-stack">
 
 - PostgreSQL
-- MongoDB
+- MongoDB Atlas
 - Kafka
 
 </div>
 
-### 📊 Monitoring & Observability
+### Monitoring
 
 <div class="tech-stack">
 
 - Grafana
 - Prometheus
+- OpenTelemetry (lerne ich gerade)
 
 </div>
 
-### 🎨 Prinzipien & Methoden
+### Methoden & Werkzeuge
 
 <div class="tech-stack">
 
 - Domain-Driven Design
 - Event Storming
-- Einfachheit & Wartbarkeit
-- Agile Methoden
+- Agile Teams
+- Jira & Confluence
+- GitHub Copilot
+
+</div>
+
+### Außerdem gearbeitet mit
+
+<div class="tech-stack">
+
+- Kubernetes
+- Helm
+- Python
+- SQL & Data Vault 2.0
+- OWASP Top 10
+
+</div>
+
+### Privat: Homelab & KI
+
+<div class="tech-stack">
+
+- Proxmox
+- Home Assistant
+- Docker & Dokploy
+- Cloudflare
+- Tailscale
+- Hugo
+- Claude Code
 
 </div>
 
 </div>
 
-## Meine Stärken
+## Sprachen
 
-Ich bringe tiefes Domain-Wissen in Diskussionen ein und verstehe gerne den Business-Kontext hinter 
-technischen Entscheidungen. Ich bin proaktiv, übernehme Verantwortung für meine Arbeit und trage 
-aktiv Ideen zum Team bei. Ich glaube an klare Kommunikation, das Stellen der richtigen Fragen und 
-die Zusammenarbeit über Team-Grenzen hinweg.
+- **Deutsch:** Muttersprache
+- **Englisch:** gut (B2)
 
-## Zukunftsausblick
+## Interessen
 
-Besonders treiben mich Software-Architektur und der Blick auf das große Ganze an. Ich denke darüber 
-nach, wie man Systeme gestaltet, die wartbar und skalierbar sind. Außerdem möchte ich mein Wissen 
-über Cloud-Technologien vertiefen. Darüber hinaus interessiere ich mich sehr für KI-Tools und die 
-Möglichkeiten, die sie für moderne Software-Projekte bieten.
+Smart Home und Homelab, Fitness (dreimal die Woche im Gym), Meal Prep, Klemmbausteine, Musik, Reisen.
+
+## Wie ich arbeite
+
+Am liebsten beschäftige ich mich mit Architektur. Meine Faustregel: Die Technik soll die fachlichen Abläufe abbilden. Laufen beide auseinander, wird aus jeder kleinen Änderung im Business eine große in der Technik. Deshalb bauen wir unsere Services nach Domain-Driven Design und setzen uns vorher zum Event Storming zusammen: Gemeinsam gehen wir durch, welche fachlichen Ereignisse es gibt, in welcher Reihenfolge sie passieren und wie wir sie technisch abbilden.
+
+Ein Beispiel, auf das ich stolz bin: Eine Bestellung kann über mehrere Lieferungen laufen. Klappt eine Lieferung nicht, etwa weil ein Artikel doch nicht mehr verfügbar war, will der Kunde sein Paket trotzdem, also starten wir einen neuen Versuch. Ursprünglich steckten Auftragsposition und Lieferposition in einer einzigen Entität, die beides können musste, und jeder neue Versuch wurde kompliziert: Die Lieferung war vorbei, der Auftrag aber noch nicht. Wir haben beides getrennt, jede mit eigenem Lebenszyklus. Seitdem kann eine Lieferung enden, während der Auftrag weiterläuft, bis er wirklich erledigt ist.
+
+Außerdem verschlanke ich gern Prozesse. Lieber zweimal länger nachdenken und einen Standard finden, als mehrere ähnliche Abläufe zu pflegen, die sich irgendwo überschneiden. Ein paar Bytes mehr in der Datenbank sind billiger als zwei Varianten desselben Prozesses, die man bei jedem Fix getrennt anfassen muss. Das zieht sich bis ins Private: Zu Hause automatisiere ich mit Home Assistant, was sich automatisieren lässt, und die trockenen Zutaten für meine Shakes portioniere ich für mehrere Tage vor.
+
+KI gehört für mich fest dazu, im Job mit GitHub Copilot, privat mit Claude Code. Beim Programmieren ist sie mein Pair-Programming-Partner: Sie fährt, ich navigiere und sage, wo es hingeht. Bei Ideen frage ich sie bewusst nach Kritik statt nach Zustimmung. Und Prozesse klicke ich nicht mehr mühsam mit Kästchen und Pfeilen zusammen, sondern lasse sie als Mermaid-Diagramm erzeugen; das geht schneller und ist am Ende übersichtlicher. Wie weit man KI einsetzen sollte und wo ihre Grenzen liegen, beschäftigt mich gerade sehr. Ich glaube, sie wird eine sehr große Rolle spielen, wahrscheinlich eine größere, als manche erwarten. Wie groß genau, traue ich mich bei dem Tempo nicht vorherzusagen.
 
 ## Kontakt
 
-Melde dich gerne über [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/) oder per E-Mail an [info@eyetealer.me](mailto:info@eyetealer.me).
-Ich freue mich über einen Austausch!
+Schreibt mir gern über [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/) oder per Mail an [info@eyetealer.me](mailto:info@eyetealer.me).
+
+*Hier schreibe ich privat. Was auf diesem Blog steht, ist meine eigene Meinung und nicht die von Otto.*

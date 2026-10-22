@@ -799,98 +799,17 @@ input[type="button"]:focus {
   outline-offset: 2px;
 }
 
-/* Responsive Design for About Page */
-@media (max-width: 768px) {
-  .about-hero {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .about-image-wrapper {
-    flex: 0 0 150px;
-  }
-
-  .about-image {
-    width: 150px;
-    height: 150px;
-  }
-
-  .about-intro h1 {
-    font-size: 2.5rem;
-  }
-
-  .about-content ul {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Values Grid - Special styling for "Was mich antreibt" */
-.values-grid ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.2rem;
-  padding: 0;
-  margin: 2rem 0;
-}
-
-.values-grid ul li {
-  background: linear-gradient(135deg, var(--color-code-background) 0%, rgba(18, 69, 89, 0.3) 100%);
-  padding: 1.2rem 1.5rem;
-  border-radius: 12px;
-  border-left: 4px solid var(--color-button);
-  font-size: 1.05rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.values-grid ul li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(255, 109, 0, 0.3);
-  border-left-color: var(--color-link-hover);
-}
-
-/* Experience Grid - Special styling for "Berufliche Erfahrung" */
-.experience-grid ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  padding: 0;
-  margin: 2rem 0;
-}
-
-.experience-grid ul li {
-  background: var(--color-code-background);
-  padding: 1.5rem;
-  border-radius: 12px;
-  border-top: 3px solid var(--color-button);
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.experience-grid ul li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(255, 109, 0, 0.25);
-  border-top-color: var(--color-link-hover);
-}
-
-.experience-grid ul li strong {
-  color: var(--color-link-hover);
-  font-size: 1.1rem;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-/* Skills Section - Modern Card Layout */
+/* About page: skills as chips, one group per heading.
+   The chips are no links, so hovering only highlights the border. */
 .skills-section {
-  margin: 3rem 0;
+  margin: 1rem 0 2.5rem;
 }
 
 .skills-section > h3 {
-  font-size: 1.5rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
-  padding-left: 1rem;
+  font-size: 1.2rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  padding-left: 0.75rem;
   border-left: 4px solid var(--color-button);
   color: var(--color-heading-primary);
 }
@@ -898,63 +817,36 @@ input[type="button"]:focus {
 .tech-stack ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 0.6rem;
+  margin: 0;
   padding: 0;
-  margin: 1rem 0 2rem 0;
   list-style: none;
 }
 
-.tech-stack ul li {
+.tech-stack li {
+  margin: 0;
+  padding: 0.45rem 1rem;
   background: var(--color-code-background);
   color: var(--color-text);
-  padding: 0.6rem 1.2rem;
-  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
   font-size: 0.95rem;
-  font-weight: 500;
-  border: 2px solid var(--color-border);
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: inline-flex;
-  align-items: center;
-  margin: 0;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-.tech-stack ul li:hover {
-  background: var(--color-button);
-  color: var(--color-background);
-  border-color: var(--color-link-hover);
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(255, 109, 0, 0.4);
+.tech-stack li:hover {
+  border-color: var(--color-button);
+  color: var(--color-heading-primary);
 }
 
-/* Reset default about-content ul styles for special sections */
-.values-grid ul,
-.experience-grid ul,
-.tech-stack ul {
-  /* Override the default grid layout */
-  padding-left: 0 !important;
-}
-
-.values-grid ul li,
-.experience-grid ul li,
-.tech-stack ul li {
-  list-style: none !important;
-  justify-content: center;
-}
-
-/* Responsive adjustments for skills */
 @media (max-width: 768px) {
-  .values-grid ul,
-  .experience-grid ul {
-    grid-template-columns: 1fr;
-  }
-
   .tech-stack ul {
-    justify-content: center;
+    gap: 0.5rem;
   }
 
-  .skills-section > h3 {
-    font-size: 1.3rem;
+  .tech-stack li {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -966,22 +858,27 @@ input[type="button"]:focus {
   }
 }
 
-/* Timeline Styles - vertical line on the left, cards on the right
-   (one column: the content column is too narrow for cards on both sides) */
+/* About page: timeline. A vertical line on the left, one card per station
+   (one column: the content column is too narrow for cards on both sides).
+   The circle on the line sits level with the date badge at the top of the card,
+   so it stays in place however long the card gets. */
 .timeline {
+  --timeline-line: 20px;      /* distance of the line from the left edge */
+  --timeline-gap: 56px;       /* where the cards start */
+  --timeline-anchor: 2.55rem; /* middle of the date badge, measured from the top of the card */
   position: relative;
-  margin: 3rem auto;
-  padding: 2rem 0;
+  margin: 1.5rem 0 2.5rem;
 }
 
 /* Vertical line */
 .timeline::before {
   content: '';
   position: absolute;
-  left: 30px;
-  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  left: var(--timeline-line);
   width: 4px;
-  height: 100%;
+  transform: translateX(-50%);
   background: linear-gradient(180deg,
     var(--color-button) 0%,
     var(--color-link-hover) 50%,
@@ -991,9 +888,7 @@ input[type="button"]:focus {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .timeline-item:last-child {
@@ -1003,53 +898,49 @@ input[type="button"]:focus {
 /* Timeline marker (the circle on the line) */
 .timeline-marker {
   position: absolute;
-  left: 30px;
-  transform: translateX(-50%);
+  top: var(--timeline-anchor);
+  left: var(--timeline-line);
   width: 24px;
   height: 24px;
+  transform: translate(-50%, -50%);
   background: var(--color-button);
   border: 4px solid var(--color-background);
   border-radius: 50%;
-  z-index: 10;
   box-shadow: 0 0 0 4px var(--color-button);
-  transition: all 0.3s ease;
+  z-index: 1;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .timeline-item:hover .timeline-marker {
-  transform: translateX(-50%) scale(1.3);
-  box-shadow: 0 0 0 6px rgba(255, 109, 0, 0.3);
+  transform: translate(-50%, -50%) scale(1.2);
   background: var(--color-link-hover);
 }
 
 /* Timeline content cards */
 .timeline-content {
-  width: calc(100% - 80px);
-  margin-left: 80px;
+  position: relative;
+  margin-left: var(--timeline-gap);
+  padding: 1.5rem 1.75rem;
   background: var(--color-code-background);
-  padding: 1.5rem 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  position: relative;
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
-/* Arrow pointing to the timeline */
+/* Arrow from the card to the circle */
 .timeline-content::before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: -15px;
+  top: var(--timeline-anchor);
+  left: -12px;
   transform: translateY(-50%);
-  width: 0;
-  height: 0;
   border-style: solid;
-  border-width: 15px 15px 15px 0;
+  border-width: 12px 12px 12px 0;
   border-color: transparent var(--color-code-background) transparent transparent;
 }
 
 .timeline-content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(255, 109, 0, 0.25);
+  box-shadow: 0 6px 18px rgba(255, 109, 0, 0.2);
 }
 
 /* Timeline date badge */
@@ -1061,34 +952,87 @@ input[type="button"]:focus {
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   box-shadow: 0 2px 6px rgba(255, 109, 0, 0.3);
 }
 
 /* Timeline title */
 .timeline-title {
   color: var(--color-heading-primary);
-  font-size: 1.4rem;
-  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  margin: 0.25rem 0 0;
   line-height: 1.3;
 }
 
 /* Timeline location */
 .timeline-location {
   color: var(--color-metadata);
-  font-size: 1rem;
-  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
   font-style: italic;
 }
 
-/* Responsive Timeline - Mobile */
+/* Text and bullet points inside a card */
+.timeline-content p {
+  margin: 0.9rem 0 0;
+}
+
+.timeline-content ul {
+  margin: 0.9rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.timeline-content li {
+  margin: 0.45rem 0;
+  padding-left: 0.35rem;
+}
+
+.timeline-content li::marker {
+  color: var(--color-button);
+}
+
+/* Responsive Timeline - Mobile: line and cards move left, so the text gets most of the width */
 @media (max-width: 768px) {
+  .timeline {
+    --timeline-line: 9px;
+    --timeline-gap: 30px;
+    --timeline-anchor: 2.05rem;
+  }
+
+  .timeline-marker {
+    width: 18px;
+    height: 18px;
+    border-width: 3px;
+    box-shadow: 0 0 0 3px var(--color-button);
+  }
+
+  .timeline-content {
+    padding: 1.1rem 1.1rem 1.25rem;
+  }
+
+  .timeline-content::before {
+    left: -8px;
+    border-width: 8px 8px 8px 0;
+  }
+
   .timeline-title {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 
   .timeline-date {
     font-size: 0.8rem;
     padding: 0.3rem 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-marker,
+  .timeline-content,
+  .tech-stack li {
+    transition: none;
+  }
+
+  .timeline-item:hover .timeline-marker {
+    transform: translate(-50%, -50%);
   }
 }
