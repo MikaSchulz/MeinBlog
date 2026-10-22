@@ -38,11 +38,7 @@ Our services work out how best to split the items of an order into parcels, base
 <div class="timeline-location">Otto, Hamburg · Fachinformatiker für Anwendungsentwicklung</div>
 
 - Shortened to two and a half years, final exam graded "good" (82 out of 100 points)
-- Data warehouse: ETL pipelines in SQL following Data Vault 2.0
-- Business intelligence and data science: first steps with Power BI, sales forecasts with Python and machine learning
-- IT security: worked through the OWASP Top 10, presented current topics in the weekly security meeting
-- Java development with Spring Boot, which is where I stayed
-- In the apprentice team, took on projects for other teams
+- Rotations through the data warehouse (ETL in SQL following Data Vault 2.0), business intelligence and data science (Power BI, forecasts with Python and machine learning) and IT security (OWASP Top 10), finally Java development with Spring Boot
 - Final project: a stock correction service. Corrections are stored as events and posted to the inventory system.
 
 </div>
@@ -67,13 +63,14 @@ Our services work out how best to split the items of an order into parcels, base
 
 <div class="skills-section">
 
-### Languages & Frameworks
+### Backend
 
 <div class="tech-stack">
 
 - Java
 - Spring Boot
 - Gradle
+- Python (occasionally)
 
 </div>
 
@@ -85,6 +82,7 @@ Our services work out how best to split the items of an order into parcels, base
 - AWS (EKS, SQS, SNS, S3, EC2, RDS, SSM)
 - Terraform
 - Docker
+- Kubernetes & Helm (occasionally)
 
 </div>
 
@@ -95,10 +93,11 @@ Our services work out how best to split the items of an order into parcels, base
 - PostgreSQL
 - MongoDB Atlas
 - Kafka
+- SQL
 
 </div>
 
-### Monitoring
+### Operations & Monitoring
 
 <div class="tech-stack">
 
@@ -117,18 +116,6 @@ Our services work out how best to split the items of an order into parcels, base
 - Agile teams
 - Jira & Confluence
 - GitHub Copilot
-
-</div>
-
-### Also worked with
-
-<div class="tech-stack">
-
-- Kubernetes
-- Helm
-- Python
-- SQL & Data Vault 2.0
-- OWASP Top 10
 
 </div>
 
@@ -159,13 +146,7 @@ Smart home and homelab, fitness (gym three times a week), meal prep, building br
 
 ## How I Work
 
-Architecture is what I enjoy most. My rule of thumb: the technology should mirror the business processes. When the two drift apart, every small change on the business side turns into a big one on the technical side. That's why we build our services following Domain-Driven Design and get together for Event Storming first: as a team, we go through which business events exist, in what order they happen and how we map them technically.
-
-One example I'm proud of: an order can be split across several deliveries. If a delivery fails, say because an item turned out to be unavailable after all, the customer still wants their parcel, so we start a new attempt. Originally, order lines and delivery lines lived in a single entity that had to handle both, which made every new attempt complicated: the delivery was over, but the order wasn't. We split the two, each with its own lifecycle. Now a delivery can end while the order carries on until it's really done.
-
-I also like to streamline processes. I'd rather think twice and find a standard than maintain several similar flows that overlap somewhere. A few extra bytes in the database are cheaper than two variants of the same process that need separate attention with every fix. That carries over into my private life: at home I automate whatever I can with Home Assistant, and I portion out the dry ingredients for my shakes several days in advance.
-
-AI has become a fixed part of how I work, with GitHub Copilot on the job and Claude Code at home. When coding, it's my pair programming partner: it drives, I navigate and say where we're going. When I have ideas, I deliberately ask it for criticism rather than agreement. And instead of tediously clicking boxes and arrows together, I have it generate processes as Mermaid diagrams; that's faster and clearer in the end. How far we should use AI and where its limits are is something I think about a lot right now. I believe it will play a very big role, probably bigger than many expect. Exactly how big, I wouldn't dare predict at this pace.
+Architecture is what I enjoy most. My rule of thumb: the technology should mirror the business processes, otherwise every small change on the business side turns into a big one on the technical side. I'd rather think twice and find a standard than maintain several similar flows. When coding, AI is my pair programming partner: it drives, I navigate. I'll write about all of this in more detail here on the blog, bit by bit.
 
 ## Contact
 
