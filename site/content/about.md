@@ -116,8 +116,8 @@ Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dab
 <div class="tech-stack">
 
 - **Domain-Driven Design**
-- Test-Driven Development
-- Event Storming
+- **Test-Driven Development**
+- **Event Storming**
 - Agile Teams
 - Jira & Confluence
 - GitHub Copilot

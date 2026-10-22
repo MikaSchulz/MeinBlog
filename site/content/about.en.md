@@ -117,8 +117,8 @@ Our core process is distributing ordered items across parcels in the best possib
 <div class="tech-stack">
 
 - **Domain-Driven Design**
-- Test-Driven Development
-- Event Storming
+- **Test-Driven Development**
+- **Event Storming**
 - Agile teams
 - Jira & Confluence
 - GitHub Copilot
