@@ -5,6 +5,7 @@ date: 2025-10-17
 lastmod: 2026-10-22
 draft: false
 type: about
+wide: true
 image: "/assets/images/profile-square.jpg"
 imageAlt: "Mika wearing glasses and smiling, with colorful lanterns and string lights in the background"
 role: "Software Engineer · Logistics at Otto"

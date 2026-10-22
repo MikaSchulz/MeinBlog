@@ -28,7 +28,8 @@
     {{ partial "header.html" . }}
 
     <main id="main-content" role="main">
-        <div class="container{{ if not .IsHome }} container-narrow{{ end }}">
+        {{- /* Pages with "wide: true" in the front matter (e.g. the CV with its cards) get a wider column */}}
+        <div class="container{{ if .Params.wide }} container-wide{{ else if not .IsHome }} container-narrow{{ end }}">
             {{ block "main" . }}{{ end }}
         </div>
     </main>

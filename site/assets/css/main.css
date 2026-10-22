@@ -54,6 +54,10 @@ body {
   max-width: 640px;
 }
 
+.container-wide {
+  max-width: 840px;
+}
+
 /* Header */
 header {
   background: var(--color-header-background);
@@ -1061,7 +1065,7 @@ input[type="button"]:focus {
 @media screen and (min-width: 769px) {
   .skills-section {
     display: grid;
-    grid-template-columns: 9.5rem 1fr;
+    grid-template-columns: 12rem 1fr;
     column-gap: 1.25rem;
     align-items: start;
   }
