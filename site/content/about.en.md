@@ -1,5 +1,5 @@
 ---
-title: "About Me"
+title: "CV"
 date: 2025-10-17
 draft: false
 type: about

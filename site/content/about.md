@@ -1,5 +1,5 @@
 ---
-title: "Über mich"
+title: "Lebenslauf"
 date: 2025-10-17
 draft: false
 type: about

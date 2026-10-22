@@ -35,7 +35,7 @@ What a cool feeling to finally see the blog live, under my own domain and hosted
 
 ## What mattered to me
 
-Even before writing any content, I set some ground rules that were important to me. One of them is good contrast between text and background, so nobody runs into barriers. I chose papaya orange because I really liked it. You'll mostly find it on the "About Me" page, but it will show up more often later on. It's inspired by McLaren, and I chose matching complementary colors for the backgrounds.
+Even before writing any content, I set some ground rules that were important to me. One of them is good contrast between text and background, so nobody runs into barriers. I chose papaya orange because I really liked it. You'll mostly find it on my CV page, but it will show up more often later on. It's inspired by McLaren, and I chose matching complementary colors for the backgrounds.
 
 Since I want the blog to be available internationally as well, I added English as a second language. I'm hoping for more exchange, also because English is the language of IT.
 
