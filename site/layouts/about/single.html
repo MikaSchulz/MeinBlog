@@ -23,7 +23,7 @@
             {{ with site.Params.linkedin }}<li><a class="cv-button" href="{{ . }}" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>{{ end }}
             {{ with site.Params.email }}<li><a class="cv-button" href="mailto:{{ . }}">{{ i18n "email" }}</a></li>{{ end }}
             {{- /* Appears by itself once the projects page is published */}}
-            {{ with site.GetPage "/projekte" }}<li><a class="cv-button cv-button-secondary" href="{{ .RelPermalink }}">{{ i18n "projects" }}</a></li>{{ end }}
+            {{ with site.GetPage "/projects" }}<li><a class="cv-button cv-button-secondary" href="{{ .RelPermalink }}">{{ i18n "projects" }}</a></li>{{ end }}
         </ul>
     </div>
 

@@ -1310,6 +1310,72 @@ input[type="button"]:focus {
   }
 }
 
+/* Projects page: one card per project, two columns where there is room.
+   The tech is shown as chips (reuses .tech-stack). */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.project {
+  padding: 1.5rem 1.75rem;
+  background: var(--color-code-background);
+  border-top: 3px solid var(--color-button);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-status {
+  display: inline-block;
+  padding: 0.15rem 0.7rem;
+  border: 1px solid var(--color-button);
+  border-radius: 999px;
+  color: var(--color-link-hover);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.project-title {
+  margin: 0.6rem 0 0;
+  font-size: 1.4rem;
+}
+
+.project p {
+  margin: 0.75rem 0 0;
+}
+
+.project .tech-stack ul {
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.project .tech-stack li {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+.project-link {
+  margin-top: 1rem;
+  color: var(--color-metadata);
+  font-size: 0.95rem;
+}
+
+.project .project-link p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .project {
+    padding: 1.1rem 1.1rem 1.25rem;
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+  }
+}
+
 /* Printing (e.g. the CV as PDF): black on white, no menu, footer or buttons */
 @page {
   margin: 12mm 14mm;
