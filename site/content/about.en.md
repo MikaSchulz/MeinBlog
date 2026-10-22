@@ -10,7 +10,7 @@ image: "/assets/images/profile-square.jpg"
 imageAlt: "Mika wearing glasses and smiling, with colorful lanterns and string lights in the background"
 role: "Software Engineer · Logistics at Otto"
 location: "Hamburg, Germany"
-intro: "Moin. I first started programming at 12 as a Minecraft modder. Today I work at Otto as a software developer, where I also did my apprenticeship. What I enjoy most is software and system architecture: mapping processes into technology in a clean, traceable and understandable way. What excites me most right now is how AI is evolving and how we will work with it in the future."
+intro: "Moin. I started programming at 12 as a Minecraft modder. Today I work at Otto as a software developer, where I also did my apprenticeship. What I enjoy most is software and system architecture: mapping processes into technology in a clean, traceable and understandable way. What excites me most right now is how AI is evolving and how we will work with it in the future."
 ---
 
 ## Career
@@ -24,10 +24,10 @@ intro: "Moin. I first started programming at 12 as a Minecraft modder. Today I w
 <h3 class="timeline-title">Software Engineer</h3>
 <div class="timeline-location">Otto, Hamburg · Logistics</div>
 
-Our core process is distributing ordered items across parcels in the best possible way. That means taking stock levels, warehouse utilization, size, weight and dangerous goods classes into account. The goal: few parcels and delivery dates kept.
+Our core process involves distributing items across parcels in the best possible way. This requires taking stock levels, warehouse utilization, item dimensions, weight and dangerous goods classes into account. The goal: few parcels and delivery dates kept.
 
-- Shipment planning: played a key role in building order processing vs. delivery processing. A delivery has a different lifecycle than the order: it can get lost, while the order should continue and lead to a new delivery. Promises such as delivery dates should ideally still be kept.
-- "You build it, you run it": backend development focused on Java and Spring Boot, plus operations on AWS and GCP
+- Shipment planning: played a key role in building order handling vs. delivery handling. A delivery has a different lifecycle than the order: e.g. it can get lost, while the order should continue and lead to a new delivery. Ideally, promises such as delivery dates should still be kept.
+- "You build it, you run it": backend development focused on Java and Spring Boot, as well as operations on AWS and GCP
 - Agile environment with Domain-Driven Design and Test-Driven Development
 
 </div>
@@ -41,9 +41,9 @@ Our core process is distributing ordered items across parcels in the best possib
 <div class="timeline-location">AXRO, from 07/2021 Otto, Hamburg · Fachinformatiker für Anwendungsentwicklung</div>
 
 - Apprenticeship shortened to 2.5 years, final exam graded "good" (82 out of 100 points)
-- At AXRO: data warehouse with ETL pipelines on Microsoft SQL Server, modeled following Data Vault 2.0
+- At AXRO: data warehouse with ETL pipelines on Microsoft SQL Server, modeled in Data Vault 2.0
 - At Otto: rotations through BI and data science (Power BI, forecasts with Python and machine learning) and IT security (mainly OWASP Top 10), most of the time in Java development with Spring Boot
-- Final project: a service for correcting stock levels; the corrections are stored as events and posted to the inventory system.
+- Final project: service for correcting stock levels; the corrections are stored as events and posted to the inventory system.
 
 </div>
 </div>
@@ -56,7 +56,7 @@ Our core process is distributing ordered items across parcels in the best possib
 <div class="timeline-location">German university entrance qualification</div>
 
 - Computer science from year 7, part of the media-focused profile in the Abitur
-- On the side, my first projects in Java: Minecraft mods (Forge, LabyMod add-on) and plugin development for servers (Spigot, Paper): game modes and a lobby system
+- As a teenager, my first projects in Java: Minecraft mods (Forge, LabyMod add-on) and plugin development for servers (Spigot, Paper): game modes and a lobby system
 
 </div>
 </div>

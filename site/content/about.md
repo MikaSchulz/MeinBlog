@@ -24,7 +24,7 @@ intro: "Moin. Zum ersten Mal programmiert habe ich mit 12 als Minecraft-Modder. 
 <h3 class="timeline-title">Software Engineer</h3>
 <div class="timeline-location">Otto, Hamburg · Logistik</div>
 
-Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dabei gilt es, Lagerbestände, Lagerauslastung sowie Größe, Gewicht und Gefahrgutklassen zu berücksichtigen. Mit dem Ziel: wenige Pakete und eingehaltene Liefertermine.
+Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dabei gilt es, Lagerbestände, Lagerauslastung sowie Artikelgröße, Gewicht und Gefahrgutklassen zu berücksichtigen. Mit dem Ziel: wenige Pakete und eingehaltene Liefertermine.
 
 - Sendungsbildung: maßgeblich beteiligt am Aufbau von Auftragsabwicklung vs. Lieferabwicklung. Eine Lieferung hat einen anderen Lifecycle als der Auftrag: Sie kann verloren gehen, der Auftrag soll fortbestehen und in einer neuen Lieferung münden. Versprechen wie Liefertermine sollten dabei idealerweise weiterhin eingehalten werden.
 - „You build it, you run it": Backend-Entwicklung mit Fokus auf Java und Spring Boot sowie Betrieb in AWS und GCP
@@ -40,8 +40,8 @@ Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dab
 <h3 class="timeline-title">Ausbildung zum Fachinformatiker für Anwendungsentwicklung</h3>
 <div class="timeline-location">AXRO, ab 07/2021 Otto, Hamburg</div>
 
-- Ausbildung auf 2,5 Jahre verkürzt, Abschlussprüfung mit „gut" (82 Punkte)
-- Bei AXRO: Data Warehouse mit ETL-Strecken auf Microsoft SQL Server, modelliert nach Data Vault 2.0
+- Ausbildung auf 2,5 Jahre verkürzt, Abschlussprüfung mit „gut" (82 von 100 Punkten)
+- Bei AXRO: Data Warehouse mit ETL-Strecken auf Microsoft SQL Server, modelliert in Data Vault 2.0
 - Bei Otto: Einsätze in BI und Data Science (Power BI, Prognosen mit Python und Machine Learning) und in der IT-Security (v. a. OWASP Top 10), den Großteil der Zeit in der Java-Entwicklung mit Spring Boot
 - Abschlussprojekt: Service zur Korrektur von Beständen; die Korrekturen werden als Events gespeichert und im Bestandssystem verbucht.
 
