@@ -1,5 +1,6 @@
 ---
 title: "Lebenslauf"
+description: "Lebenslauf von Mika Schulz: Software Engineer in der Logistik bei Otto in Hamburg, mit Java, Spring Boot, Cloud und Domain-Driven Design."
 date: 2025-10-17
 draft: false
 type: about

@@ -1,5 +1,6 @@
 ---
 title: "CV"
+description: "CV of Mika Schulz: software engineer in logistics at Otto in Hamburg, working with Java, Spring Boot, the cloud and Domain-Driven Design."
 date: 2025-10-17
 draft: false
 type: about
