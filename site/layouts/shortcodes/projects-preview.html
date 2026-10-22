@@ -1,0 +1,19 @@
+{{- /* Short preview of the projects page, e.g. on the CV: one tile per project with its title,
+       status and first three technologies, linking to its card. Data: "projects" in content/projects.md */ -}}
+{{- with site.GetPage "/projects" }}
+{{- $page := . }}
+<ul class="cv-projects" role="list">
+    {{- range .Params.projects }}
+    <li>
+        <a class="cv-project" href="{{ $page.RelPermalink }}#{{ .id }}">
+            <span class="cv-project-title">{{ .title }}</span>
+            <span class="cv-project-status">{{ .status }}</span>
+            {{- with .tech }}
+            <span class="cv-project-tech">{{ delimit (first 3 .) " · " }}</span>
+            {{- end }}
+        </a>
+    </li>
+    {{- end }}
+</ul>
+<p class="cv-projects-more"><a href="{{ .RelPermalink }}">{{ i18n "allProjects" }}</a></p>
+{{- end }}

@@ -79,6 +79,10 @@ contains index.html 'href="/projekte/"' "Navigation links to the German projects
 contains en/index.html 'href="/en/projects/"' "Navigation links to the English projects page"
 contains about/index.html 'href="/projekte/"' "German CV links to the projects page"
 contains en/about/index.html 'href="/en/projects/"' "English CV links to the projects page"
+contains projekte/index.html 'id="repper"' "Projects page has an anchor per project"
+contains about/index.html 'href="/projekte/#repper"' "German CV previews the projects"
+contains en/about/index.html 'href="/en/projects/#repper"' "English CV previews the projects"
+contains projekte/index.html 'href="/posts/wie-dieser-blog-entstand/"' "Project cards link to posts"
 
 echo "US3 - Categories and tags"
 contains posts/smoke-test-post/index.html 'href="/categories/misc/"' "Post page links its categories"

@@ -1301,7 +1301,8 @@ input[type="button"]:focus {
 
 @media (prefers-reduced-motion: reduce) {
   .timeline-marker,
-  .timeline-content {
+  .timeline-content,
+  .cv-project {
     transition: none;
   }
 
@@ -1356,14 +1357,66 @@ input[type="button"]:focus {
   font-size: 0.85rem;
 }
 
-.project-link {
+.project .project-link {
   margin-top: 1rem;
   color: var(--color-metadata);
   font-size: 0.95rem;
 }
 
-.project .project-link p {
+/* CV: preview of the projects, one tile per project linking to its card */
+.cv-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-projects li {
   margin: 0;
+  padding: 0;
+}
+
+.cv-project {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  height: 100%;
+  padding: 0.9rem 1.1rem;
+  background: var(--color-code-background);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: border-color 0.2s ease;
+}
+
+.cv-project:hover,
+.cv-project:focus {
+  border-color: var(--color-button);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.cv-project-title {
+  color: var(--color-heading-primary);
+  font-weight: 600;
+}
+
+.cv-project-status {
+  color: var(--color-link-hover);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.cv-project-tech {
+  color: var(--color-metadata);
+  font-size: 0.85rem;
+}
+
+.cv-projects-more {
+  font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {
@@ -1378,7 +1431,7 @@ input[type="button"]:focus {
 
 /* Printing (e.g. the CV as PDF): black on white, no menu, footer or buttons */
 @page {
-  margin: 12mm 14mm;
+  margin: 10mm 14mm;
 }
 
 @media print {
@@ -1395,9 +1448,9 @@ input[type="button"]:focus {
     --color-button: #c24e00;
   }
 
-  /* 10.5pt is a usual size for printed CVs; rem-based spacing shrinks along */
+  /* 10pt is a usual size for printed CVs; rem-based spacing shrinks along */
   html {
-    font-size: 10.5pt;
+    font-size: 10pt;
   }
 
   body {
@@ -1413,8 +1466,29 @@ input[type="button"]:focus {
   header[role="banner"],
   footer,
   .cv-actions,
-  .cv-contact {
+  .cv-contact,
+  .cv-projects-more {
     display: none !important;
+  }
+
+  .cv-header {
+    gap: 0.75rem 1.25rem;
+  }
+
+  .cv-photo {
+    width: 96px;
+    height: 96px;
+  }
+
+  .cv-projects {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+    margin: 0.75rem 0 0;
+  }
+
+  .cv-project {
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
   }
 
   body {
