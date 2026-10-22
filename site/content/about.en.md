@@ -40,7 +40,8 @@ Our services work out how best to split the items of an order into parcels, base
 <div class="timeline-location">AXRO, from 07/2021 Otto, Hamburg · Fachinformatiker für Anwendungsentwicklung</div>
 
 - Shortened to two and a half years, final exam graded "good" (82 out of 100 points)
-- At Otto, rotations through the data warehouse (ETL in SQL following Data Vault 2.0), business intelligence and data science (Power BI, forecasts with Python and machine learning) and IT security (OWASP Top 10), finally Java development with Spring Boot
+- At AXRO: data warehouse with ETL pipelines on Microsoft SQL Server, modeled following Data Vault 2.0
+- At Otto: rotations through business intelligence and data science (Power BI, forecasts with Python and machine learning) and IT security (OWASP Top 10), finally Java development with Spring Boot
 - Final project: a stock correction service. Corrections are stored as events and posted to the inventory system.
 
 </div>

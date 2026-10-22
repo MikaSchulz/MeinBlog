@@ -40,7 +40,8 @@ Aus den bestellten Artikeln berechnen unsere Services, wie sie am besten auf Pak
 <div class="timeline-location">AXRO, ab 07/2021 Otto, Hamburg</div>
 
 - Auf zweieinhalb Jahre verkürzt, Abschlussprüfung mit „gut" (82 Punkte)
-- Bei Otto Einsätze im Data Warehouse (ETL mit SQL nach Data Vault 2.0), in Business Intelligence und Data Science (Power BI, Prognosen mit Python und Machine Learning) und in der IT-Security (OWASP Top 10), zuletzt in der Java-Entwicklung mit Spring Boot
+- Bei AXRO: Data Warehouse mit ETL-Strecken auf Microsoft SQL Server, modelliert nach Data Vault 2.0
+- Bei Otto: Einsätze in Business Intelligence und Data Science (Power BI, Prognosen mit Python und Machine Learning) und in der IT-Security (OWASP Top 10), zuletzt in der Java-Entwicklung mit Spring Boot
 - Abschlussprojekt: ein Service zur Bestandskorrektur. Korrekturen werden als Events gespeichert und im Bestandssystem verbucht.
 
 </div>
