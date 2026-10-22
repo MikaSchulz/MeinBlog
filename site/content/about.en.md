@@ -127,7 +127,7 @@ Our core process involves distributing items across parcels in the best possible
 
 </div>
 
-## Side projects
+## Personal projects
 
 What I build and run in my spare time, from my own server to my own apps:
 

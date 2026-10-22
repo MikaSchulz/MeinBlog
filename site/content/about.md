@@ -126,9 +126,9 @@ Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dab
 
 </div>
 
-## Nebenbei gebaut
+## Private Projekte
 
-Was ich privat entwickle und betreibe, vom eigenen Server bis zur eigenen App:
+Was ich in meiner Freizeit entwickle und betreibe, vom eigenen Server bis zur eigenen App:
 
 {{< projects-preview >}}
 
