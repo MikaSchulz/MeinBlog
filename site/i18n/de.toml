@@ -16,6 +16,9 @@ other = "Projekte"
 [email]
 other = "E-Mail"
 
+[asOf]
+other = "Stand"
+
 [topics]
 other = "Themen"
 

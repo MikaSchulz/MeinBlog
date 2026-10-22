@@ -30,5 +30,8 @@
     <div class="content">
         {{ .Content }}
     </div>
+
+    {{- /* Set "lastmod" in the front matter whenever the CV changes */}}
+    <p class="cv-updated">{{ i18n "asOf" }}: {{ .Lastmod | time.Format "January 2006" }}</p>
 </article>
 {{ end }}

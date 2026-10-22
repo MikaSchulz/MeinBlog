@@ -1018,6 +1018,26 @@ input[type="button"]:focus {
   color: var(--color-heading-primary);
 }
 
+/* Main skills are bold in the text and get an orange outline */
+.tech-stack li:has(> strong) {
+  border-color: var(--color-button);
+  color: var(--color-heading-primary);
+}
+
+.tech-stack li > strong {
+  font-weight: 600;
+}
+
+.cv-legend,
+.cv-updated {
+  color: var(--color-metadata);
+  font-size: 0.9rem;
+}
+
+.cv-updated {
+  margin-top: 2rem;
+}
+
 @media (max-width: 768px) {
   .tech-stack ul {
     gap: 0.5rem;
@@ -1311,9 +1331,18 @@ input[type="button"]:focus {
     --color-button: #c24e00;
   }
 
+  /* 10.5pt is a usual size for printed CVs; rem-based spacing shrinks along */
+  html {
+    font-size: 10.5pt;
+  }
+
   body {
     background: #ffffff;
-    font-size: 11pt;
+    font-size: 1rem;
+  }
+
+  .cv-updated {
+    margin-top: 0.75rem;
   }
 
   .skip-link,

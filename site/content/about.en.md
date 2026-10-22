@@ -2,13 +2,14 @@
 title: "CV"
 description: "CV of Mika Schulz: software engineer in logistics at Otto in Hamburg, working with Java, Spring Boot, the cloud and Domain-Driven Design."
 date: 2025-10-17
+lastmod: 2026-10-22
 draft: false
 type: about
 image: "/assets/images/profile-square.jpg"
 imageAlt: "Mika wearing glasses and smiling, with colorful lanterns and string lights in the background"
 role: "Software Engineer · Logistics at Otto"
 location: "Hamburg, Germany"
-intro: "Moin! I first started programming at twelve, writing Minecraft mods. Today I work at Otto, where I also did my apprenticeship, and what excites me most is architecture: building processes that stay simple and easy to follow."
+intro: "Moin! I first started programming at twelve, writing Minecraft mods. Today I work at Otto, where I also did most of my apprenticeship. My favorite topic at work is architecture: building processes that stay simple and easy to follow. And what excites me most right now is how AI is evolving and how to work well together with it."
 ---
 
 ## Career
@@ -18,7 +19,7 @@ intro: "Moin! I first started programming at twelve, writing Minecraft mods. Tod
 <div class="timeline-item timeline-item-current">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
-<div class="timeline-date">Since 2023</div> <span class="timeline-now">Current</span>
+<div class="timeline-date">Since 01/2023</div> <span class="timeline-now">Current</span>
 <h3 class="timeline-title">Software Engineer</h3>
 <div class="timeline-location">Otto, Hamburg · Logistics</div>
 
@@ -27,7 +28,6 @@ Our services work out how best to split the items of an order into parcels, base
 - Shipment planning: played a key role in separating order lines from delivery lines, so failed deliveries can be retried cleanly
 - Building and running our services the "you build it, you run it" way, with infrastructure in Terraform on Google Cloud and AWS
 - Domain modeling with Domain-Driven Design and Event Storming
-- Coordinating within the team and with other teams
 
 </div>
 </div>
@@ -35,12 +35,12 @@ Our services work out how best to split the items of an order into parcels, base
 <div class="timeline-item">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
-<div class="timeline-date">2020–2023</div>
+<div class="timeline-date">08/2020 – 01/2023</div>
 <h3 class="timeline-title">Apprenticeship as an IT Specialist for Application Development</h3>
-<div class="timeline-location">Otto, Hamburg · Fachinformatiker für Anwendungsentwicklung</div>
+<div class="timeline-location">AXRO, from 07/2021 Otto, Hamburg · Fachinformatiker für Anwendungsentwicklung</div>
 
 - Shortened to two and a half years, final exam graded "good" (82 out of 100 points)
-- Rotations through the data warehouse (ETL in SQL following Data Vault 2.0), business intelligence and data science (Power BI, forecasts with Python and machine learning) and IT security (OWASP Top 10), finally Java development with Spring Boot
+- At Otto, rotations through the data warehouse (ETL in SQL following Data Vault 2.0), business intelligence and data science (Power BI, forecasts with Python and machine learning) and IT security (OWASP Top 10), finally Java development with Spring Boot
 - Final project: a stock correction service. Corrections are stored as events and posted to the inventory system.
 
 </div>
@@ -63,14 +63,16 @@ Our services work out how best to split the items of an order into parcels, base
 
 ## Skills
 
+<p class="cv-legend">Bold with an orange outline: my main focus at work</p>
+
 <div class="skills-section">
 
 ### Backend
 
 <div class="tech-stack">
 
-- Java
-- Spring Boot
+- **Java**
+- **Spring Boot**
 - Gradle
 - Python (occasionally)
 
@@ -80,7 +82,7 @@ Our services work out how best to split the items of an order into parcels, base
 
 <div class="tech-stack">
 
-- Google Cloud (Cloud Run)
+- **Google Cloud (Cloud Run)**
 - AWS (EKS, SQS, SNS, S3, EC2, RDS, SSM)
 - Terraform
 - Docker
@@ -94,7 +96,7 @@ Our services work out how best to split the items of an order into parcels, base
 
 - PostgreSQL
 - MongoDB Atlas
-- Kafka
+- **Kafka**
 - SQL
 
 </div>
@@ -113,7 +115,7 @@ Our services work out how best to split the items of an order into parcels, base
 
 <div class="tech-stack">
 
-- Domain-Driven Design
+- **Domain-Driven Design**
 - Event Storming
 - Agile teams
 - Jira & Confluence

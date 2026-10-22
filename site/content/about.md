@@ -2,13 +2,14 @@
 title: "Lebenslauf"
 description: "Lebenslauf von Mika Schulz: Software Engineer in der Logistik bei Otto in Hamburg, mit Java, Spring Boot, Cloud und Domain-Driven Design."
 date: 2025-10-17
+lastmod: 2026-10-22
 draft: false
 type: about
 image: "/assets/images/profile-square.jpg"
 imageAlt: "Mika mit Brille, lächelnd, im Hintergrund bunte Laternen und Lichterketten"
 role: "Software Engineer · Logistik bei Otto"
 location: "Hamburg"
-intro: "Moin! Zum ersten Mal programmiert habe ich mit zwölf, als Minecraft-Modder. Heute arbeite ich bei Otto, wo ich auch meine Ausbildung gemacht habe, und am meisten reizt mich Architektur: Abläufe so zu bauen, dass sie einfach und nachvollziehbar bleiben."
+intro: "Moin! Zum ersten Mal programmiert habe ich mit zwölf, als Minecraft-Modder. Heute arbeite ich bei Otto, wo ich auch den größten Teil meiner Ausbildung gemacht habe. Mein Lieblingsthema im Job ist Architektur: Abläufe so zu bauen, dass sie einfach und nachvollziehbar bleiben. Und am meisten reizt mich gerade, wie sich KI entwickelt und wie man gut mit ihr zusammenarbeitet."
 ---
 
 ## Werdegang
@@ -18,7 +19,7 @@ intro: "Moin! Zum ersten Mal programmiert habe ich mit zwölf, als Minecraft-Mod
 <div class="timeline-item timeline-item-current">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
-<div class="timeline-date">Seit 2023</div> <span class="timeline-now">Aktuell</span>
+<div class="timeline-date">Seit 01/2023</div> <span class="timeline-now">Aktuell</span>
 <h3 class="timeline-title">Software Engineer</h3>
 <div class="timeline-location">Otto, Hamburg · Logistik</div>
 
@@ -27,7 +28,6 @@ Aus den bestellten Artikeln berechnen unsere Services, wie sie am besten auf Pak
 - Sendungsbildung: maßgeblich an der Trennung von Auftrags- und Lieferposition beteiligt, damit gescheiterte Lieferungen sauber neu abgewickelt werden können
 - Entwicklung und Betrieb nach „You build it, you run it", Infrastruktur mit Terraform in der Google Cloud und in AWS
 - Fachliche Modellierung mit Domain-Driven Design und Event Storming
-- Abstimmung im Team und mit anderen Teams
 
 </div>
 </div>
@@ -35,12 +35,12 @@ Aus den bestellten Artikeln berechnen unsere Services, wie sie am besten auf Pak
 <div class="timeline-item">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
-<div class="timeline-date">2020–2023</div>
+<div class="timeline-date">08/2020 – 01/2023</div>
 <h3 class="timeline-title">Ausbildung zum Fachinformatiker für Anwendungsentwicklung</h3>
-<div class="timeline-location">Otto, Hamburg</div>
+<div class="timeline-location">AXRO, ab 07/2021 Otto, Hamburg</div>
 
 - Auf zweieinhalb Jahre verkürzt, Abschlussprüfung mit „gut" (82 Punkte)
-- Einsätze im Data Warehouse (ETL mit SQL nach Data Vault 2.0), in Business Intelligence und Data Science (Power BI, Prognosen mit Python und Machine Learning) und in der IT-Security (OWASP Top 10), zuletzt in der Java-Entwicklung mit Spring Boot
+- Bei Otto Einsätze im Data Warehouse (ETL mit SQL nach Data Vault 2.0), in Business Intelligence und Data Science (Power BI, Prognosen mit Python und Machine Learning) und in der IT-Security (OWASP Top 10), zuletzt in der Java-Entwicklung mit Spring Boot
 - Abschlussprojekt: ein Service zur Bestandskorrektur. Korrekturen werden als Events gespeichert und im Bestandssystem verbucht.
 
 </div>
@@ -62,14 +62,16 @@ Aus den bestellten Artikeln berechnen unsere Services, wie sie am besten auf Pak
 
 ## Kenntnisse
 
+<p class="cv-legend">Fett und orange umrandet: mein Schwerpunkt im Job</p>
+
 <div class="skills-section">
 
 ### Backend
 
 <div class="tech-stack">
 
-- Java
-- Spring Boot
+- **Java**
+- **Spring Boot**
 - Gradle
 - Python (gelegentlich)
 
@@ -79,7 +81,7 @@ Aus den bestellten Artikeln berechnen unsere Services, wie sie am besten auf Pak
 
 <div class="tech-stack">
 
-- Google Cloud (Cloud Run)
+- **Google Cloud (Cloud Run)**
 - AWS (EKS, SQS, SNS, S3, EC2, RDS, SSM)
 - Terraform
 - Docker
@@ -93,7 +95,7 @@ Aus den bestellten Artikeln berechnen unsere Services, wie sie am besten auf Pak
 
 - PostgreSQL
 - MongoDB Atlas
-- Kafka
+- **Kafka**
 - SQL
 
 </div>
@@ -112,7 +114,7 @@ Aus den bestellten Artikeln berechnen unsere Services, wie sie am besten auf Pak
 
 <div class="tech-stack">
 
-- Domain-Driven Design
+- **Domain-Driven Design**
 - Event Storming
 - Agile Teams
 - Jira & Confluence
