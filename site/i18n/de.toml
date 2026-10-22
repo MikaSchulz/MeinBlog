@@ -10,6 +10,12 @@ other = "Lebenslauf"
 [blog]
 other = "Blog"
 
+[projects]
+other = "Projekte"
+
+[email]
+other = "E-Mail"
+
 [topics]
 other = "Themen"
 

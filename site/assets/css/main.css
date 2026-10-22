@@ -799,25 +799,182 @@ input[type="button"]:focus {
   outline-offset: 2px;
 }
 
-/* About page: profile photo to the right of the short profile at the top */
-.author-image {
-  float: right;
-  width: 150px;
-  height: auto;
-  margin: 0.4rem 0 1rem 1.5rem;
+/* About page (CV): a business card at the top with photo, name, role,
+   the short profile and contact buttons */
+.cv-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1.75rem;
+  background: var(--color-code-background);
+  border-top: 3px solid var(--color-button);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* The first section starts below the photo */
-.about-page .content h2 {
-  clear: both;
+.cv-photo {
+  width: 128px;
+  height: 128px;
+  border: 3px solid var(--color-button);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* The page title ("Lebenslauf") is the h1, set small above the name */
+.cv-eyebrow {
+  margin: 0;
+  color: var(--color-link-hover);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cv-name {
+  margin: 0.2rem 0 0;
+  color: var(--color-heading-primary);
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.cv-role {
+  margin: 0.4rem 0 0;
+  font-size: 1.05rem;
+}
+
+.cv-location {
+  margin: 0.1rem 0 0;
+  color: var(--color-metadata);
+}
+
+.cv-intro {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.cv-print-contact {
+  display: none;
+}
+
+.cv-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-actions li {
+  margin: 0;
+  padding: 0;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 0.55rem 1.2rem;
+  background: var(--color-button);
+  color: var(--color-background);
+  border: 1px solid var(--color-button);
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cv-button:hover,
+.cv-button:focus {
+  background: var(--color-link-hover);
+  border-color: var(--color-link-hover);
+  color: var(--color-background);
+  text-decoration: none;
+}
+
+.cv-button-secondary {
+  background: transparent;
+  color: var(--color-heading-primary);
+}
+
+/* Rule of thumb in "How I work" as a pull quote */
+.cv-quote {
+  margin: 1.25rem 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 4px solid var(--color-button);
+  color: var(--color-heading-primary);
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.cv-quote p {
+  margin: 0;
+}
+
+/* Languages and interests: two small cards side by side */
+.cv-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+.cv-fact {
+  padding: 1.25rem 1.5rem;
+  background: var(--color-code-background);
+  border-radius: 12px;
+}
+
+.cv-fact h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+}
+
+.cv-fact ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.cv-fact li {
+  margin: 0.3rem 0;
+  padding-left: 0.25rem;
+}
+
+.cv-fact li::marker {
+  color: var(--color-button);
+}
+
+.cv-fact p {
+  margin: 0;
 }
 
 @media (max-width: 768px) {
-  .author-image {
-    width: 110px;
-    margin-left: 1rem;
+  .cv-header {
+    gap: 1rem 1.1rem;
+    padding: 1.25rem;
+  }
+
+  .cv-photo {
+    width: 88px;
+    height: 88px;
+  }
+
+  .cv-name {
+    font-size: 1.6rem;
+  }
+
+  .cv-quote {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .cv-facts {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -877,6 +1034,45 @@ input[type="button"]:focus {
   :root {
     --primary-color: #000;
     --link-color: #0000EE;
+  }
+}
+
+/* Wide screens: skills as a calm two-column list (on paper the compact stacked version) */
+@media screen and (min-width: 769px) {
+  .skills-section {
+    display: grid;
+    grid-template-columns: 9.5rem 1fr;
+    column-gap: 1.25rem;
+    align-items: start;
+  }
+
+  .skills-section .tech-stack ul {
+    gap: 0.45rem;
+  }
+
+  .skills-section .tech-stack li {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .skills-section > h3,
+  .skills-section > .tech-stack {
+    margin: 0;
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .skills-section > h3:first-child,
+  .skills-section > h3:first-child + .tech-stack {
+    border-top: none;
+  }
+
+  .skills-section > h3 {
+    padding-left: 0;
+    padding-top: 1.25rem;
+    border-left: none;
+    color: var(--color-link-hover);
+    font-size: 1rem;
   }
 }
 
@@ -1013,6 +1209,43 @@ input[type="button"]:focus {
   color: var(--color-button);
 }
 
+/* The current station stands out, the school years step back */
+.timeline-now {
+  margin-left: 0.5rem;
+  color: var(--color-link-hover);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.timeline-item-current .timeline-content {
+  box-shadow: 0 0 0 1px var(--color-button), 0 6px 18px rgba(255, 109, 0, 0.18);
+}
+
+.timeline-item-current .timeline-content::before {
+  border-right-color: var(--color-button);
+}
+
+.timeline-item-minor .timeline-content {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  box-shadow: none;
+}
+
+.timeline-item-minor .timeline-content::before {
+  border-right-color: var(--color-border);
+}
+
+.timeline-item-minor .timeline-title {
+  font-size: 1.15rem;
+}
+
+.timeline-item-minor .timeline-marker {
+  background: var(--color-metadata);
+  box-shadow: 0 0 0 4px var(--color-metadata);
+}
+
 /* Responsive Timeline - Mobile: line and cards move left, so the text gets most of the width */
 @media (max-width: 768px) {
   .timeline {
@@ -1058,3 +1291,164 @@ input[type="button"]:focus {
     transform: translate(-50%, -50%);
   }
 }
+
+/* Printing (e.g. the CV as PDF): black on white, no menu, footer or buttons */
+@page {
+  margin: 12mm 14mm;
+}
+
+@media print {
+  :root {
+    --color-background: #ffffff;
+    --color-text: #1a1a1a;
+    --color-heading-primary: #000000;
+    --color-heading-secondary: #000000;
+    --color-link: #000000;
+    --color-link-hover: #a33f00;
+    --color-metadata: #555555;
+    --color-code-background: #ffffff;
+    --color-border: #cccccc;
+    --color-button: #c24e00;
+  }
+
+  body {
+    background: #ffffff;
+    font-size: 11pt;
+  }
+
+  .skip-link,
+  header[role="banner"],
+  footer,
+  .cv-actions,
+  .cv-contact {
+    display: none !important;
+  }
+
+  body {
+    line-height: 1.45;
+  }
+
+  .cv-print-contact {
+    display: block;
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .cv-intro {
+    font-size: 1rem;
+  }
+
+  .timeline-item {
+    margin-bottom: 1rem;
+  }
+
+  .timeline-content p,
+  .timeline-content ul {
+    margin-top: 0.5rem;
+  }
+
+  .timeline-content li {
+    margin: 0.2rem 0;
+  }
+
+  main {
+    min-height: 0;
+    padding: 0;
+  }
+
+  .container,
+  .container-narrow {
+    max-width: none;
+    padding: 0;
+  }
+
+  article {
+    border-bottom: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .cv-header,
+  .timeline-content,
+  .cv-fact,
+  .tech-stack li {
+    box-shadow: none !important;
+  }
+
+  .cv-header {
+    padding: 0 0 1rem;
+    border-top: none;
+    border-bottom: 2px solid var(--color-button);
+    border-radius: 0;
+  }
+
+  /* No line, circles or arrows: they need background colors, which browsers don't print */
+  .timeline::before,
+  .timeline-marker,
+  .timeline-content::before {
+    display: none;
+  }
+
+  .timeline-content {
+    margin-left: 0;
+    padding: 0 0 0 1rem;
+    border: none !important;
+    border-left: 2px solid var(--color-button) !important;
+    border-radius: 0;
+  }
+
+  .timeline-date {
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    color: var(--color-button);
+  }
+
+  .timeline-item,
+  .cv-fact,
+  .cv-quote {
+    break-inside: avoid;
+  }
+
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  /* A little tighter, so the CV fits on two pages */
+  h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .cv-quote {
+    margin: 0.75rem 0;
+    font-size: 1.2rem;
+  }
+
+  .skills-section {
+    margin: 0.5rem 0 1rem;
+  }
+
+  .skills-section > h3 {
+    margin: 0.75rem 0 0.35rem;
+    font-size: 1rem;
+  }
+
+  .tech-stack li {
+    padding: 0.15rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .cv-facts {
+    margin: 1.25rem 0;
+  }
+
+  .cv-fact {
+    padding: 0;
+  }
+}
+

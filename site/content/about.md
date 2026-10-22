@@ -3,20 +3,21 @@ title: "Lebenslauf"
 date: 2025-10-17
 draft: false
 type: about
-image: "/assets/images/profile.jpg"
+image: "/assets/images/profile-square.jpg"
 imageAlt: "Mika mit Brille, lächelnd, im Hintergrund bunte Laternen und Lichterketten"
+role: "Software Engineer · Logistik bei Otto"
+location: "Hamburg"
+intro: "Moin! Zum ersten Mal programmiert habe ich mit zwölf, als Minecraft-Modder. Heute arbeite ich bei Otto, wo ich auch meine Ausbildung gemacht habe, und am meisten reizt mich Architektur: Abläufe so zu bauen, dass sie einfach und nachvollziehbar bleiben."
 ---
-
-Moin, ich bin Mika, Software Engineer aus Hamburg. Seit 2023 arbeite ich bei Otto in der Logistik, vorher habe ich dort meine Ausbildung zum Fachinformatiker für Anwendungsentwicklung gemacht. Zum ersten Mal programmiert habe ich mit zwölf, als Minecraft-Modder. Am meisten reizt mich Architektur: Abläufe so zu bauen, dass sie einfach und nachvollziehbar bleiben.
 
 ## Werdegang
 
 <div class="timeline">
 
-<div class="timeline-item">
+<div class="timeline-item timeline-item-current">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
-<div class="timeline-date">Seit 2023</div>
+<div class="timeline-date">Seit 2023</div> <span class="timeline-now">Aktuell</span>
 <h3 class="timeline-title">Software Engineer</h3>
 <div class="timeline-location">Otto, Hamburg · Logistik</div>
 
@@ -44,7 +45,7 @@ Aus den bestellten Artikeln berechnen unsere Services, wie sie am besten auf Pak
 </div>
 </div>
 
-<div class="timeline-item">
+<div class="timeline-item timeline-item-minor">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
 <div class="timeline-date">Bis 2020</div>
@@ -134,21 +135,38 @@ Aus den bestellten Artikeln berechnen unsere Services, wie sie am besten auf Pak
 
 </div>
 
+<div class="cv-facts">
+<section class="cv-fact">
+
 ## Sprachen
 
 - **Deutsch:** Muttersprache
 - **Englisch:** gut (B2)
 
+</section>
+<section class="cv-fact">
+
 ## Interessen
 
 Smart Home und Homelab, Fitness (dreimal die Woche im Gym), Meal Prep, Klemmbausteine, Musik, Reisen.
 
+</section>
+</div>
+
 ## Wie ich arbeite
 
-Am liebsten beschäftige ich mich mit Architektur. Meine Faustregel: Die Technik soll die fachlichen Abläufe abbilden, sonst wird jede kleine Änderung im Business zu einer großen in der Technik. Ich denke lieber zweimal nach und finde einen Standard, als mehrere ähnliche Abläufe zu pflegen. Beim Programmieren ist KI mein Pair-Programming-Partner: Sie fährt, ich navigiere. Ausführlicher schreibe ich darüber nach und nach hier im Blog.
+Am liebsten beschäftige ich mich mit Architektur. Meine Faustregel:
+
+<blockquote class="cv-quote"><p>Die Technik soll die fachlichen Abläufe abbilden.</p></blockquote>
+
+Laufen beide auseinander, wird jede kleine Änderung im Business zu einer großen in der Technik. Ich denke lieber zweimal nach und finde einen Standard, als mehrere ähnliche Abläufe zu pflegen. Beim Programmieren ist KI mein Pair-Programming-Partner: Sie fährt, ich navigiere. Ausführlicher schreibe ich darüber nach und nach hier im Blog.
+
+<div class="cv-contact">
 
 ## Kontakt
 
 Schreibt mir gern über [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/) oder per Mail an [info@eyetealer.me](mailto:info@eyetealer.me).
 
 *Hier schreibe ich privat. Was auf diesem Blog steht, ist meine eigene Meinung und nicht die von Otto.*
+
+</div>

@@ -3,20 +3,21 @@ title: "CV"
 date: 2025-10-17
 draft: false
 type: about
-image: "/assets/images/profile.jpg"
+image: "/assets/images/profile-square.jpg"
 imageAlt: "Mika wearing glasses and smiling, with colorful lanterns and string lights in the background"
+role: "Software Engineer · Logistics at Otto"
+location: "Hamburg, Germany"
+intro: "Moin! I first started programming at twelve, writing Minecraft mods. Today I work at Otto, where I also did my apprenticeship, and what excites me most is architecture: building processes that stay simple and easy to follow."
 ---
-
-Moin, I'm Mika, a software engineer from Hamburg. Since 2023 I've been working in logistics at Otto, where I also did my apprenticeship as an IT specialist for application development. I first started programming at twelve, writing Minecraft mods. What excites me most is architecture: building processes that stay simple and easy to follow.
 
 ## Career
 
 <div class="timeline">
 
-<div class="timeline-item">
+<div class="timeline-item timeline-item-current">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
-<div class="timeline-date">Since 2023</div>
+<div class="timeline-date">Since 2023</div> <span class="timeline-now">Current</span>
 <h3 class="timeline-title">Software Engineer</h3>
 <div class="timeline-location">Otto, Hamburg · Logistics</div>
 
@@ -44,7 +45,7 @@ Our services work out how best to split the items of an order into parcels, base
 </div>
 </div>
 
-<div class="timeline-item">
+<div class="timeline-item timeline-item-minor">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
 <div class="timeline-date">Until 2020</div>
@@ -135,21 +136,38 @@ Our services work out how best to split the items of an order into parcels, base
 
 </div>
 
+<div class="cv-facts">
+<section class="cv-fact">
+
 ## Languages
 
 - **German:** native
 - **English:** good (B2)
 
+</section>
+<section class="cv-fact">
+
 ## Interests
 
 Smart home and homelab, fitness (gym three times a week), meal prep, building bricks, music, travel.
 
+</section>
+</div>
+
 ## How I Work
 
-Architecture is what I enjoy most. My rule of thumb: the technology should mirror the business processes, otherwise every small change on the business side turns into a big one on the technical side. I'd rather think twice and find a standard than maintain several similar flows. When coding, AI is my pair programming partner: it drives, I navigate. I'll write about all of this in more detail here on the blog, bit by bit.
+Architecture is what I enjoy most. My rule of thumb:
+
+<blockquote class="cv-quote"><p>The technology should mirror the business processes.</p></blockquote>
+
+When the two drift apart, every small change on the business side turns into a big one on the technical side. I'd rather think twice and find a standard than maintain several similar flows. When coding, AI is my pair programming partner: it drives, I navigate. I'll write about all of this in more detail here on the blog, bit by bit.
+
+<div class="cv-contact">
 
 ## Contact
 
 Drop me a message via [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/) or by email at [info@eyetealer.me](mailto:info@eyetealer.me).
 
 *I write here in a private capacity. What you read on this blog is my own opinion, not Otto's.*
+
+</div>
