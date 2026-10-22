@@ -34,7 +34,7 @@ Ein cooles Gefühl, den Blog endlich live zu sehen – unter der eigenen Domain 
 
 ## Was mir wichtig war
 
-Noch bevor es inhaltlich losging, habe ich Rahmenbedingungen festgelegt, die mir wichtig waren. Dazu gehört ein guter Kontrast zwischen Text und Hintergrund, damit keine Barrieren entstehen. Das Orange, das sich vor allem durch die „Über mich“-Seite zieht und später auch noch häufiger zum Einsatz kommen wird, habe ich gewählt, weil es mich sehr angesprochen hat. Es ist an McLarens Papaya-Orange angelehnt, und dazu habe ich passende Komplementärfarben für die Hintergründe gewählt.
+Noch bevor es inhaltlich losging, habe ich Rahmenbedingungen festgelegt, die mir wichtig waren. Dazu gehört ein guter Kontrast zwischen Text und Hintergrund, damit keine Barrieren entstehen. Das Orange, das sich vor allem durch meinen Lebenslauf zieht und später auch noch häufiger zum Einsatz kommen wird, habe ich gewählt, weil es mich sehr angesprochen hat. Es ist an McLarens Papaya-Orange angelehnt, und dazu habe ich passende Komplementärfarben für die Hintergründe gewählt.
 
 Weil ich den Blog auch international verfügbar machen möchte, habe ich Englisch als weitere Sprache hinzugefügt. Ich hoffe auf mehr Austausch, auch weil Englisch die Sprache der IT ist.
 

@@ -5,10 +5,19 @@ other = "Skip to main content"
 other = "Home"
 
 [about]
-other = "About"
+other = "CV"
 
 [blog]
 other = "Blog"
+
+[projects]
+other = "Projects"
+
+[email]
+other = "Email"
+
+[asOf]
+other = "Last updated"
 
 [topics]
 other = "Topics"

@@ -54,6 +54,10 @@ body {
   max-width: 640px;
 }
 
+.container-wide {
+  max-width: 840px;
+}
+
 /* Header */
 header {
   background: var(--color-header-background);
@@ -799,98 +803,196 @@ input[type="button"]:focus {
   outline-offset: 2px;
 }
 
-/* Responsive Design for About Page */
+/* About page (CV): a business card at the top with photo, name, role,
+   the short profile and contact buttons */
+.cv-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1.75rem;
+  background: var(--color-code-background);
+  border-top: 3px solid var(--color-button);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cv-photo {
+  width: 128px;
+  height: 128px;
+  border: 3px solid var(--color-button);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* The page title ("Lebenslauf") is the h1, set small above the name */
+.cv-eyebrow {
+  margin: 0;
+  color: var(--color-link-hover);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cv-name {
+  margin: 0.2rem 0 0;
+  color: var(--color-heading-primary);
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.cv-role {
+  margin: 0.4rem 0 0;
+  font-size: 1.05rem;
+}
+
+.cv-location {
+  margin: 0.1rem 0 0;
+  color: var(--color-metadata);
+}
+
+.cv-intro {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.cv-print-contact {
+  display: none;
+}
+
+.cv-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-actions li {
+  margin: 0;
+  padding: 0;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 0.55rem 1.2rem;
+  background: var(--color-button);
+  color: var(--color-background);
+  border: 1px solid var(--color-button);
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cv-button:hover,
+.cv-button:focus {
+  background: var(--color-link-hover);
+  border-color: var(--color-link-hover);
+  color: var(--color-background);
+  text-decoration: none;
+}
+
+.cv-button-secondary {
+  background: transparent;
+  color: var(--color-heading-primary);
+}
+
+/* Rule of thumb in "How I work" as a pull quote */
+.cv-quote {
+  margin: 1.25rem 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 4px solid var(--color-button);
+  color: var(--color-heading-primary);
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.cv-quote p {
+  margin: 0;
+}
+
+/* Languages and interests: two small cards side by side */
+.cv-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+.cv-fact {
+  padding: 1.25rem 1.5rem;
+  background: var(--color-code-background);
+  border-radius: 12px;
+}
+
+.cv-fact h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+}
+
+.cv-fact ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.cv-fact li {
+  margin: 0.3rem 0;
+  padding-left: 0.25rem;
+}
+
+.cv-fact li::marker {
+  color: var(--color-button);
+}
+
+.cv-fact p {
+  margin: 0;
+}
+
 @media (max-width: 768px) {
-  .about-hero {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
+  .cv-header {
+    gap: 1rem 1.1rem;
+    padding: 1.25rem;
   }
 
-  .about-image-wrapper {
-    flex: 0 0 150px;
+  .cv-photo {
+    width: 88px;
+    height: 88px;
   }
 
-  .about-image {
-    width: 150px;
-    height: 150px;
+  .cv-name {
+    font-size: 1.6rem;
   }
 
-  .about-intro h1 {
-    font-size: 2.5rem;
+  .cv-quote {
+    font-size: 1.25rem;
   }
+}
 
-  .about-content ul {
+@media (max-width: 600px) {
+  .cv-facts {
     grid-template-columns: 1fr;
   }
 }
 
-/* Values Grid - Special styling for "Was mich antreibt" */
-.values-grid ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.2rem;
-  padding: 0;
-  margin: 2rem 0;
-}
-
-.values-grid ul li {
-  background: linear-gradient(135deg, var(--color-code-background) 0%, rgba(18, 69, 89, 0.3) 100%);
-  padding: 1.2rem 1.5rem;
-  border-radius: 12px;
-  border-left: 4px solid var(--color-button);
-  font-size: 1.05rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.values-grid ul li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(255, 109, 0, 0.3);
-  border-left-color: var(--color-link-hover);
-}
-
-/* Experience Grid - Special styling for "Berufliche Erfahrung" */
-.experience-grid ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  padding: 0;
-  margin: 2rem 0;
-}
-
-.experience-grid ul li {
-  background: var(--color-code-background);
-  padding: 1.5rem;
-  border-radius: 12px;
-  border-top: 3px solid var(--color-button);
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.experience-grid ul li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(255, 109, 0, 0.25);
-  border-top-color: var(--color-link-hover);
-}
-
-.experience-grid ul li strong {
-  color: var(--color-link-hover);
-  font-size: 1.1rem;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-/* Skills Section - Modern Card Layout */
+/* About page: skills as chips, one group per heading.
+   The chips are no links, so hovering only highlights the border. */
 .skills-section {
-  margin: 3rem 0;
+  margin: 1rem 0 2.5rem;
 }
 
 .skills-section > h3 {
-  font-size: 1.5rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
-  padding-left: 1rem;
+  font-size: 1.2rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  padding-left: 0.75rem;
   border-left: 4px solid var(--color-button);
   color: var(--color-heading-primary);
 }
@@ -898,63 +1000,56 @@ input[type="button"]:focus {
 .tech-stack ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 0.6rem;
+  margin: 0;
   padding: 0;
-  margin: 1rem 0 2rem 0;
   list-style: none;
 }
 
-.tech-stack ul li {
+.tech-stack li {
+  margin: 0;
+  padding: 0.45rem 1rem;
   background: var(--color-code-background);
   color: var(--color-text);
-  padding: 0.6rem 1.2rem;
-  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
   font-size: 0.95rem;
-  font-weight: 500;
-  border: 2px solid var(--color-border);
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: inline-flex;
-  align-items: center;
-  margin: 0;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-.tech-stack ul li:hover {
-  background: var(--color-button);
-  color: var(--color-background);
-  border-color: var(--color-link-hover);
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(255, 109, 0, 0.4);
+.tech-stack li:hover {
+  border-color: var(--color-button);
+  color: var(--color-heading-primary);
 }
 
-/* Reset default about-content ul styles for special sections */
-.values-grid ul,
-.experience-grid ul,
-.tech-stack ul {
-  /* Override the default grid layout */
-  padding-left: 0 !important;
+/* Main skills are bold in the text and get an orange outline */
+.tech-stack li:has(> strong) {
+  border-color: var(--color-button);
+  color: var(--color-heading-primary);
 }
 
-.values-grid ul li,
-.experience-grid ul li,
-.tech-stack ul li {
-  list-style: none !important;
-  justify-content: center;
+.tech-stack li > strong {
+  font-weight: 600;
 }
 
-/* Responsive adjustments for skills */
+.cv-legend,
+.cv-updated {
+  color: var(--color-metadata);
+  font-size: 0.9rem;
+}
+
+.cv-updated {
+  margin-top: 2rem;
+}
+
 @media (max-width: 768px) {
-  .values-grid ul,
-  .experience-grid ul {
-    grid-template-columns: 1fr;
-  }
-
   .tech-stack ul {
-    justify-content: center;
+    gap: 0.5rem;
   }
 
-  .skills-section > h3 {
-    font-size: 1.3rem;
+  .tech-stack li {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -966,22 +1061,66 @@ input[type="button"]:focus {
   }
 }
 
-/* Timeline Styles - vertical line on the left, cards on the right
-   (one column: the content column is too narrow for cards on both sides) */
+/* Wide screens: skills as a calm two-column list (on paper the compact stacked version) */
+@media screen and (min-width: 769px) {
+  .skills-section {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    column-gap: 1.25rem;
+    align-items: start;
+  }
+
+  .skills-section .tech-stack ul {
+    gap: 0.45rem;
+  }
+
+  .skills-section .tech-stack li {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .skills-section > h3,
+  .skills-section > .tech-stack {
+    margin: 0;
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .skills-section > h3:first-child,
+  .skills-section > h3:first-child + .tech-stack {
+    border-top: none;
+  }
+
+  .skills-section > h3 {
+    padding-left: 0;
+    padding-top: 1.25rem;
+    border-left: none;
+    color: var(--color-link-hover);
+    font-size: 1rem;
+  }
+}
+
+/* About page: timeline. A vertical line on the left, one card per station
+   (one column: the content column is too narrow for cards on both sides).
+   The circle on the line sits level with the date badge at the top of the card,
+   so it stays in place however long the card gets. */
 .timeline {
+  --timeline-line: 20px;      /* distance of the line from the left edge */
+  --timeline-gap: 56px;       /* where the cards start */
+  --timeline-anchor: 2.55rem; /* middle of the date badge, measured from the top of the card */
   position: relative;
-  margin: 3rem auto;
-  padding: 2rem 0;
+  margin: 1.5rem 0 2.5rem;
 }
 
 /* Vertical line */
 .timeline::before {
   content: '';
   position: absolute;
-  left: 30px;
-  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  left: var(--timeline-line);
   width: 4px;
-  height: 100%;
+  transform: translateX(-50%);
   background: linear-gradient(180deg,
     var(--color-button) 0%,
     var(--color-link-hover) 50%,
@@ -991,9 +1130,7 @@ input[type="button"]:focus {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .timeline-item:last-child {
@@ -1003,53 +1140,49 @@ input[type="button"]:focus {
 /* Timeline marker (the circle on the line) */
 .timeline-marker {
   position: absolute;
-  left: 30px;
-  transform: translateX(-50%);
+  top: var(--timeline-anchor);
+  left: var(--timeline-line);
   width: 24px;
   height: 24px;
+  transform: translate(-50%, -50%);
   background: var(--color-button);
   border: 4px solid var(--color-background);
   border-radius: 50%;
-  z-index: 10;
   box-shadow: 0 0 0 4px var(--color-button);
-  transition: all 0.3s ease;
+  z-index: 1;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .timeline-item:hover .timeline-marker {
-  transform: translateX(-50%) scale(1.3);
-  box-shadow: 0 0 0 6px rgba(255, 109, 0, 0.3);
+  transform: translate(-50%, -50%) scale(1.2);
   background: var(--color-link-hover);
 }
 
 /* Timeline content cards */
 .timeline-content {
-  width: calc(100% - 80px);
-  margin-left: 80px;
+  position: relative;
+  margin-left: var(--timeline-gap);
+  padding: 1.5rem 1.75rem;
   background: var(--color-code-background);
-  padding: 1.5rem 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  position: relative;
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
-/* Arrow pointing to the timeline */
+/* Arrow from the card to the circle */
 .timeline-content::before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: -15px;
+  top: var(--timeline-anchor);
+  left: -12px;
   transform: translateY(-50%);
-  width: 0;
-  height: 0;
   border-style: solid;
-  border-width: 15px 15px 15px 0;
+  border-width: 12px 12px 12px 0;
   border-color: transparent var(--color-code-background) transparent transparent;
 }
 
 .timeline-content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(255, 109, 0, 0.25);
+  box-shadow: 0 6px 18px rgba(255, 109, 0, 0.2);
 }
 
 /* Timeline date badge */
@@ -1061,30 +1194,108 @@ input[type="button"]:focus {
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   box-shadow: 0 2px 6px rgba(255, 109, 0, 0.3);
 }
 
 /* Timeline title */
 .timeline-title {
   color: var(--color-heading-primary);
-  font-size: 1.4rem;
-  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  margin: 0.25rem 0 0;
   line-height: 1.3;
 }
 
 /* Timeline location */
 .timeline-location {
   color: var(--color-metadata);
-  font-size: 1rem;
-  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
   font-style: italic;
 }
 
-/* Responsive Timeline - Mobile */
+/* Text and bullet points inside a card */
+.timeline-content p {
+  margin: 0.9rem 0 0;
+}
+
+.timeline-content ul {
+  margin: 0.9rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.timeline-content li {
+  margin: 0.45rem 0;
+  padding-left: 0.35rem;
+}
+
+.timeline-content li::marker {
+  color: var(--color-button);
+}
+
+/* The current station stands out, the school years step back */
+.timeline-now {
+  margin-left: 0.5rem;
+  color: var(--color-link-hover);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.timeline-item-current .timeline-content {
+  box-shadow: 0 0 0 1px var(--color-button), 0 6px 18px rgba(255, 109, 0, 0.18);
+}
+
+.timeline-item-current .timeline-content::before {
+  border-right-color: var(--color-button);
+}
+
+.timeline-item-minor .timeline-content {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  box-shadow: none;
+}
+
+.timeline-item-minor .timeline-content::before {
+  border-right-color: var(--color-border);
+}
+
+.timeline-item-minor .timeline-title {
+  font-size: 1.15rem;
+}
+
+.timeline-item-minor .timeline-marker {
+  background: var(--color-metadata);
+  box-shadow: 0 0 0 4px var(--color-metadata);
+}
+
+/* Responsive Timeline - Mobile: line and cards move left, so the text gets most of the width */
 @media (max-width: 768px) {
+  .timeline {
+    --timeline-line: 9px;
+    --timeline-gap: 30px;
+    --timeline-anchor: 2.05rem;
+  }
+
+  .timeline-marker {
+    width: 18px;
+    height: 18px;
+    border-width: 3px;
+    box-shadow: 0 0 0 3px var(--color-button);
+  }
+
+  .timeline-content {
+    padding: 1.1rem 1.1rem 1.25rem;
+  }
+
+  .timeline-content::before {
+    left: -8px;
+    border-width: 8px 8px 8px 0;
+  }
+
   .timeline-title {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 
   .timeline-date {
@@ -1092,3 +1303,185 @@ input[type="button"]:focus {
     padding: 0.3rem 0.8rem;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-marker,
+  .timeline-content,
+  .tech-stack li {
+    transition: none;
+  }
+
+  .timeline-item:hover .timeline-marker {
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Printing (e.g. the CV as PDF): black on white, no menu, footer or buttons */
+@page {
+  margin: 12mm 14mm;
+}
+
+@media print {
+  :root {
+    --color-background: #ffffff;
+    --color-text: #1a1a1a;
+    --color-heading-primary: #000000;
+    --color-heading-secondary: #000000;
+    --color-link: #000000;
+    --color-link-hover: #a33f00;
+    --color-metadata: #555555;
+    --color-code-background: #ffffff;
+    --color-border: #cccccc;
+    --color-button: #c24e00;
+  }
+
+  /* 10.5pt is a usual size for printed CVs; rem-based spacing shrinks along */
+  html {
+    font-size: 10.5pt;
+  }
+
+  body {
+    background: #ffffff;
+    font-size: 1rem;
+  }
+
+  .cv-updated {
+    margin-top: 0.75rem;
+  }
+
+  .skip-link,
+  header[role="banner"],
+  footer,
+  .cv-actions,
+  .cv-contact {
+    display: none !important;
+  }
+
+  body {
+    line-height: 1.45;
+  }
+
+  .cv-print-contact {
+    display: block;
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .cv-intro {
+    font-size: 1rem;
+  }
+
+  .timeline-item {
+    margin-bottom: 1rem;
+  }
+
+  .timeline-content p,
+  .timeline-content ul {
+    margin-top: 0.5rem;
+  }
+
+  .timeline-content li {
+    margin: 0.2rem 0;
+  }
+
+  main {
+    min-height: 0;
+    padding: 0;
+  }
+
+  .container,
+  .container-narrow {
+    max-width: none;
+    padding: 0;
+  }
+
+  article {
+    border-bottom: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .cv-header,
+  .timeline-content,
+  .cv-fact,
+  .tech-stack li {
+    box-shadow: none !important;
+  }
+
+  .cv-header {
+    padding: 0 0 1rem;
+    border-top: none;
+    border-bottom: 2px solid var(--color-button);
+    border-radius: 0;
+  }
+
+  /* No line, circles or arrows: they need background colors, which browsers don't print */
+  .timeline::before,
+  .timeline-marker,
+  .timeline-content::before {
+    display: none;
+  }
+
+  .timeline-content {
+    margin-left: 0;
+    padding: 0 0 0 1rem;
+    border: none !important;
+    border-left: 2px solid var(--color-button) !important;
+    border-radius: 0;
+  }
+
+  .timeline-date {
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    color: var(--color-button);
+  }
+
+  .timeline-item,
+  .cv-fact,
+  .cv-quote {
+    break-inside: avoid;
+  }
+
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  /* A little tighter, so the CV fits on two pages */
+  h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .cv-quote {
+    margin: 0.75rem 0;
+    font-size: 1.2rem;
+  }
+
+  .skills-section {
+    margin: 0.5rem 0 1rem;
+  }
+
+  .skills-section > h3 {
+    margin: 0.75rem 0 0.35rem;
+    font-size: 1rem;
+  }
+
+  .tech-stack li {
+    padding: 0.15rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .cv-facts {
+    margin: 1.25rem 0;
+  }
+
+  .cv-fact {
+    padding: 0;
+  }
+}
+

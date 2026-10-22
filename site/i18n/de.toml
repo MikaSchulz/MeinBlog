@@ -5,10 +5,19 @@ other = "Zum Hauptinhalt springen"
 other = "Startseite"
 
 [about]
-other = "Über mich"
+other = "Lebenslauf"
 
 [blog]
 other = "Blog"
+
+[projects]
+other = "Projekte"
+
+[email]
+other = "E-Mail"
+
+[asOf]
+other = "Stand"
 
 [topics]
 other = "Themen"

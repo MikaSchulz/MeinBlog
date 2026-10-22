@@ -1,152 +1,179 @@
 ---
-title: "Über mich"
+title: "Lebenslauf"
+description: "Lebenslauf von Mika Schulz: Software Engineer in der Logistik bei Otto in Hamburg, mit Java, Spring Boot, Cloud und Domain-Driven Design."
 date: 2025-10-17
+lastmod: 2026-10-22
 draft: false
-image: "/assets/images/profile.jpg"
-imageAlt: "Profilbild des Blog-Autors"
+type: about
+wide: true
+image: "/assets/images/profile-square.jpg"
+imageAlt: "Mika mit Brille, lächelnd, im Hintergrund bunte Laternen und Lichterketten"
+role: "Software Engineer · Logistik bei Otto"
+location: "Hamburg"
+intro: "Moin. Zum ersten Mal programmiert habe ich mit 12 als Minecraft-Modder. Heute arbeite ich bei Otto als Softwareentwickler, wo ich auch meine Ausbildung absolviert habe. Am liebsten beschäftige ich mich mit Software- und Systemarchitektur: Prozesse sauber, nachvollziehbar und verständlich technisch abzubilden. Am meisten reizt mich gerade die Entwicklung von KI und wie wir in Zukunft mit ihr arbeiten werden."
 ---
 
-Hi, ich bin Mika, ein Software-Entwickler, der aktuell bei der Otto GmbH & Co. KGaA arbeitet.
-Meine Leidenschaft für IT begann schon in jungen Jahren, und seitdem lässt sie mich nicht mehr los. 
-Alles fing mit Minecraft-Modding an, wo ich zum ersten Mal mit Java in Berührung kam, die Grundlagen 
-der Software-Architektur kennenlernte und sogar erste Erfahrungen im Projektmanagement sammelte.
-
-Im Laufe der Zeit habe ich diese Leidenschaft zum Beruf gemacht und meine Fähigkeiten während meiner 
-Ausbildung zum Fachinformatiker für Anwendungsentwicklung vertieft. Heute arbeite ich als Java-Entwickler 
-bei der Otto GmbH & Co. KGaA und bin immer bereit, zu experimentieren, Neues zu lernen und spannende 
-Herausforderungen anzugehen.
-
-## Ausbildung & Karriereweg
+## Werdegang
 
 <div class="timeline">
 
-<div class="timeline-item">
+<div class="timeline-item timeline-item-current">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
-<div class="timeline-date">Aktuell</div>
-<h3 class="timeline-title">Java Software-Engineer</h3>
-<div class="timeline-location">Otto GmbH & Co. KGaA</div>
+<div class="timeline-date">Seit 01/2023</div> <span class="timeline-now">Aktuell</span>
+<h3 class="timeline-title">Software Engineer</h3>
+<div class="timeline-location">Otto, Hamburg · Logistik</div>
+
+Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dabei gilt es, Lagerbestände, Lagerauslastung sowie Artikelgröße, Gewicht und Gefahrgutklassen zu berücksichtigen. Mit dem Ziel: wenige Pakete und eingehaltene Liefertermine.
+
+- Sendungsbildung: maßgeblich beteiligt am Aufbau von Auftragsabwicklung vs. Lieferabwicklung. Eine Lieferung hat einen anderen Lifecycle als der Auftrag: Sie kann verloren gehen, der Auftrag soll fortbestehen und in einer neuen Lieferung münden. Versprechen wie Liefertermine sollten dabei idealerweise weiterhin eingehalten werden.
+- „You build it, you run it": Backend-Entwicklung mit Fokus auf Java und Spring Boot sowie Betrieb in AWS und GCP
+- Agiles Umfeld mit Domain-Driven Design und Test-Driven Development
+
 </div>
 </div>
 
 <div class="timeline-item">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
-<div class="timeline-date">2020 - 2023</div>
+<div class="timeline-date">08/2020 – 01/2023</div>
 <h3 class="timeline-title">Ausbildung zum Fachinformatiker für Anwendungsentwicklung</h3>
-<div class="timeline-location">Otto GmbH & Co. KGaA</div>
+<div class="timeline-location">AXRO, ab 07/2021 Otto, Hamburg</div>
+
+- Ausbildung auf 2,5 Jahre verkürzt, Abschlussprüfung mit „gut" (82 von 100 Punkten)
+- Bei AXRO: Data Warehouse mit ETL-Strecken auf Microsoft SQL Server, modelliert in Data Vault 2.0
+- Bei Otto: Einsätze in BI und Data Science (Power BI, Prognosen mit Python und Machine Learning) und in der IT-Security (v. a. OWASP Top 10), den Großteil der Zeit in der Java-Entwicklung mit Spring Boot
+- Abschlussprojekt: Service zur Korrektur von Beständen; die Korrekturen werden als Events gespeichert und im Bestandssystem verbucht.
+
 </div>
 </div>
 
-<div class="timeline-item">
+<div class="timeline-item timeline-item-minor">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
-<div class="timeline-date">2017 - 2020</div>
+<div class="timeline-date">Bis 2020</div>
 <h3 class="timeline-title">Abitur</h3>
-<div class="timeline-location">Johannes-Brahms-Schule, Pinneberg</div>
-</div>
-</div>
+
+- Informatik ab der 7. Klasse, im Abitur Teil des Medienprofils
+- Nebenbei erste eigene Projekte in Java: Minecraft-Mods (Forge, LabyMod-Addon) sowie Pluginentwicklung für Server (Spigot, Paper): Spielmodi und ein Lobby-System
 
 </div>
-
-## Was mich antreibt
-
-<div class="values-grid">
-
-- 💎 **Clean Code** - Lesbar, wartbar, durch Coding Patterns und Best Practices
-- 🔭 **Big Picture** – Das große Ganze im Blick
-- ⚖️ **Balance** – Eleganz ohne unnötige Komplexität
-- 📚 **Kontinuierliches Lernen** – Immer neugierig bleiben
+</div>
 
 </div>
 
-## Berufliche Erfahrung
+## Kenntnisse
 
-Ich arbeite als Software-Entwickler mit Schwerpunkt auf:
-
-<div class="experience-grid">
-
-- 🚀 **Feature-Entwicklung & Deployment** Entwicklung und Auslieferung von Features basierend auf agilen Methoden
-- ☁️ **Infrastruktur & Betrieb** Wartung und Verbesserung von Cloud-Infrastruktur, Monitoring von Systemen durch Dashboards, Metriken und Logs
-- 🤝 **Team-übergreifende Zusammenarbeit** Koordination mit mehreren Teams und Stakeholdern
-- 🏗️ **Domain Modeling** Arbeit mit Event Storming zur Gestaltung von Business- und technischen Architekturen
-
-</div>
-
-## Skills & Technologien
+<p class="cv-legend">Fett und orange umrandet: Schwerpunkte im Job</p>
 
 <div class="skills-section">
 
-### 💻 Sprachen & Frameworks
+### Backend
 
 <div class="tech-stack">
 
-- Java
-- Spring Boot
+- **Java**
+- **Spring Boot**
 - Gradle
-- Python
+- Python (gelegentlich)
 
 </div>
 
-### ☁️ Cloud & Infrastruktur
+### Cloud & Infrastruktur
 
 <div class="tech-stack">
 
+- **Google Cloud (Cloud Run)**
 - AWS (EKS, SQS, SNS, S3, EC2, RDS, SSM)
-- Kubernetes
-- Helm
+- **Terraform**
 - Docker
-- Terraform
+- Kubernetes & Helm (gelegentlich)
 
 </div>
 
-### 💾 Daten & Messaging
+### Daten & Messaging
 
 <div class="tech-stack">
 
-- PostgreSQL
-- MongoDB
-- Kafka
+- **MongoDB Atlas**
+- **Kafka**
+- SQL (PostgreSQL)
 
 </div>
 
-### 📊 Monitoring & Observability
+### Betrieb & Monitoring
 
 <div class="tech-stack">
 
 - Grafana
 - Prometheus
+- OpenTelemetry (lerne ich gerade)
 
 </div>
 
-### 🎨 Prinzipien & Methoden
+### Methoden & Werkzeuge
 
 <div class="tech-stack">
 
-- Domain-Driven Design
-- Event Storming
-- Einfachheit & Wartbarkeit
-- Agile Methoden
+- **Domain-Driven Design**
+- **Test-Driven Development**
+- **Event Storming**
+- Agile Teams
+- Jira & Confluence
+- GitHub Copilot
+
+</div>
+
+### Privat: Homelab & KI
+
+<div class="tech-stack">
+
+- Proxmox
+- Home Assistant
+- Docker & Dokploy
+- Cloudflare
+- Tailscale
+- Hugo
+- Claude Code
 
 </div>
 
 </div>
 
-## Meine Stärken
+<div class="cv-facts">
+<section class="cv-fact">
 
-Ich bringe tiefes Domain-Wissen in Diskussionen ein und verstehe gerne den Business-Kontext hinter 
-technischen Entscheidungen. Ich bin proaktiv, übernehme Verantwortung für meine Arbeit und trage 
-aktiv Ideen zum Team bei. Ich glaube an klare Kommunikation, das Stellen der richtigen Fragen und 
-die Zusammenarbeit über Team-Grenzen hinweg.
+## Sprachen
 
-## Zukunftsausblick
+- **Deutsch:** Muttersprache
+- **Englisch:** gut (B2)
 
-Besonders treiben mich Software-Architektur und der Blick auf das große Ganze an. Ich denke darüber 
-nach, wie man Systeme gestaltet, die wartbar und skalierbar sind. Außerdem möchte ich mein Wissen 
-über Cloud-Technologien vertiefen. Darüber hinaus interessiere ich mich sehr für KI-Tools und die 
-Möglichkeiten, die sie für moderne Software-Projekte bieten.
+</section>
+<section class="cv-fact">
+
+## Interessen
+
+Smart Home, Fitness, Meal Prep, Klemmbausteine, Musik, Reisen.
+
+</section>
+</div>
+
+## Wie ich arbeite
+
+Bei Architektur interessiert mich vor allem das große Ganze. Meine Faustregel:
+
+<blockquote class="cv-quote"><p>Die Technik soll die fachlichen Abläufe abbilden.</p></blockquote>
+
+Laufen beide auseinander, wird jede Änderung im Business zu einer größeren in der Technik. Ich denke lieber vorher nach, überlege mir einen Standard und verschlanke Abläufe, anstatt sie doppelt zu pflegen.
+
+KI ist mein Pair-Programming-Partner: Sie fährt (Driver), ich gebe Anweisungen (Navigator). Aber KI entwickelt sich sehr rasant. Ausführlicher schreibe ich darüber hier im Blog.
+
+<div class="cv-contact">
 
 ## Kontakt
 
-Melde dich gerne über [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/) oder per E-Mail an [info@eyetealer.me](mailto:info@eyetealer.me).
-Ich freue mich über einen Austausch!
+Schreibt mir gern über [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/) oder per Mail an [info@eyetealer.me](mailto:info@eyetealer.me).
+
+*Hier schreibe ich privat. Was auf diesem Blog steht, ist meine eigene Meinung und nicht die von Otto.*
+
+</div>

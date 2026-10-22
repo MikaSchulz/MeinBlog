@@ -1,155 +1,180 @@
 ---
-title: "About Me"
+title: "CV"
+description: "CV of Mika Schulz: software engineer in logistics at Otto in Hamburg, working with Java, Spring Boot, the cloud and Domain-Driven Design."
 date: 2025-10-17
+lastmod: 2026-10-22
 draft: false
-image: "/assets/images/profile.jpg"
-imageAlt: "Profile photo of the blog author"
+type: about
+wide: true
+image: "/assets/images/profile-square.jpg"
+imageAlt: "Mika wearing glasses and smiling, with colorful lanterns and string lights in the background"
+role: "Software Engineer · Logistics at Otto"
+location: "Hamburg, Germany"
+intro: "Moin. I started programming at 12 as a Minecraft modder. Today I work at Otto as a software developer, where I also did my apprenticeship. What I enjoy most is software and system architecture: mapping processes into technology in a clean, traceable and understandable way. What excites me most right now is how AI is evolving and how we will work with it in the future."
 ---
 
-Hi, I'm Mika, a software developer currently working at Otto GmbH & Co. KGaA.
-My passion for IT started at a young age, and ever since, I've been hooked. It all began with
-Minecraft modding, where I first got hands-on with Java, explored the basics of software
-architecture, and even got a taste of project management.
-
-Over time, I turned this passion into a career, deepening my skills during my apprenticeship as an
-IT specialist in application development (Fachinformatiker für Anwendungsentwicklung). Today, I work
-as a Java developer at Otto GmbH & Co. KGaA, always eager to experiment, learn new things, and
-tackle exciting challenges along the way.
-
-## Education & Career Path
+## Career
 
 <div class="timeline">
 
+<div class="timeline-item timeline-item-current">
+<div class="timeline-marker"></div>
+<div class="timeline-content">
+<div class="timeline-date">Since 01/2023</div> <span class="timeline-now">Current</span>
+<h3 class="timeline-title">Software Engineer</h3>
+<div class="timeline-location">Otto, Hamburg · Logistics</div>
+
+Our core process involves distributing items across parcels in the best possible way. This requires taking stock levels, warehouse utilization, item dimensions, weight and dangerous goods classes into account. The goal: few parcels and delivery dates kept.
+
+- Shipment planning: played a key role in building order handling vs. delivery handling. A delivery has a different lifecycle than the order: e.g. it can get lost, while the order should continue and lead to a new delivery. Ideally, promises such as delivery dates should still be kept.
+- "You build it, you run it": backend development focused on Java and Spring Boot, as well as operations on AWS and GCP
+- Agile environment with Domain-Driven Design and Test-Driven Development
+
+</div>
+</div>
+
 <div class="timeline-item">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
-<div class="timeline-date">Current</div>
-<h3 class="timeline-title">Java Software-Engineer</h3>
-<div class="timeline-location">Otto GmbH & Co. KGaA</div>
+<div class="timeline-date">08/2020 – 01/2023</div>
+<h3 class="timeline-title">Apprenticeship as an IT Specialist for Application Development</h3>
+<div class="timeline-location">AXRO, from 07/2021 Otto, Hamburg · Fachinformatiker für Anwendungsentwicklung</div>
+
+- Apprenticeship shortened to 2.5 years, final exam graded "good" (82 out of 100 points)
+- At AXRO: data warehouse with ETL pipelines on Microsoft SQL Server, modeled in Data Vault 2.0
+- At Otto: rotations through BI and data science (Power BI, forecasts with Python and machine learning) and IT security (mainly OWASP Top 10), most of the time in Java development with Spring Boot
+- Final project: service for correcting stock levels; the corrections are stored as events and posted to the inventory system.
+
 </div>
 </div>
 
-<div class="timeline-item">
+<div class="timeline-item timeline-item-minor">
 <div class="timeline-marker"></div>
 <div class="timeline-content">
-<div class="timeline-date">2020 - 2023</div>
-<h3 class="timeline-title">Apprenticeship as IT Specialist for Application Development (Fachinformatiker für Anwendungsentwicklung)</h3>
-<div class="timeline-location">Otto GmbH & Co. KGaA</div>
-</div>
-</div>
+<div class="timeline-date">Until 2020</div>
+<h3 class="timeline-title">Abitur</h3>
+<div class="timeline-location">German university entrance qualification</div>
 
-<div class="timeline-item">
-<div class="timeline-marker"></div>
-<div class="timeline-content">
-<div class="timeline-date">2017 - 2020</div>
-<h3 class="timeline-title">Abitur (German high school diploma)</h3>
-<div class="timeline-location">Johannes-Brahms-Schule, Pinneberg</div>
+- Computer science from year 7, part of the media-focused profile in the Abitur
+- As a teenager, my first projects in Java: Minecraft mods (Forge, LabyMod add-on) and plugin development for servers (Spigot, Paper): game modes and a lobby system
+
 </div>
 </div>
 
 </div>
 
-## What Drives Me
+## Skills
 
-<div class="values-grid">
-
-- 💎 **Clean Code** – Readable, maintainable, achieved through coding patterns and best practices
-- 🔭 **Big Picture** – Keeping the bigger picture in mind
-- ⚖️ **Balance** – Elegance without unnecessary complexity
-- 📚 **Continuous Learning** – Always stay curious
-
-</div>
-
-## Professional Experience
-
-I work as a software developer with a focus on:
-
-<div class="experience-grid">
-
-- 🚀 **Feature Development & Deployment** – Building and shipping features based on agile
-  methodologies
-- ☁️ **Infrastructure & Operations** – Maintaining and improving cloud infrastructure, monitoring
-  systems through dashboards, metrics, and logs
-- 🤝 **Cross-Team Collaboration** – Coordinating with multiple teams and stakeholders
-- 🏗️ **Domain Modeling** – Working with Event Storming to design both business and technical
-  architectures
-
-</div>
-
-## Skills & Technologies
+<p class="cv-legend">Bold with an orange outline: main focus areas at work</p>
 
 <div class="skills-section">
 
-### 💻 Languages & Frameworks
+### Backend
 
 <div class="tech-stack">
 
-- Java
-- Spring Boot
+- **Java**
+- **Spring Boot**
 - Gradle
-- Python
+- Python (occasionally)
 
 </div>
 
-### ☁️ Cloud & Infrastructure
+### Cloud & Infrastructure
 
 <div class="tech-stack">
 
+- **Google Cloud (Cloud Run)**
 - AWS (EKS, SQS, SNS, S3, EC2, RDS, SSM)
-- Kubernetes
-- Helm
+- **Terraform**
 - Docker
-- Terraform
+- Kubernetes & Helm (occasionally)
 
 </div>
 
-### 💾 Data & Messaging
+### Data & Messaging
 
 <div class="tech-stack">
 
-- PostgreSQL
-- MongoDB
-- Kafka
+- **MongoDB Atlas**
+- **Kafka**
+- SQL (PostgreSQL)
 
 </div>
 
-### 📊 Monitoring & Observability
+### Operations & Monitoring
 
 <div class="tech-stack">
 
 - Grafana
 - Prometheus
+- OpenTelemetry (currently learning)
 
 </div>
 
-### 🎨 Principles & Methodologies
+### Methods & Tools
 
 <div class="tech-stack">
 
-- Domain-Driven Design
-- Event Storming
-- Simplicity & Maintainability
-- Agile Methodologies
+- **Domain-Driven Design**
+- **Test-Driven Development**
+- **Event Storming**
+- Agile teams
+- Jira & Confluence
+- GitHub Copilot
+
+</div>
+
+### Private: Homelab & AI
+
+<div class="tech-stack">
+
+- Proxmox
+- Home Assistant
+- Docker & Dokploy
+- Cloudflare
+- Tailscale
+- Hugo
+- Claude Code
 
 </div>
 
 </div>
 
-## My Strengths
+<div class="cv-facts">
+<section class="cv-fact">
 
-I bring deep domain knowledge into discussions and enjoy understanding the business context behind
-technical decisions. I'm proactive, take ownership of my work, and actively contribute ideas to the
-team. I believe in clear communication, asking the right questions, and working collaboratively
-across team boundaries.
+## Languages
 
-## Looking Forward
+- **German:** native
+- **English:** good (B2)
 
-I'm particularly driven by software architecture, always looking at the bigger picture and thinking
-about how to design systems that are maintainable and scalable. I'm also eager to deepen my
-knowledge of cloud technologies. On top of that, I'm passionate about diving into AI tools and
-discovering the opportunities they bring to modern software projects.
+</section>
+<section class="cv-fact">
 
-## Connect with Me
+## Interests
 
-Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/) or by email at [info@eyetealer.me](mailto:info@eyetealer.me).
-I'm looking forward to connecting with you!
+Smart home, fitness, meal prep, building bricks, music, travel.
+
+</section>
+</div>
+
+## How I Work
+
+When it comes to architecture, what interests me most is the big picture. My rule of thumb:
+
+<blockquote class="cv-quote"><p>The technology should mirror the business processes.</p></blockquote>
+
+When the two drift apart, every change on the business side turns into a bigger one on the technical side. I'd rather think ahead, come up with a standard and streamline processes instead of maintaining them twice.
+
+AI is my pair programming partner: it drives (driver), I give directions (navigator). But AI is evolving very fast. I write about it in more detail here on the blog.
+
+<div class="cv-contact">
+
+## Contact
+
+Drop me a message via [LinkedIn](https://www.linkedin.com/in/mika-schulz-538b5a246/) or by email at [info@eyetealer.me](mailto:info@eyetealer.me).
+
+*I write here in a private capacity. What you read on this blog is my own opinion, not Otto's.*
+
+</div>
