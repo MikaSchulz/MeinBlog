@@ -39,7 +39,7 @@ projects:
   - id: "podcast"
     title: "Daily News Podcast"
     status: "Paused"
-    text: "My own news podcast, with sources and weighting I choose myself: a Python script pulls the topics from RSS feeds, weighted by categories such as world news, business or tech, and skips what was already covered in the last few days. Claude writes the script, Google Text-to-Speech reads it out, and the MP3 lands on my phone via Google Drive. Meant for every morning, about 30 minutes, automatically on GitHub Actions."
+    text: "An AI-generated news podcast, freshly made every day. It pulls its topics from RSS feeds. The categories, such as world news, business or tech, can be configured and weighted. Topics that get a lot of coverage are given priority in the weighting. If a topic was already part of the podcast in the last few days, it isn't covered again. Claude writes the script, Google Text-to-Speech reads it out, and the MP3 is uploaded to Google Drive. Every morning, about 30 minutes of up-to-date news."
     tech: ["Python", "Claude Code", "Google Text-to-Speech", "GitHub Actions", "Google Drive", "RSS"]
     links:
       - text: "Code on GitHub"
@@ -47,15 +47,15 @@ projects:
   - id: "wortel"
     title: "Wortel"
     status: "Paused"
-    text: "A German word game along the lines of Wordle, with words of four to seven letters and a daily challenge. Started out on Spring Boot, then moved to Supabase: Postgres, login and a REST API as edge functions in TypeScript. The app is built with Compose Multiplatform and runs in the browser and on Android."
+    text: "A German puzzle game along the lines of Wordle. The words have four to seven letters. A hint feature fills in letters that appear in the solution. Started out on Spring Boot, then moved to Supabase: Postgres, login and a REST API as edge functions in TypeScript. The app is built with Compose Multiplatform and runs in the browser and on Android."
     tech: ["Supabase", "TypeScript", "Compose Multiplatform", "PostgreSQL", "Deno", "GitHub Actions"]
     links:
       - text: "Code on GitHub"
         url: "https://github.com/MikaSchulz/Wortel"
   - id: "tamagotchi"
-    title: "Tamagotchi"
+    title: "TamagotchiVB"
     status: "School days"
-    text: "A virtual pet for Windows, built as a school project in a team; I did most of it. Pick a cat, a dog or an ox, give it a name, then feed it, pet it and keep it happy. Hunger, thirst, fun and affection get worse over time, even while the program is closed; the difficulty level sets how fast. You earn coins in mini-games such as Memory or the slot machine and spend them in the shop."
+    text: "A virtual pet inspired by Tamagotchis. Built as a school project in a team, with the focus on object-oriented programming in Visual Basic. At the start you choose between a cat, a dog and an axolotl. You have to feed it, pet it and keep it happy. The difficulty level sets how fast those values change. That also happens while the program is closed. If you don't look after your pet enough, it dies. You earn coins in mini-games such as Memory or the slot machine. You spend them on food in the shop. Some of the graphics were drawn by hand and then traced by us in vector graphics programs."
     tech: ["VB.NET", "Windows Forms", ".NET Framework", "Visual Studio"]
     links:
       - text: "Code on GitHub"

@@ -42,7 +42,7 @@ projects:
   - id: "podcast"
     title: "Daily News Podcast"
     status: "Pausiert"
-    text: "Mein eigener Nachrichten-Podcast mit Quellen und Gewichtung, die ich selbst festlege: Ein Python-Skript holt die Themen aus RSS-Feeds, gewichtet nach Kategorien wie Welt, Wirtschaft oder Tech, und lässt weg, was in den letzten Tagen schon dran war. Claude schreibt daraus den Sprechtext, Google Text-to-Speech liest ihn vor, und die MP3 landet über Google Drive auf meinem Handy. Gedacht für jeden Morgen, rund 30 Minuten, automatisch über GitHub Actions."
+    text: "Ein KI-generierter Nachrichten-Podcast, der täglich neu erstellt wird. Er holt sich die Themen aus RSS-Feeds. Die Kategorien, etwa Welt, Wirtschaft oder Tech, lassen sich konfigurieren und gewichten. Themen, über die viel berichtet wird, werden bei der Gewichtung bevorzugt. War ein Thema in den letzten Tagen schon Teil des Podcasts, so wird nicht noch einmal darüber berichtet. Claude schreibt den Sprechtext, Google Text-to-Speech liest ihn vor, und die MP3 wird in Google Drive hochgeladen. Jeden Morgen rund 30 Minuten tagesaktuelle News."
     tech: ["Python", "Claude Code", "Google Text-to-Speech", "GitHub Actions", "Google Drive", "RSS"]
     links:
       - text: "Code auf GitHub"
@@ -50,15 +50,15 @@ projects:
   - id: "wortel"
     title: "Wortel"
     status: "Pausiert"
-    text: "Ein deutsches Worträtsel nach dem Prinzip von Wordle, mit Wörtern aus vier bis sieben Buchstaben und einer täglichen Challenge. Angefangen mit Spring Boot, dann umgezogen auf Supabase: Postgres, Login und eine REST-API als Edge Functions in TypeScript. Die App dazu ist mit Compose Multiplatform gebaut und läuft im Browser und auf Android."
+    text: "Ein deutsches Rätselspiel nach dem Prinzip von Wordle. Die Wörter haben vier bis sieben Buchstaben. Eine Tippfunktion ergänzt Buchstaben, die in der Lösung vorkommen. Angefangen mit Spring Boot, dann umgezogen auf Supabase: Postgres, Login und eine REST-API als Edge Functions in TypeScript. Die App ist in Compose Multiplatform gebaut und läuft im Browser und auf Android."
     tech: ["Supabase", "TypeScript", "Compose Multiplatform", "PostgreSQL", "Deno", "GitHub Actions"]
     links:
       - text: "Code auf GitHub"
         url: "https://github.com/MikaSchulz/Wortel"
   - id: "tamagotchi"
-    title: "Tamagotchi"
+    title: "TamagotchiVB"
     status: "Schulzeit"
-    text: "Ein virtuelles Haustier für Windows, entstanden als Schulprojekt im Team; den Großteil habe ich gemacht. Katze, Hund oder Ochse aussuchen, Namen geben und dann füttern, streicheln und bei Laune halten. Hunger, Durst, Spaß und Zuneigung werden mit der Zeit schlechter, auch wenn das Programm geschlossen ist; wie schnell, legt der Schwierigkeitsgrad fest. Münzen verdient man in Minispielen wie Memory oder am Spielautomaten und gibt sie im Shop aus."
+    text: "Ein virtuelles Haustier, angelehnt an Tamagotchis. Entstanden als Schulprojekt im Team, bei dem der Fokus auf objektorientiertem Programmieren in Visual Basic lag. Zu Anfang lässt sich zwischen Katze, Hund und Axolotl wählen. Man muss es füttern, streicheln und bei Laune halten. Der Schwierigkeitsgrad legt fest, wie schnell sich die Werte dafür ändern. Das passiert auch dann, wenn das Programm geschlossen ist. Kümmert man sich zu wenig um sein Haustier, so stirbt es. Münzen verdient man in Minispielen wie Memory oder am Spielautomaten. Man gibt sie im Shop für Futter aus. Die Grafiken sind teils von Hand gezeichnet und dann selbst mit Vektorgrafikprogrammen nachgezeichnet."
     tech: ["VB.NET", "Windows Forms", ".NET Framework", "Visual Studio"]
     links:
       - text: "Code auf GitHub"
