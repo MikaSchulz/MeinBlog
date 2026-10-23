@@ -13,6 +13,9 @@ other = "Blog"
 [projects]
 other = "Projects"
 
+[allProjects]
+other = "All projects in detail"
+
 [email]
 other = "Email"
 

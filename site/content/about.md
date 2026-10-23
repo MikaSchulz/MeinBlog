@@ -124,21 +124,13 @@ Unser Kernprozess ist es, bestellte Artikel optimal auf Pakete zu verteilen. Dab
 
 </div>
 
-### Privat: Homelab & KI
-
-<div class="tech-stack">
-
-- Proxmox
-- Home Assistant
-- Docker & Dokploy
-- Cloudflare
-- Tailscale
-- Hugo
-- Claude Code
-
 </div>
 
-</div>
+## Private Projekte
+
+Was ich in meiner Freizeit entwickle und betreibe, vom eigenen Server bis zur eigenen App:
+
+{{< projects-preview >}}
 
 <div class="cv-facts">
 <section class="cv-fact">

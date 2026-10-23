@@ -1,0 +1,35 @@
+{{ define "main" }}
+<article role="article" aria-labelledby="page-title">
+    <h1 id="page-title">{{ .Title }}</h1>
+    <div class="content">
+        {{ .Content }}
+
+        {{- /* Cards from the "projects" list in the front matter; the CV shows the same list as a preview */}}
+        <div class="projects">
+            {{ range .Params.projects }}
+            <section class="project" id="{{ .id }}" aria-labelledby="project-{{ .id }}">
+                <div class="project-status">{{ .status }}</div>
+                <h2 class="project-title" id="project-{{ .id }}">{{ .title }}</h2>
+                <p>{{ .text | markdownify }}</p>
+                {{ with .tech }}
+                <div class="tech-stack">
+                    <ul role="list">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+                </div>
+                {{ end }}
+                {{ with .links }}
+                <p class="project-link">
+                    {{- range $i, $link := . }}
+                    {{- if $i }} · {{ end }}
+                    {{- with $link.page }}
+                        {{- with site.GetPage . }}<a href="{{ .RelPermalink }}">{{ $link.text }}</a>
+                        {{- else }}{{ errorf "projects: page %q not found (link %q)" $link.page $link.text }}{{ end }}
+                    {{- else }}<a href="{{ $link.url }}">{{ $link.text }}</a>{{ end }}
+                    {{- end }}
+                </p>
+                {{ end }}
+            </section>
+            {{ end }}
+        </div>
+    </div>
+</article>
+{{ end }}

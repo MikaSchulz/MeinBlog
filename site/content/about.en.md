@@ -125,21 +125,13 @@ Our core process involves distributing items across parcels in the best possible
 
 </div>
 
-### Private: Homelab & AI
-
-<div class="tech-stack">
-
-- Proxmox
-- Home Assistant
-- Docker & Dokploy
-- Cloudflare
-- Tailscale
-- Hugo
-- Claude Code
-
 </div>
 
-</div>
+## Personal projects
+
+What I build and run in my spare time, from my own server to my own apps:
+
+{{< projects-preview >}}
 
 <div class="cv-facts">
 <section class="cv-fact">
