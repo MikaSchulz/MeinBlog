@@ -26,14 +26,6 @@ projects:
     status: "Running"
     text: "Home Assistant is the hub for the lights, heating, door lock and door buzzer, as well as door and window sensors. Everything is connected locally over a Matter-over-Thread network. My favorite automation: coming home with my bike on my shoulder and opening the front door with my smartphone, without touching a key."
     tech: ["Home Assistant", "Matter", "Thread", "Shelly", "Nuki", "MQTT"]
-  - id: "podcast"
-    title: "Daily News Podcast"
-    status: "Running"
-    text: "My own news podcast, about 30 minutes every morning: a Python script pulls the topics from RSS feeds, weighted by categories such as world news, business or tech, and skips what was already covered in the last few days. Claude writes the script, Google Text-to-Speech reads it out, and the MP3 lands on my phone via Google Drive. It all runs automatically on GitHub Actions."
-    tech: ["Python", "Claude Code", "Google Text-to-Speech", "GitHub Actions", "Google Drive", "RSS"]
-    links:
-      - text: "Code on GitHub"
-        url: "https://github.com/MikaSchulz/DailyNewsPodcast"
   - id: "repper"
     title: "Repper"
     status: "In progress"
@@ -44,6 +36,22 @@ projects:
     status: "In progress"
     text: "Mutual matching for activities: two people privately choose what they feel like doing, for example watching a movie or cooking. If both pick the same thing, there's a match and a push notification. For anyone who hasn't seen someone in a while or is too shy to suggest something."
     tech: ["Compose Multiplatform", "Firebase", "Google Cloud", "Push notifications"]
+  - id: "podcast"
+    title: "Daily News Podcast"
+    status: "Paused"
+    text: "My own news podcast, with sources and weighting I choose myself: a Python script pulls the topics from RSS feeds, weighted by categories such as world news, business or tech, and skips what was already covered in the last few days. Claude writes the script, Google Text-to-Speech reads it out, and the MP3 lands on my phone via Google Drive. Meant for every morning, about 30 minutes, automatically on GitHub Actions."
+    tech: ["Python", "Claude Code", "Google Text-to-Speech", "GitHub Actions", "Google Drive", "RSS"]
+    links:
+      - text: "Code on GitHub"
+        url: "https://github.com/MikaSchulz/DailyNewsPodcast"
+  - id: "wortel"
+    title: "Wortel"
+    status: "Paused"
+    text: "Wordle in German, with words of four to seven letters and a daily challenge. Started out on Spring Boot, then moved to Supabase: Postgres, login and a REST API as edge functions in TypeScript. The app is built with Compose Multiplatform and runs in the browser and on Android."
+    tech: ["Supabase", "TypeScript", "Compose Multiplatform", "PostgreSQL", "Deno", "GitHub Actions"]
+    links:
+      - text: "Code on GitHub"
+        url: "https://github.com/MikaSchulz/Wortel"
   - id: "minecraft"
     title: "Minecraft mods"
     status: "School days"

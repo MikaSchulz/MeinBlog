@@ -29,14 +29,6 @@ projects:
     status: "Läuft"
     text: "Home Assistant ist die Zentrale für Licht, Heizung, Türschloss und Türsummer sowie Tür- und Fenstersensoren. Alles ist lokal über ein Matter-over-Thread-Netzwerk verbunden. Meine Lieblings-Automation: nach Hause kommen mit dem Fahrrad auf der Schulter und, ohne einen Schlüssel anzufassen, mit dem Smartphone die Haustür öffnen."
     tech: ["Home Assistant", "Matter", "Thread", "Shelly", "Nuki", "MQTT"]
-  - id: "podcast"
-    title: "Daily News Podcast"
-    status: "Läuft"
-    text: "Mein eigener Nachrichten-Podcast, jeden Morgen rund 30 Minuten: Ein Python-Skript holt die Themen aus RSS-Feeds, gewichtet nach Kategorien wie Welt, Wirtschaft oder Tech, und lässt weg, was in den letzten Tagen schon dran war. Claude schreibt daraus den Sprechtext, Google Text-to-Speech liest ihn vor, und die MP3 landet über Google Drive auf meinem Handy. Das Ganze läuft automatisch über GitHub Actions."
-    tech: ["Python", "Claude Code", "Google Text-to-Speech", "GitHub Actions", "Google Drive", "RSS"]
-    links:
-      - text: "Code auf GitHub"
-        url: "https://github.com/MikaSchulz/DailyNewsPodcast"
   - id: "repper"
     title: "Repper"
     status: "In Arbeit"
@@ -47,6 +39,22 @@ projects:
     status: "In Arbeit"
     text: "Mutual-Match für Aktivitäten: Zwei Personen wählen privat aus, worauf sie gerade Lust haben, zum Beispiel Film gucken oder kochen. Wählen beide dasselbe, gibt es ein Match und eine Push-Nachricht. Für alle, die sich länger nicht gesehen haben oder sich nicht trauen, selbst etwas vorzuschlagen."
     tech: ["Compose Multiplatform", "Firebase", "Google Cloud", "Push-Benachrichtigungen"]
+  - id: "podcast"
+    title: "Daily News Podcast"
+    status: "Pausiert"
+    text: "Mein eigener Nachrichten-Podcast mit Quellen und Gewichtung, die ich selbst festlege: Ein Python-Skript holt die Themen aus RSS-Feeds, gewichtet nach Kategorien wie Welt, Wirtschaft oder Tech, und lässt weg, was in den letzten Tagen schon dran war. Claude schreibt daraus den Sprechtext, Google Text-to-Speech liest ihn vor, und die MP3 landet über Google Drive auf meinem Handy. Gedacht für jeden Morgen, rund 30 Minuten, automatisch über GitHub Actions."
+    tech: ["Python", "Claude Code", "Google Text-to-Speech", "GitHub Actions", "Google Drive", "RSS"]
+    links:
+      - text: "Code auf GitHub"
+        url: "https://github.com/MikaSchulz/DailyNewsPodcast"
+  - id: "wortel"
+    title: "Wortel"
+    status: "Pausiert"
+    text: "Wordle auf Deutsch, mit Wörtern aus vier bis sieben Buchstaben und einer täglichen Challenge. Angefangen mit Spring Boot, dann umgezogen auf Supabase: Postgres, Login und eine REST-API als Edge Functions in TypeScript. Die App dazu ist mit Compose Multiplatform gebaut und läuft im Browser und auf Android."
+    tech: ["Supabase", "TypeScript", "Compose Multiplatform", "PostgreSQL", "Deno", "GitHub Actions"]
+    links:
+      - text: "Code auf GitHub"
+        url: "https://github.com/MikaSchulz/Wortel"
   - id: "minecraft"
     title: "Minecraft-Mods"
     status: "Schulzeit"
