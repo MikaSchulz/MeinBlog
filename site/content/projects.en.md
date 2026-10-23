@@ -9,7 +9,7 @@ projects:
   - id: "blog"
     title: "This blog"
     status: "Online"
-    text: "A bilingual blog built with Hugo. Most of it was built by AI; the ideas, decisions and texts are mine. It runs as a Docker container on my own server, and every push to `main` goes live automatically."
+    text: "A bilingual blog built with the help of AI. The ideas and posts are mine. It runs as a Docker container via Dokploy on my own server."
     tech: ["Hugo", "Docker", "Dokploy", "Cloudflare Tunnel", "Claude Code"]
     links:
       - text: "How this blog came about"
@@ -19,27 +19,27 @@ projects:
   - id: "homelab"
     title: "Homelab"
     status: "Running"
-    text: "A mini PC that was meant for the TV is now my server. With Proxmox it runs this blog, a dev box for programming, my second brain and Home Assistant. Only the blog is public; everything else is secured with Cloudflare Zero Trust and Tailscale."
-    tech: ["Proxmox", "Docker & Dokploy", "Cloudflare Zero Trust", "Tailscale", "SilverBullet"]
+    text: "A NUC mini PC, originally meant to replace the TV, is now my server. With Proxmox it runs this blog, a dev box for programming, a second brain, a Pi-hole, a Tailscale exit node and Home Assistant. Only the blog is publicly reachable. Everything is secured with a Cloudflare Zero Trust tunnel and Tailscale."
+    tech: ["Proxmox", "Docker & Dokploy", "Cloudflare Zero Trust", "Tailscale", "SilverBullet", "Pi-hole"]
   - id: "smart-home"
     title: "Smart home"
     status: "Running"
-    text: "Home Assistant is the hub for the lights, heating, door lock and door buzzer, all local instead of in the manufacturer's cloud. My favorite automation: coming home with my bike on my shoulder without touching a key."
-    tech: ["Home Assistant", "Matter & Thread", "Philips Hue", "Shelly", "Nuki", "MQTT"]
+    text: "Home Assistant is the hub for the lights, heating, door lock and door buzzer, as well as door and window sensors. Everything is connected locally over a Matter-over-Thread network. My favorite automation: coming home with my bike on my shoulder and opening the front door with my smartphone, without touching a key."
+    tech: ["Home Assistant", "Matter", "Thread", "Shelly", "Nuki", "MQTT"]
   - id: "repper"
     title: "Repper"
     status: "In progress"
-    text: "A lean iPhone app that counts reps at the gym: put the phone on the weight stack, train, done. Right now I'm teaching it to count dumbbell exercises with the Apple Watch too. That's harder than it sounds, because the hand moves in an arc."
+    text: "A 'lightweight' app (pun intended) that counts reps at the gym: you put the phone on the weight stack, and it uses the phone's motion sensors to count how many reps you've done. It's planned to be available as a smartwatch app as well. The sensor side is much harder there, though, because the hand moves in an arc during dumbbell exercises."
     tech: ["iOS", "Apple Watch", "Motion sensors", "Vibe coding"]
   - id: "wanna"
     title: "Wanna"
     status: "In progress"
-    text: "Mutual matching for activities: two people privately choose what they feel like doing, for example watching a movie or cooking. If both pick the same thing, there's a match and a push notification. For anyone who hasn't seen someone in a while or doesn't dare to suggest something."
+    text: "Mutual matching for activities: two people privately choose what they feel like doing, for example watching a movie or cooking. If both pick the same thing, there's a match and a push notification. For anyone who hasn't seen someone in a while or is too shy to suggest something."
     tech: ["Compose Multiplatform", "Firebase", "Google Cloud", "Push notifications"]
   - id: "minecraft"
     title: "Minecraft mods"
     status: "School days"
-    text: "My first projects in Java, as a teenager. One mod made up for a bug in the game by calculating from which height a certain jump is safe; soon almost the whole community of that game mode used it. Then came plugins for smaller servers: game modes and a lobby system."
+    text: "First projects in Java, as a teenager. Mods and plugins such as a \"King of the Hill\" game mode or a lobby system."
     tech: ["Java", "Forge", "LabyMod", "Spigot", "Paper"]
 ---
 

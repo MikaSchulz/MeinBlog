@@ -12,7 +12,7 @@ projects:
   - id: "blog"
     title: "Dieser Blog"
     status: "Online"
-    text: "Ein zweisprachiger Blog mit Hugo. Gebaut hat ihn größtenteils die KI, Ideen, Entscheidungen und Texte sind von mir. Er läuft als Docker-Container auf meinem eigenen Server, und jeder Push auf `main` geht automatisch live."
+    text: "Ein zweisprachiger Blog, gebaut mit Hilfe von KI. Ideen und Blogeinträge sind von mir. Er läuft als Docker-Container via Dokploy auf meinem eigenen Server."
     tech: ["Hugo", "Docker", "Dokploy", "Cloudflare Tunnel", "Claude Code"]
     links:
       - text: "Wie dieser Blog entstanden ist"
@@ -22,17 +22,17 @@ projects:
   - id: "homelab"
     title: "Homelab"
     status: "Läuft"
-    text: "Ein Mini-PC, der eigentlich für den Fernseher gedacht war, ist heute mein Server. Mit Proxmox laufen darauf der Blog, eine Dev-Box zum Programmieren, mein Second Brain und Home Assistant. Öffentlich ist nur der Blog, alles andere ist über Cloudflare Zero Trust und Tailscale abgesichert."
-    tech: ["Proxmox", "Docker & Dokploy", "Cloudflare Zero Trust", "Tailscale", "SilverBullet"]
+    text: "Ein NUC-Mini-PC, ursprünglich als Fernseherersatz gedacht, ist heute mein Server. Mit Proxmox laufen darauf der Blog, eine Dev-Box zum Programmieren, ein Second Brain, ein Pi-hole, ein Tailscale Exit Node sowie Home Assistant. Öffentlich erreichbar ist nur der Blog. Abgesichert ist alles über einen Cloudflare Zero Trust Tunnel und Tailscale."
+    tech: ["Proxmox", "Docker & Dokploy", "Cloudflare Zero Trust", "Tailscale", "SilverBullet", "Pi-hole"]
   - id: "smart-home"
     title: "Smart Home"
     status: "Läuft"
-    text: "Home Assistant ist die Zentrale für Licht, Heizung, Türschloss und Türsummer, alles lokal statt in der Cloud des Herstellers. Meine Lieblings-Automation: nach Hause kommen mit dem Fahrrad auf der Schulter, ohne einen Schlüssel anzufassen."
-    tech: ["Home Assistant", "Matter & Thread", "Philips Hue", "Shelly", "Nuki", "MQTT"]
+    text: "Home Assistant ist die Zentrale für Licht, Heizung, Türschloss und Türsummer sowie Tür- und Fenstersensoren. Alles ist lokal über ein Matter-over-Thread-Netzwerk verbunden. Meine Lieblings-Automation: nach Hause kommen mit dem Fahrrad auf der Schulter und, ohne einen Schlüssel anzufassen, mit dem Smartphone die Haustür öffnen."
+    tech: ["Home Assistant", "Matter", "Thread", "Shelly", "Nuki", "MQTT"]
   - id: "repper"
     title: "Repper"
     status: "In Arbeit"
-    text: "Eine schlanke iPhone-App, die im Gym Wiederholungen zählt: Handy auf den Gewichtsblock legen, trainieren, fertig. Gerade bringe ich ihr bei, mit der Apple Watch auch bei Kurzhantel-Übungen mitzuzählen. Das ist schwerer, als es klingt, weil sich die Hand dabei im Bogen bewegt."
+    text: "Eine „leichtgewichtige“ App (pun intended), die im Gym Wiederholungen zählt, indem man sie auf den Gewichtsblock legt. Beim Training misst sie anhand der Bewegungssensoren des Smartphones, wie viele Wiederholungen der Trainierende gemacht hat. In Zukunft soll dies auch als Smartwatch-App verfügbar sein. Allerdings ist die Sensorik deutlich schwieriger, da sich die Hand bei Kurzhantelübungen im Bogen bewegt."
     tech: ["iOS", "Apple Watch", "Bewegungssensoren", "Vibe-Coding"]
   - id: "wanna"
     title: "Wanna"
@@ -42,7 +42,7 @@ projects:
   - id: "minecraft"
     title: "Minecraft-Mods"
     status: "Schulzeit"
-    text: "Meine ersten Projekte in Java, als Jugendlicher. Eine Mod hat einen Fehler im Spiel ausgeglichen und berechnet, aus welcher Höhe ein bestimmter Sprung sicher ist; bald hat sie fast die ganze Community dieses Spielmodus genutzt. Dazu kamen Plugins für kleinere Server: Spielmodi und ein Lobby-System."
+    text: "Erste Projekte in Java, als Jugendlicher. Mods und Plugins wie ein „King of the Hill“-Spielmodus oder ein Lobby-System."
     tech: ["Java", "Forge", "LabyMod", "Spigot", "Paper"]
 ---
 
