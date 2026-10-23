@@ -26,6 +26,14 @@ projects:
     status: "Running"
     text: "Home Assistant is the hub for the lights, heating, door lock and door buzzer, as well as door and window sensors. Everything is connected locally over a Matter-over-Thread network. My favorite automation: coming home with my bike on my shoulder and opening the front door with my smartphone, without touching a key."
     tech: ["Home Assistant", "Matter", "Thread", "Shelly", "Nuki", "MQTT"]
+  - id: "podcast"
+    title: "Daily News Podcast"
+    status: "Running"
+    text: "My own news podcast, about 30 minutes every morning: a Python script pulls the topics from RSS feeds, weighted by categories such as world news, business or tech, and skips what was already covered in the last few days. Claude writes the script, Google Text-to-Speech reads it out, and the MP3 lands on my phone via Google Drive. It all runs automatically on GitHub Actions."
+    tech: ["Python", "Claude Code", "Google Text-to-Speech", "GitHub Actions", "Google Drive", "RSS"]
+    links:
+      - text: "Code on GitHub"
+        url: "https://github.com/MikaSchulz/DailyNewsPodcast"
   - id: "repper"
     title: "Repper"
     status: "In progress"
