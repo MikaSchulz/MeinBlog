@@ -54,8 +54,8 @@ projects:
         url: "https://github.com/MikaSchulz/Wortel"
   - id: "tamagotchi"
     title: "Tamagotchi"
-    status: "Finished"
-    text: "A virtual pet for Windows: pick a cat, a dog or an ox, give it a name, then feed it, pet it and keep it happy. Hunger, thirst, fun and affection get worse over time, even while the program is closed; the difficulty level sets how fast. You earn coins in mini-games such as Memory or the slot machine and spend them in the shop."
+    status: "School days"
+    text: "A virtual pet for Windows, built as a school project in a team; I did most of it. Pick a cat, a dog or an ox, give it a name, then feed it, pet it and keep it happy. Hunger, thirst, fun and affection get worse over time, even while the program is closed; the difficulty level sets how fast. You earn coins in mini-games such as Memory or the slot machine and spend them in the shop."
     tech: ["VB.NET", "Windows Forms", ".NET Framework", "Visual Studio"]
     links:
       - text: "Code on GitHub"
