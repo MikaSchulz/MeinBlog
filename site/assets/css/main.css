@@ -983,7 +983,8 @@ input[type="button"]:focus {
 }
 
 /* About page: skills as chips, one group per heading.
-   The chips are no links, so hovering only highlights the border. */
+   The chips are no links, so they don't react to hovering or tapping:
+   the orange outline marks the main skills only. */
 .skills-section {
   margin: 1rem 0 2.5rem;
 }
@@ -1014,12 +1015,6 @@ input[type="button"]:focus {
   border: 1px solid var(--color-border);
   border-radius: 999px;
   font-size: 0.95rem;
-  transition: border-color 0.2s ease, color 0.2s ease;
-}
-
-.tech-stack li:hover {
-  border-color: var(--color-button);
-  color: var(--color-heading-primary);
 }
 
 /* Main skills are bold in the text and get an orange outline */
@@ -1306,8 +1301,7 @@ input[type="button"]:focus {
 
 @media (prefers-reduced-motion: reduce) {
   .timeline-marker,
-  .timeline-content,
-  .tech-stack li {
+  .timeline-content {
     transition: none;
   }
 
