@@ -50,7 +50,7 @@ projects:
   - id: "wortel"
     title: "Wortel"
     status: "Pausiert"
-    text: "Wordle auf Deutsch, mit Wörtern aus vier bis sieben Buchstaben und einer täglichen Challenge. Angefangen mit Spring Boot, dann umgezogen auf Supabase: Postgres, Login und eine REST-API als Edge Functions in TypeScript. Die App dazu ist mit Compose Multiplatform gebaut und läuft im Browser und auf Android."
+    text: "Ein deutsches Worträtsel nach dem Prinzip von Wordle, mit Wörtern aus vier bis sieben Buchstaben und einer täglichen Challenge. Angefangen mit Spring Boot, dann umgezogen auf Supabase: Postgres, Login und eine REST-API als Edge Functions in TypeScript. Die App dazu ist mit Compose Multiplatform gebaut und läuft im Browser und auf Android."
     tech: ["Supabase", "TypeScript", "Compose Multiplatform", "PostgreSQL", "Deno", "GitHub Actions"]
     links:
       - text: "Code auf GitHub"
