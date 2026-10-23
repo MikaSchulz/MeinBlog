@@ -55,6 +55,14 @@ projects:
     links:
       - text: "Code auf GitHub"
         url: "https://github.com/MikaSchulz/Wortel"
+  - id: "tamagotchi"
+    title: "Tamagotchi"
+    status: "Fertig"
+    text: "Ein virtuelles Haustier für Windows: Katze, Hund oder Ochse aussuchen, Namen geben und dann füttern, streicheln und bei Laune halten. Hunger, Durst, Spaß und Zuneigung werden mit der Zeit schlechter, auch wenn das Programm geschlossen ist; wie schnell, legt der Schwierigkeitsgrad fest. Münzen verdient man in Minispielen wie Memory oder am Spielautomaten und gibt sie im Shop aus."
+    tech: ["VB.NET", "Windows Forms", ".NET Framework", "Visual Studio"]
+    links:
+      - text: "Code auf GitHub"
+        url: "https://github.com/MikaSchulz/TamagotchiVB"
   - id: "minecraft"
     title: "Minecraft-Mods"
     status: "Schulzeit"
